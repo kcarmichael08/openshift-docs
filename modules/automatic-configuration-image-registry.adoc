@@ -12,22 +12,15 @@ integrations based on artifacts found in the monitored clusters, such as image
 pull secrets.  Usually, you do not need to configure registry integrations
 manually.
 
-In the case of AWS ECR, {product-title} will automatically create ECR registry
-integrations if the following conditions are met:
+For Amazon ECR integrations, {product-title} will automatically create ECR registry integrations if the following conditions are met:
 
-. The cluster's cloud provider is AWS.
-. The nodes in your cluster have an Instance IAM Role association and the
-  Instance Metadata Service is available in the nodes.  For example, when using
-  AWS EKS to manage your cluster, this role is known as the EKS Node IAM role.
-. The Instance IAM role has IAM policies granting access to the ECR registries
-  you are deploying from.
+* The cluster's cloud provider is AWS.
+* The nodes in your cluster have an Instance IAM Role association and the Instance Metadata Service is available in the nodes.  For example, when using Amazon Elastic Kubernetes Service (EKS) to manage your cluster, this role is known as the EKS Node IAM role.
+* The Instance IAM role has IAM policies granting access to the ECR registries from which you are deploying.
 
-If the above conditions are met, {product-title} will monitor deployments that
-are pulling from ECR registries and will auto-generate an ECR integrations for
-them.
+If the listed conditions are met, {product-title} monitors deployments that are pulling from ECR registries and autogenerates ECR integrations for them.
 
 [IMPORTANT]
 ====
-If you use registries like GCR, {product-title} does not create a registry
-integration automatically.
+If you are using a GCR registry, {product-title} does not create a registry integration automatically.
 ====
