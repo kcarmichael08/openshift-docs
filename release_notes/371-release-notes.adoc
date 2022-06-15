@@ -1,0 +1,146 @@
+:_content-type: ASSEMBLY
+[id="release-notes-371"]
+= Red Hat Advanced Cluster Security for Kubernetes 3.71
+include::modules/common-attributes.adoc[]
+:context: release-notes-371
+
+toc::[]
+
+*Release date:* 25 July 2022
+
+{product-title} is an enterprise-ready, Kubernetes-native container security solution that protects your vital applications across build, deploy, and runtime. It deploys in your infrastructure and integrates with your DevOps tooling and workflows to deliver better security and compliance and to enable DevOps and InfoSec teams to operationalize security.
+
+[id="about-this-release-371"]
+
+{product-title} ({product-title-short}) 3.71 includes feature enhancements, bug fixes, scale improvements, and other changes.
+
+[id="new-features-371"]
+== New features
+
+[id="dashboard-updates"]
+=== Dashboard updates
+
+placeholder for dashboard updates
+
+[id="network-policies-list"]
+=== List of network policies in Deployment tab for violations 
+
+When viewing a violation, you can select the *Deployment* tab and scroll to the *Network Policy* section to view a list of network policies in the namespace for the deployed cluster. For example, if you have configured the system to alert you of a violation of “Deployments should have at least one ingress network policy,” you can choose the *Deployment* tab to view a list of the existing network policies. You can use this list to verify which network policies exist in the namespace and determine whether or not an ingress network policy is missing. 
+
+
+== Enhancements
+
+[id="placeholder"]
+=== placeholder
+
+
+[id="notable-tech-changes-371"]
+== Notable technical changes
+
+[id="placeholder2"]
+=== Placeholder2
+
+[id="deprecation-notices-371"]
+== Deprecated and removed features
+
+Some features available in previous releases have been deprecated or removed.
+
+Deprecated functionality is still included in {product-title-short} and continues to be supported; however, it will be removed in a future release of this product and is not recommended for new deployments. For the most recent list of major functionality deprecated and removed, refer to the table below. Additional information about some removed or deprecated functionality is available after the table.
+
+In the table, features are marked with the following statuses:
+
+- GA: General Availability
+- TP: Technology Preview
+- DEP: Deprecated
+- REM: Removed
+
+.Deprecated and removed features tracker
+[cols="3,1,1,1",options="header"]
+|====
+|Feature |{product-title-short} 3.69 |{product-title-short} 3.70 | {product-title-short} 3.71
+
+|Ability to add comments to alerts and processes
+|DEP
+|DEP
+|REM
+
+|Anchore, Tenable, and Docker Trusted registry integrations
+|DEP
+|DEP
+|REM
+
+|External authorization plug-in for scoped access control
+|DEP
+|DEP
+|REM
+
+|`FROM` option in the Disallowed Dockerfile line policy field
+|GA
+|DEP
+|DEP
+
+| `PodSecurityPolicy` (PSP) Kubernetes objects
+| GA
+| DEP
+| DEP
+
+|`RenamePolicyCategory` and `DeletePolicyCategory` API endpoints
+|GA
+|DEP
+|DEP
+
+| `--rhacs` option for the `roxctl` helm output command
+| DEP
+| DEP
+| REM
+
+|`/v1/nodes` and `/v1/images` API endpoint response: `firstNodeOccurrence` response body parameter
+|DEP
+|DEP
+|REM
+
+|====
+
+[id="deprecated-features-371"]
+=== Deprecated features
+
+
+
+[id="removed-features-370"]
+=== Removed features
+
+* *Anchore*, *Tenable*, and *Docker Trusted Registry* integrations: The {product-title-short} scanner supersedes these integrations.
+* *External authorization plug-in for scoped access control*: Use the existing in-product scoped access control.
+* *FROM option in the Disallowed Dockerfile line policy field*: Any policies containing the Disallowed Dockerfile line policy field with the `FROM` option must be updated to remove those policy sections.
+
+[id="bug-fixes-371"]
+== Bug fixes
+
+* placeholder. (*ROX-XXXXX*)
+
+
+[id="image-versions-371"]
+== Image versions
+
+[%header,cols="1,1,2"]
+|===
+| Image | Description | Current version
+
+| Main
+| Includes Central, Sensor, Admission Controller, and Compliance.
+Also includes `roxctl` for use in continuous integration (CI) systems.
+| `registry.redhat.io/advanced-cluster-security/rhacs-main-rhel8:3.71`
+
+| Scanner
+| Scans images and nodes.
+| `registry.redhat.io/advanced-cluster-security/rhacs-scanner-rhel8:3.71`
+
+| Scanner DB
+| Stores image scan results and vulnerability definitions.
+| `registry.redhat.io/advanced-cluster-security/rhacs-scanner-db-rhel8:3.71`
+
+| Collector
+| Collects runtime activity in Kubernetes or {ocp} clusters.
+| `registry.redhat.io/advanced-cluster-security/rhacs-collector-rhel8:3.71`
+  `registry.redhat.io/advanced-cluster-security/rhacs-collector-slim-rhel8:3.71`
+|===
