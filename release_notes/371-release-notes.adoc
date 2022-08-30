@@ -7,6 +7,7 @@ include::modules/common-attributes.adoc[]
 toc::[]
 
 *Release date:* 25 July 2022
+*Updated:* 30 August 2022
 
 {product-title} ({product-title-short}) is an enterprise-ready, Kubernetes-native container security solution that protects your vital applications across build, deploy, and runtime. It deploys in your infrastructure and integrates with your DevOps tooling and workflows to deliver better security and compliance and to enable DevOps and InfoSec teams to operationalize security.
 
@@ -256,6 +257,9 @@ In the table, features are marked with the following statuses:
 ** Use `/v1/imagecves/suppress` and `/v1/imagecves/unsuppress` to snooze and unsnooze image vulnerabilities.
 ** Use `/v1/nodecves/suppress` and `/v1/nodecves/unsuppress` to snooze and unsnooze node and host vulnerabilities.
 ** Use `/v1/clustercves/suppress` and `/v1/clustercves/unsuppress` to snooze and unsnooze platform (Kubernetes, Istio, and {ocp}) vulnerabilities.
+** *Updated 30 August 2022:* 
+*** The `ids` field in the `/v1/cves/suppress` and `/v1/cves/unsuppress` API payload will be renamed to `cves` in the {product-title-short} 3.72 release.
+*** The `cves.ids` field of the `storage.VulnerabilityRequest` object in the response of `VulnerabilityRequestService` endpoints will be renamed to `cves.cves` in the {product-title-short} 3.72 release.
 
 
 [id="removed-features-371"]
