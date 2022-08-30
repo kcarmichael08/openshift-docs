@@ -1,7 +1,7 @@
 // Module included in the following assemblies:
 //
 // * operating/manage-role-based-access-control.adoc
-:_module-type: PROCEDURE
+:_content-type: PROCEDURE
 [id="manage-access-for-specific-users-or-groups_{context}"]
 = Managing access for specific users or groups
 
@@ -11,8 +11,7 @@ You can create and apply these rules based on the metadata keys and values you s
 
 [NOTE]
 ====
-The metadata keys are always dependent upon the configurations in your authentication provider.
-For example:
+The metadata keys are always dependent upon the configurations in your authentication provider. For example:
 
 * Allowed metadata keys for OpenID Connect (OIDC) are only:
 ** `name`
@@ -26,10 +25,10 @@ For example:
 * You must have the *Admin* role, or read and write permissions for the `AuthProvider` and `Role` resources to create, modify, and delete custom roles.
 
 .Procedure
-. On the RHACS portal, navigate to *Platform Configuration* -> *Access control*.
+. On the {product-title-short} portal, navigate to *Platform Configuration* -> *Access control*.
 . Under *Auth Providers*, select the authentication provider for which you want to configure user roles.
 . Click *Edit Provider*.
-. Under section 2 *Assign StackRox roles to your <auth_provider> users*, click on *Add New Rule*.
+. Under *Assign roles to your <auth_provider> users*, click on *Add new rule*.
 . Click on the *Key* to which this role applies.
 . Select a *Value* for the key.
 . Select the *Role* you want to assign to users matching the specified key and value.
@@ -38,7 +37,6 @@ For example:
 [NOTE]
 ====
 * You can add more than one rule using these steps.
-* When you select a *Value*, only users who accessed the system before using that value appear as an option.
-You can type in custom values for users who did not log in yet.
+* When you select a *Value*, only users who accessed the system before using that value appear as an option. You can type in custom values for users who did not log in yet.
 * If a user matches to more than one of the defined rules, the user gets permissions from every matching rule.
 ====
