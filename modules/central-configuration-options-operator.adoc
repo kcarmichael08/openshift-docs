@@ -119,6 +119,8 @@ If no PVC with the given name exists, it will be created. The default value is `
 [id="scanner-settings_{context}"]
 == Scanner settings
 
+#Needs updates for 4.4 Scanner V4#
+
 [cols="1,3"]
 |===
 | Parameter | Description

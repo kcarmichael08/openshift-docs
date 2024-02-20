@@ -131,3 +131,27 @@ By default, the admission control service runs 3 replicas. The following table l
 | 2.75 cores
 | 5000 MiB
 |===
+
+== Scanner
+#need to add text about Scanner-slim here?#
+=== Scanner V4 (optional)
+If Scanner V4 is installed on secured clusters, the following requirements apply:
+|===
+| Scanner V4 Indexer | CPU | Memory
+| *Request*
+| 1 core
+| 1500 MiB
+| *Limit*
+| 2 cores
+| 3000 MiB
+|===
+Scanner V4 requires Scanner V4 DB to store data. The following table lists the minimum memory and storage values required to install and run Scanner V4 DB. For Scanner V4 DB, a PVC ensures optimal performance and should be 10000 MiB. #is this correct or do we want to say that a PVC is actually required?#
+|===
+| Scanner V4 DB | CPU | Memory
+| *Request*
+| .2 cores
+| 2000 MiB
+| *Limit*
+| 2 cores
+| 4000 MiB
+|===
