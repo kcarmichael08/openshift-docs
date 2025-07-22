@@ -190,7 +190,7 @@ xref:../CommonObjectReference/CommonObjectReference.adoc#V1GetExternalNetworkEnt
 [id="GetExternalNetworkFlows_NetworkGraphService"]
 == GetExternalNetworkFlows
 
-`GET /v1/networkgraph/cluster/{clusterId}/externalentities/{entityId}/flows`
+`GET /v1/networkgraph/cluster/{clusterId}/externalentities/flows/{deploymentId}`
 
 === Description
 
@@ -208,65 +208,9 @@ xref:../CommonObjectReference/CommonObjectReference.adoc#V1GetExternalNetworkEnt
 | null
 | 
 
-| entityId
+| deploymentId
 |  
 | X
-| null
-| 
-
-|===
-
-==== Query Parameters
-
-[cols="2,3,1,1,1"]
-|===
-|Name| Description| Required| Default| Pattern
-
-| query
-|  
-| -
-| null
-| 
-
-| since
-|  
-| -
-| null
-| 
-
-| pagination.limit
-|  
-| -
-| null
-| 
-
-| pagination.offset
-|  
-| -
-| null
-| 
-
-| pagination.sortOption.field
-|  
-| -
-| null
-| 
-
-| pagination.sortOption.reversed
-|  
-| -
-| null
-| 
-
-| pagination.sortOption.aggregateBy.aggrFunc
-|  
-| -
-| UNSET
-| 
-
-| pagination.sortOption.aggregateBy.distinct
-|  
-| -
 | null
 | 
 
@@ -290,112 +234,6 @@ xref:../CommonObjectReference/CommonObjectReference.adoc#V1GetExternalNetworkFlo
 | 200
 | A successful response.
 |  xref:../CommonObjectReference/CommonObjectReference.adoc#V1GetExternalNetworkFlowsResponse_CommonObjectReference[V1GetExternalNetworkFlowsResponse]
-
-| 0
-| An unexpected error response.
-|  xref:../CommonObjectReference/CommonObjectReference.adoc#GooglerpcStatus_CommonObjectReference[GooglerpcStatus]
-
-|===
-
-=== Samples
-
-[id="GetExternalNetworkFlowsMetadata_NetworkGraphService"]
-== GetExternalNetworkFlowsMetadata
-
-`GET /v1/networkgraph/cluster/{clusterId}/externalentities/metadata`
-
-=== Description
-
-=== Parameters
-
-==== Path Parameters
-
-[cols="2,3,1,1,1"]
-|===
-|Name| Description| Required| Default| Pattern
-
-| clusterId
-|  
-| X
-| null
-| 
-
-|===
-
-==== Query Parameters
-
-[cols="2,3,1,1,1"]
-|===
-|Name| Description| Required| Default| Pattern
-
-| query
-|  
-| -
-| null
-| 
-
-| since
-|  
-| -
-| null
-| 
-
-| pagination.limit
-|  
-| -
-| null
-| 
-
-| pagination.offset
-|  
-| -
-| null
-| 
-
-| pagination.sortOption.field
-|  
-| -
-| null
-| 
-
-| pagination.sortOption.reversed
-|  
-| -
-| null
-| 
-
-| pagination.sortOption.aggregateBy.aggrFunc
-|  
-| -
-| UNSET
-| 
-
-| pagination.sortOption.aggregateBy.distinct
-|  
-| -
-| null
-| 
-
-|===
-
-=== Return Type
-
-xref:../CommonObjectReference/CommonObjectReference.adoc#V1GetExternalNetworkFlowsMetadataResponse_CommonObjectReference[V1GetExternalNetworkFlowsMetadataResponse]
-
-=== Content Type
-
-* application/json
-
-=== Responses
-
-.HTTP Response Codes
-[cols="2,3,1"]
-|===
-| Code | Message | Datatype
-
-| 200
-| A successful response.
-|  xref:../CommonObjectReference/CommonObjectReference.adoc#V1GetExternalNetworkFlowsMetadataResponse_CommonObjectReference[V1GetExternalNetworkFlowsMetadataResponse]
 
 | 0
 | An unexpected error response.

@@ -130,39 +130,3 @@ xref:../CommonObjectReference/CommonObjectReference.adoc#StorageTelemetryConfigu
 |===
 
 === Samples
-
-[id="PostConfigReload_TelemetryService"]
-== PostConfigReload
-
-`POST /v1/telemetry/config/reload`
-
-=== Description
-
-=== Parameters
-
-=== Return Type
-
-`Object`
-
-=== Content Type
-
-* application/json
-
-=== Responses
-
-.HTTP Response Codes
-[cols="2,3,1"]
-|===
-| Code | Message | Datatype
-
-| 200
-| A successful response.
-|  `Object`
-
-| 0
-| An unexpected error response.
-|  xref:../CommonObjectReference/CommonObjectReference.adoc#GooglerpcStatus_CommonObjectReference[GooglerpcStatus]
-
-|===
-
-=== Samples

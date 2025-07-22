@@ -761,6 +761,11 @@ Topics:
     Topics:
     - Name: 'Signature Integration Service'
       File: SignatureIntegrationService
+  - Name: Summary Service
+    Dir: SummaryService
+    Topics:
+    - Name: 'Summary Service'
+      File: SummaryService
   - Name: Telemetry Service
     Dir: TelemetryService
     Topics:
