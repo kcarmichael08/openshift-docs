@@ -5,14 +5,19 @@
 [id="access-object-collections_{context}"]
 = Accessing deployment collections
 
-To use collections, click *Platform Configuration* -> *Collections*. The page displays a list of currently-configured collections. You can perform the following actions:
+[role="_abstract"]
+Create, edit, clone, and delete deployment collections in {product-title} ({product-title-short}) by using the *Platform Configuration* -> *Collections* page.
 
-* Search for collections by entering text in the *Search by name* field, and then press *->*. 
-* Click on a collection in the collection list to view the collection in read-only mode.
-* Click on {kebab} for an existing collection to edit, clone, or delete it.
+.Procedure
+
+* Click *Platform Configuration* -> *Collections* to do any of the following actions:
+
+** To search for collections, enter text in the *Search by name* field, and then press the arrow icon. 
+** To view the collection in read-only mode, click a collection name in the collection list.
+** To edit, clone, or delete a collection, locate the collection in the list and click the overflow menu {kebab}.
 +
 [NOTE]
 ====
 You cannot delete a collection that is actively used in {product-title-short}.
 ====
-* Click *Create collection* to create a new deployment collection.
+** Click *Create collection* to create a new deployment collection.
