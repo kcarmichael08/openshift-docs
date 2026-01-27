@@ -1,0 +1,11 @@
+// Module included in the following assemblies:
+//
+// * operating/examine-images-for-vulnerabilities.adoc
+:_mod-docs-content-type: CONCEPT
+[id="about-vulnerabilities_{context}"]
+= Vulnerabilities
+
+[role="_abstract"]
+{product-title} ({product-title-short}) fetches vulnerability definitions and updates from many vulnerability feeds. These feeds are both general in nature, such as the National Vulnerability Database (NVD), or distribution-specific, such as Alpine, Debian, and Ubuntu. 
+
+For more information about viewing and addressing vulnerabilities that {product-title-short} finds, see "Vulnerability management".

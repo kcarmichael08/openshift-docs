@@ -1,0 +1,25 @@
+// Module included in the following assemblies:
+//
+// * operating/examine-images-for-vulnerabilities.adoc
+:_mod-docs-content-type: CONCEPT
+[id="vm-scanning-requirements_{context}"]
+= Requirements for virtual machine scanning
+
+[role="_abstract"]
+To use {product-title} ({product-title-short}) to scan virtual machines (VMs), you must meet specific requirements.
+
+{ocp-virt-first} must meet the following requirements:
+
+* The {ocp-virt} Operator is installed in the cluster you want to scan.
+* The HyperConverged resource is patched to enable virtual socket (vsock) support.
+
+VMs must meet the following requirements:
+
+* VM resources include vsock support with the setting `spec.domain.devices.autoattachVSOCK: true`.
+* VMs are running {op-system-base-full}. You must register any host where the scan agent is installed with Red Hat Subscription Manager and have an active {op-system-base} subscription.
+* VMs have internet access to download repository-to-Common Platform Enumeration (CPE) mappings.
+* DNF is installed.
+
+For resource requirements, such as CPU and memory resource allocation, see "Resource requirements for virtual machine scanning".
+
+
