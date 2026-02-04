@@ -1,28 +1,37 @@
 // Module included in the following assemblies:
 //
 // * operating/manage_security_policies/custom-security-policies.adoc
+
 :_mod-docs-content-type: PROCEDURE
 [id="configure-policy-enforcement-creating-policies_{context}"]
 = Configuring policy enforcement
 
 [role="_abstract"]
-You can configure if {product-title-short} should only inform you with a notification when this policy is violated, or inform you and enforce the policy. Policy enforcement is determined by whether the admission controller is enabled on the cluster and the lifecycle stage of the policy. 
+To address security violations effectively, configure {product-title-short} to apply specific enforcement behaviors across the build, deploy, and runtime lifecycles. You can adjust the configuration to receive alerts for violations or automatically block noncompliant images and workloads to stop them from entering your environment. Implementing these controls ensures that your clusters remain secure and compliant with your defined policies.
 
 .Procedure
 
-. Select an enforcement method:
-* *Inform*: Include the violation in the violations list.
-* *Inform and enforce*: Include the violation in the violation list and enforce actions that you have configured. If you select this option, you must select the enforcement behavior for the policy by using the toggle for the appropriate lifecycles.
-. If you choose to enforce the policy, configure the enforcement behavior. The enforcement behavior you can select depends on the lifecycle stages you selected for the policy in the *Lifecycle* section of the policy definition. The following enforcement behaviors are available depending on the lifecycle stage:
-* *Build*: Select *Enforce on Build* to have {product-title-short} fail your continuous integration (CI) builds when images match the criteria of the policy. You can download the `roxctl` CLI and configure the `roxctl image check` command to work with the policy.
-* *Deploy*: Select *Enforce on Deploy* to have {product-title-short} block workload admission and updates that match the conditions of the policy if the {product-title-short} admission controller is configured and running.
-** In clusters with admission controller enforcement, the Kubernetes or {ocp} API server blocks all noncompliant deployments. In other clusters, {product-title-short} edits noncompliant deployments to prevent pods from being scheduled.
+. Select a method to address the violations of the policy:
++
+[NOTE]
+====
+Enforcement is not available for node event sources.
+====
++
+Inform:: Include the violation in the violations list.
+Inform and enforce:: Include the violation in the violation list and enforce actions that you have configured. If you select this option, you must select the enforcement behavior for the policy by using the toggle for the appropriate lifecycles.
+. If you select policy enforcement, configure the enforcement behavior. The enforcement behavior you can select depends on the lifecycle stages you selected for the policy in the *Lifecycle* section of the policy definition.
++
+The following enforcement behaviors are available depending on the lifecycle stage:
++
+Build:: Set *Enforce on Build* to on to have {product-title-short} fail your continuous integration (CI) builds when images match the criteria of the policy. You can download the `roxctl` CLI and configure the `roxctl image check` command to work with the policy.
+Deploy:: Set *Enforce on Deploy* to on to have {product-title-short} block any workload admissions or updates that match the policy criteria. You must configure and run the {product-title-short} admission controller for this enforcement to take effect.
+** In clusters with admission controller enforcement, the Kubernetes or {ocp} API server blocks all noncompliant deployments. In clusters without admission controller enforcement, {product-title-short} modifies noncompliant deployments to prevent pods from scheduling.
 ** For existing deployments, policy changes only result in enforcement at the next detection of the criteria, when a Kubernetes event occurs. For more information about enforcement, see "Deploy stage enforcement".
-* *Runtime*: Select *Enforce on Runtime* to have {product-title-short} delete all pods when an event in the pods matches the criteria of the policy.
+Runtime:: Set *Enforce on Runtime* to on to have {product-title-short} delete all pods when an event in the pods matches the criteria of the policy.
 +
 [WARNING]
 ====
 Policy enforcement can impact running applications or development processes.
 Before you enable enforcement options, inform all stakeholders and plan how to respond to automated enforcement actions.
 ====
-. Click *Next*.

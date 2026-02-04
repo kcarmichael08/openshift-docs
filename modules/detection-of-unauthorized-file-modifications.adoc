@@ -1,0 +1,21 @@
+// Module included in the following assemblies:
+//
+// * operating/manage_security_policies/configuring-file-activity-monitoring.adoc
+
+:_mod-docs-content-type: CONCEPT
+[id="detection-of-unauthorized-file-modifications_{context}"]
+= Detection of unauthorized file modifications
+
+[role="_abstract"]
+Protect your infrastructure by configuring {product-title-short} policies to monitor sensitive file activity. By using *Effective path* and *Actual path* criteria, you detect unauthorized modifications and host breakouts, even when attackers try to obscure their targets.
+
+By using these criteria, you gain a comprehensive security posture that bridges the gap between process intent and physical reality. You can address and neutralize tactics that attackers use to hide their tracks, such as symbolic links or volume mounts.
+
+While you use the *Effective path* to observe the file as the process sees it, you rely on the *Actual path* to unmask the true identity of the file on the host filesystem or underlying mount. This approach ensures that you detect unauthorized modifications even if an attacker camouflages the target.
+
+[IMPORTANT]
+====
+To use file activity monitoring, you must have enabled *File Activity Monitoring* within the *per Node Configuration* section during secured cluster configuration.
+
+For more information, see "Creating and modifying security policies".
+====

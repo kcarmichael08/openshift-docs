@@ -1,29 +1,38 @@
 // Module included in the following assemblies:
 //
 // * operating/manage_security_policies/custom-security-policies.adoc
+
 :_mod-docs-content-type: PROCEDURE
 [id="configure-policy-scope_{context}"]
 = Configuring the policy scope
 
 [role="_abstract"]
-You can define the scope of a policy to restrict or allow the policy for certain entities. You can enable the policy to apply only to a specific cluster, namespace, or deployment label. For policies configured for the deploy and runtime lifecycle stages, you can also exclude a cluster, namespace, deployment, or deployment label so that the policy is not applied. For the build lifecycle stage, you can exclude specific images so that, for example, those images will not trigger a violation during the continuous integration part of a continuous integration/continuous delivery (CI/CD) pipeline.
+Define the policy scope to control the specific resources in your environment that you want to monitor. You can restrict the policy to specific clusters and namespaces, or exclude deployments and images. By configuring these scopes, you ensure that the policy triggers violations only for relevant resources.
 
 .Procedure
 
-. Configure any of the following options:
-* *Restrict by scope*: This enables this policy to only be applied for a specific cluster, a namespace, or a deployment label.
-You can add multiple scopes and also use regular expressions in link:https://github.com/google/re2/wiki/Syntax[RE2 Syntax] for namespaces and labels.
-* *Exclude by scope*: Excludes specific deployments, clusters, namespaces, and deployment labels from the policy. The policy will not apply to the entities that you select. You can add multiple scopes and also use regular expressions in link:https://github.com/google/re2/wiki/Syntax[RE2 Syntax] for namespaces and labels. However, you cannot use regular expressions for selecting deployments.
+. Create scopes to restrict or exclude your policy from entities within your environment:
++
+[NOTE]
+====
+Node event source does not support scoping.
+====
+
+Restrict by scope:: Use this setting to apply the policy to a specific cluster, namespace, or deployment label.
+You can add one or more scopes and also use regular expressions in link:https://github.com/google/re2/wiki/Syntax[RE2 Syntax] for namespaces and labels.
+Exclude by scope:: Excludes specific deployments, clusters, namespaces, and deployment labels from the policy. The policy will not apply to the entities that you select. You can add one or more scopes and also use regular expressions in link:https://github.com/google/re2/wiki/Syntax[RE2 Syntax] for namespaces and labels.
 +
 [NOTE]
 ====
 This function is only available for policies configured for the deploy and runtime lifecycle stages.
 ====
-* *Exclude images*: For policies configured for the build lifecycle stage, you can exclude images from the policy. Select the images for which you do not want to trigger a violation.
+
+Exclude images:: For policies configured for the build lifecycle stage, you can exclude images from the policy. Select the images for which you do not want to trigger a violation.
 +
 [NOTE]
 ====
-The *Excluded Images* setting only applies when you check images in a continuous integration system with the *Build* lifecycle stage. 
+The *Excluded Images* setting only applies when you check images in a continuous integration system with the *Build* lifecycle stage.
 It does not have any effect if you use this policy to check running deployments in the *Deploy* lifecycle stage or runtime activities in the *Runtime* lifecycle stage.
 ====
+
 . Click *Next*.

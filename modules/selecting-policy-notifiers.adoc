@@ -1,18 +1,19 @@
 // Module included in the following assemblies:
 //
 // * operating/manage_security_policies/custom-security-policies.adoc
+
 :_mod-docs-content-type: PROCEDURE
 [id="selecting-policy-notifiers_{context}"]
 = Selecting policy notifiers
 
 [role="_abstract"]
-You can attach notifiers to the policy to send policy violations to email recipients, or to external tools such as Slack, Jira, Splunk, or other applications that use webhooks. 
+To receive alerts by email or an external tool when a policy violation occurs, select notifiers from the available list. These integrations notify you immediately of compliance events so you can respond quickly.
 
 .Prerequisite
 
-* You must have previously configured the notifier before it is visible and available to select in the list. You configure these integrations in the *Platform Configuration* -> *Integrations* page, in the *Notifier Integrations* section.
+* You have configured the notifier before it is visible and available to select in the list. You configure these integrations in the *Platform Configuration* -> *Integrations* page, in the *Notifier Integrations* section.
 
 .Procedure
 
-. Select the notifier that {product-title-short} will use to inform you when a policy is violated. 
+. Select one or more notifiers for {product-title-short} to use to inform you when a policy violation occurs.
 . Click *Next*.
