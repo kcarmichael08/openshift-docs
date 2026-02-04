@@ -2,14 +2,15 @@
 //
 // * operating/evaluate-security-risks.adoc
 // * operating/manage_security_policies/custom-security-policies.adoc
+
 :_mod-docs-content-type: PROCEDURE
 [id="create-policy-from-risk-view_{context}"]
 = Creating a security policy from the risk view
 
 [role="_abstract"]
-While evaluating risks in your deployments in the *Risk* view, when you apply local page filtering, you can create new security policies based on the filtering criteria you are using.
+You can generate a new security policy directly from the *Risk* view in the {product-title-short} portal to address specific security concerns. Use this method to create a policy based on the local page filtering criteria you apply to your risk data, ensuring the policy targets the specific risks you are analyzing.
 
 .Procedure
-. Go to the {product-title-short} portal and select *Risk* from the navigation menu.
-. Apply local page filtering criteria that you want to create a policy for.
-. Select *New Policy* and complete the required fields to create a new policy. For the steps to create a policy, see "Creating a security policy from the system policies view".
+. In the {product-title-short} portal, click *Risk*.
+. Apply the local page filtering criteria that you want to create a policy for.
+. Click *Create policy* and complete the required fields to create a new policy. For the steps to create a policy, see "Creating a security policy from the system policies view".

@@ -1,14 +1,16 @@
 // Module included in the following assemblies:
 //
 // * operating/manage_security_policies/custom-security-policies.adoc
+
 :_mod-docs-content-type: PROCEDURE
 [id="enable-policy_{context}"]
 = Enable the policy
 
 [role="_abstract"]
-Enable or disable the policy.
+Apply the configured rules to your environment by activating the policy. You can enable the policy to enforce these settings or disable the policy to stop its application.
 
 .Procedure
 
-. Select *Enable* make the policy active, or *Disable* to disable it.
-. Click *Next*.
+* Select whether to enable or disable the policy:
+** To enable the policy, select *Enable*.
+** To disable the policy, select *Disable*.

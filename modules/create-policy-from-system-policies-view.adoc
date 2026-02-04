@@ -1,11 +1,13 @@
 // Module included in the following assemblies:
 //
 // * operating/manage_security_policies/custom-security-policies.adoc
+
 :_mod-docs-content-type: PROCEDURE
 [id="create-policy-from-system-policies-view_{context}"]
 = Creating a security policy from the system policies view
 
-You can create new security policies from the system policies view.
+[role="_abstract"]
+Define a new security policy in the {product-title-short} portal to enforce security rules in your environment. Go to *Policy Management* to create a new policy and enter the required definition information. You can manage security settings by creating policies in the *Platform Configuration -> Policy* page.
 
 .Procedure
 . In the {product-title-short} portal, go to *Platform Configuration* -> *Policy Management*.
