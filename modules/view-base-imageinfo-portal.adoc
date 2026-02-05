@@ -1,0 +1,27 @@
+// Module included in the following assemblies:
+//
+// * operating/examine-images-for-vulnerabilities.adoc
+:_mod-docs-content-type: PROCEDURE
+[id="view-base-imageinfo-portal_{context}"]
+= Viewing base image information for an image in the {product-title-short} portal
+
+[role="_abstract"]
+
+{product-title-short} can provide information about the base images identified in your application, such as the base image name, digest, and age. You can use the {product-title-short} portal to view this information.
+
+.Procedure
+
+. Select *Vulnerability Management* -> *Results*.
+. Click *<number> Images*. 
+. Optional: To filter the display to only show base images, take the following actions:
+.. In the filter bar, select *Image component* and *Layer type*.
+.. In the filter bar, click *Filter by Layer type* and click *Base image*. 
+. Click the name of the image that you want to examine. 
+. Click the arrow to expand *Base image assessment*. The image name, digest, and image age are shown. 
++
+[NOTE]
+====
+{product-title-short} only displays this information when a base image was detected. To view vulnerabilities by application layer, you must use the filter bar to filter CVEs by layer type. See "View vulnerabilities in a base image layer". If the system did not detect any base image, all layers are considered application layers.
+====
+
+

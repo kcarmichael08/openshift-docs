@@ -198,6 +198,27 @@ include::modules/understanding-vulnerability-scores.adoc[leveloffset=+2]
 
 include::modules/disable-language-specific-vulnerability-scanning.adoc[leveloffset=+1]
 
+include::modules/base-images.adoc[leveloffset=+1]
+//We may want to move this to a different location after we complete the part of the feature that includes policy enforcement.
+
+//Define approved base images
+include::modules/define-base-images.adoc[leveloffset=+2]
+
+[role="_additional-resources"]
+.Additional resources
+
+* xref:../operating/manage-user-access/manage-role-based-access-control-3630.adoc#rbac-permission-sets_manage-role-based-access-control[System permission sets]
+* xref:../operating/manage-vulnerabilities/common-vuln-management-tasks.adoc#base-image-vulnerabilities_other[Viewing vulnerabilities in base images]
+
+include::modules/base-images-api.adoc[leveloffset=+3]
+
+[role="_additional-resources"]
+.Additional resources
+
+* xref:../operating/manage-user-access/manage-role-based-access-control-3630.adoc#rbac-permission-sets_manage-role-based-access-control[System permission sets]
+* xref:../operating/manage-vulnerabilities/common-vuln-management-tasks.adoc#base-image-vulnerabilities_other[Viewing vulnerabilities in base images]
+//ADD API REFERENCE AFTER API DOCS ARE PUBLISHED
+
 [id="additional-resources_examine-images-for-vulnerabilities"]
 == Additional resources
 
