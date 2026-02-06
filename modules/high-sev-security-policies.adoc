@@ -40,6 +40,7 @@ a|Alerts when a Red{nbsp}Hat image is not signed by the official link:https://ac
 |Deploy |Secure Shell (ssh) Port Exposed |Alerts when deployments expose port 22, which is commonly reserved for SSH access. |Enabled
 |Runtime |Cryptocurrency Mining Process Execution |Spawns the crypto-currency mining process. |Enabled
 |Runtime |iptables Execution |Detects when someone runs iptables, which is a deprecated way of managing network states in containers. |Enabled
+|Runtime |Kubernetes Actions: Attach to Pod |Alerts when the Kubernetes API receives a request to attach to a container. |Enabled
 |Runtime |Kubernetes Actions: Exec into Pod |Alerts when the Kubernetes API receives a request to run a command in a container. |Enabled
 |Runtime |Linux Group Add Execution |Detects when someone runs the addgroup or groupadd binary to add a Linux group. |Enabled
 |Runtime |Linux User Add Execution |Detects when someone runs the useradd or adduser binary to add a Linux user. |Enabled
