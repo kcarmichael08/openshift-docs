@@ -926,6 +926,7 @@ User issued container commands::
 | Kubernetes Resource
 | One of: +
 
+PODS_ATTACH +
 PODS_EXEC +
 PODS_PORTFORWARD +
 | ! `OR` only
