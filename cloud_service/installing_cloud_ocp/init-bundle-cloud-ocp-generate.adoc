@@ -1,6 +1,6 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="init-bundle-cloud-ocp-generate"]
-= Generating an init bundle or cluster registration secret for secured clusters
+= Generating a cluster registration secret or an init bundle for secured clusters
 include::modules/common-attributes.adoc[]
 :context: init-bundle-cloud-ocp-generate
 
@@ -8,38 +8,25 @@ toc::[]
 
 [role="_abstract"]
 
-Before you set up a secured cluster, you must create an init bundle or cluster registration secret (CRS). The secured cluster then uses this bundle or CRS to authenticate with the Central instance, also called Central. You can create an init bundle or CRS by using either the {product-title-short} portal or the `roxctl` CLI. You then apply the init bundle or CRS by using it to create resources.
+Before you set up a secured cluster, you must generate a cluster registration secret (CRS) or an init bundle that contains secrets for initial authentication with the Central instance, also called Central. Generate a CRS or an init bundle by using either the {product-title-short} portal or the `roxctl` CLI, and then apply the CRS or the init bundle to the secured cluster.
 
 [NOTE]
 ====
-You must have the `Admin` user role to create an init bundle.
+You must have the `Admin` user role to generate a CRS or an init bundle. Init bundles are still supported, but using a CRS is the preferred way to set up a secured cluster.
 ====
 
-{product-title-short} uses a special artifact during installation that allows the {product-title-short} Central component to communicate securely with secured clusters that you are adding. Before the 4.7 release, {product-title-short} used _init bundles_ exclusively for initiating the secure communication channel. Beginning with 4.7, {product-title-short} provides an alternative to init bundles called _cluster registration secrets_ (CRSes).
+Before you set up a secured cluster, you must generate a CRS or an init bundle. The secured cluster then uses the contained secrets for initial authentication with Central. Central is the specific service that provides the ACS Console, handles all API interactions, and manages data storage and image scanning. Use either the {product-title-short} portal or the `roxctl` CLI to generate a CRS or an init bundle.
 
-:FeatureName: Cluster registration secrets
-include::snippets/technology-preview.adoc[]
-
-include::snippets/cluster-registration-secrets.adoc[]
-
-You can use either an init bundle or a cluster registration secret (CRS) during installation of a secured cluster. However, {product-title-short} does not yet provide a way to create a CRS by using the portal. Therefore, you must create the CRS by using the `roxctl` CLI.
-
-Before you set up a secured cluster, you must create an init bundle or CRS. The secured cluster then uses this bundle or CRS to authenticate with Central. You can create an init bundle by using either the {product-title-short} portal or the `roxctl` CLI. If you are using a CRS, you must use the `roxctl` CLI to create it.
-
-You can then apply the init bundle or the CRS by using the {ocp} web console or by using the `oc` or `kubectl` CLI. If you install {product-title-short} by using Helm, you provide the init bundle or CRS when you run the `helm install` command.
+You can then apply the CRS or the init bundle by using the {ocp} web console or by using the `oc` or `kubectl` CLI. If you install {product-title-short} by using Helm, you provide the CRS or the init bundle when you run the `helm install` command.
 
 [id="generate-init-bundle-cloud-ocp"]
-== Generating an init bundle
+== Generating a CRS or an init bundle
 
 include::modules/portal-generate-init-bundle.adoc[leveloffset=+2]
-include::modules/roxctl-generate-init-bundle.adoc[leveloffset=+2]
-
-[id="generate-crs-cloud-ocp"]
-== Generating a CRS
-
 include::modules/crs-generate-roxctl.adoc[leveloffset=+2]
+include::modules/roxctl-generate-init-bundle.adoc[leveloffset=+2]
 
 [id="next-steps_init-bundle-cloud-ocp-generate"]
 == Next steps
 
-* xref:../../cloud_service/installing_cloud_ocp/init-bundle-cloud-ocp-apply.adoc#create-resource-init-bundle_init-bundle-cloud-ocp-apply[Applying an init bundle or cluster registration secret for secured clusters]
+* xref:../../cloud_service/installing_cloud_ocp/init-bundle-cloud-ocp-apply.adoc#create-resource-init-bundle_init-bundle-cloud-ocp-apply[Applying a cluster registration secret or an init bundle for secured clusters]

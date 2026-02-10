@@ -8,9 +8,6 @@
 
 Manage cluster registration secrets that allow communication between Central and secured clusters for the initial setup.
 
-:FeatureName: Cluster registration secrets
-include::snippets/technology-preview.adoc[]
-
 .Usage
 [source,terminal]
 ----

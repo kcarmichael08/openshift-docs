@@ -18,5 +18,5 @@ Before you install:
 The following list provides a high-level overview of installation steps:
 
 . Install xref:../installing_other/install-central-other.adoc#install-central-other[Central services] on a cluster using Helm charts or the `roxctl` CLI.
-. Generate and apply an xref:../installing_other/init-bundle-other.adoc#init-bundle-other[init bundle].
+. Generate and apply a xref:../installing_other/init-bundle-other.adoc#init-bundle-other[cluster registration secret or an init bundle].
 . Install xref:../installing_other/install-secured-cluster-other.adoc#install-secured-cluster-other[secured cluster resources] on each of your secured clusters.

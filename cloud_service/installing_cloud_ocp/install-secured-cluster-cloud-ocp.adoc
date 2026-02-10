@@ -13,8 +13,8 @@ You can install {product-title-managed-short} on your secured clusters by using 
 
 * During {product-title-short} installation, you noted the *Central instance* address. You can view this information by choosing *Advanced Cluster Security* -> *ACS Instances* from the cloud console navigation menu, and then clicking the ACS instance you created.
 * If you are installing by using the Operator, you created your {osp} cluster that you want to secure and installed the Operator on it.
-* You created and downloaded the init bundle or cluster registration secret (CRS) by using the ACS Console or by using the `roxctl` CLI.
-* You applied the init bundle or CRS on the cluster that you want to secure, unless you are installing by using a Helm chart.
+* You generated and downloaded the cluster registration secret (CRS) or the init bundle by using the ACS Console or by using the `roxctl` CLI.
+* You applied the CRS or the init bundle on the cluster that you want to secure, unless you are installing by using a Helm chart.
 
 
 [id="installing-sc-operator-cloud-ocp"]
@@ -42,8 +42,8 @@ include::modules/acs-quick-install-secured-cluster-using-helm.adoc[leveloffset=+
 
 [role="_additional-resources"]
 .Additional resources
-* xref:../../cloud_service/installing_cloud_ocp/init-bundle-cloud-ocp-generate.adoc#init-bundle-cloud-ocp-generate[Generating an init bundle for secured clusters]
-* xref:../../cloud_service/installing_cloud_ocp/init-bundle-cloud-ocp-apply.adoc#init-bundle-cloud-ocp-apply[Applying an init bundle for secured clusters]
+* xref:../../cloud_service/installing_cloud_ocp/init-bundle-cloud-ocp-generate.adoc#init-bundle-cloud-ocp-generate[Generating a cluster registration secret or an init bundle for secured clusters]
+* xref:../../cloud_service/installing_cloud_ocp/init-bundle-cloud-ocp-apply.adoc#init-bundle-cloud-ocp-apply[Applying a cluster registration secret or an init bundle for secured clusters]
 
 [id="configure-secured-cluster-services-helm-chart-customizations-cloud-ocp"]
 === Configuring the secured-cluster-services Helm chart with customizations
@@ -66,8 +66,8 @@ include::modules/install-secured-cluster-services-helm-chart.adoc[leveloffset=+3
 
 [role="_additional-resources"]
 .Additional resources
-* xref:../../cloud_service/installing_cloud_ocp/init-bundle-cloud-ocp-generate.adoc#init-bundle-cloud-ocp-generate[Generating an init bundle for secured clusters]
-* xref:../../cloud_service/installing_cloud_ocp/init-bundle-cloud-ocp-apply.adoc#init-bundle-cloud-ocp-apply[Applying an init bundle for secured clusters]
+* xref:../../cloud_service/installing_cloud_ocp/init-bundle-cloud-ocp-generate.adoc#init-bundle-cloud-ocp-generate[Generating a cluster registration secret or an init bundle for secured clusters]
+* xref:../../cloud_service/installing_cloud_ocp/init-bundle-cloud-ocp-apply.adoc#init-bundle-cloud-ocp-apply[Applying a cluster registration secret or an init bundle for secured clusters]
 
 include::modules/change-config-options-after-deployment.adoc[leveloffset=+2]
 
