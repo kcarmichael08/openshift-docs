@@ -20,4 +20,4 @@ Scanner V4 is not enabled by default, but you can enable it during installation.
     scannerComponent: Enabled
 ----
 
-. Configure your init bundle or cluster registration secret (CRS) to allow communication between Central and the secured cluster. For more information, see "Generating and applying an init bundle or cluster registration secret for RHACS on Red Hat OpenShift".
+. Generate a cluster registration secret (CRS) or an init bundle to allow communication between Central and the secured cluster. For more information, see "Generating and applying a cluster registration secret (CRS) or an init bundle for RHACS on Red Hat OpenShift".

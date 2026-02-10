@@ -7,7 +7,7 @@
 = Installing the central-services Helm chart without customizations
 
 [role="_abstract"]
-You can install the `central-services` Helm chart to deploy the centralized components, Central and Scanner.
+You can install the `central-services` Helm chart to deploy the centralized components: Central and Scanner.
 
 The output of the installation command includes:
 

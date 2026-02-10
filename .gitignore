@@ -16,3 +16,6 @@ bin
 commercial_package
 .vscode
 .vale
+claude-review.sh
+.gitignore
+*.md

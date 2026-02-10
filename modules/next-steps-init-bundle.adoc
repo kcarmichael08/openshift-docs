@@ -7,6 +7,6 @@
 = Next steps
 
 [role="_abstract"]
-After you have generated and applied the init bundle or cluster registration secret (CRS), you can proceed to install the services.
+After you have generated and applied the cluster registration secret (CRS) or the init bundle, you can proceed to install the services.
 
 Install {rh-rhacs-first} secured cluster services in all clusters that you want to monitor.
