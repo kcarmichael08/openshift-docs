@@ -60,6 +60,7 @@ where:
 `<username>`:: Specifies the user name for your pull secret for Red{nbsp}Hat Container Registry authentication.
 `<password>`:: Specifies the password for your pull secret for Red{nbsp}Hat Container Registry authentication.
 --
+
 [id="installing-kube-roxctl-steps"]
 == Installing {product-title-short} on Kubernetes platforms by using the `roxctl` CLI
 
