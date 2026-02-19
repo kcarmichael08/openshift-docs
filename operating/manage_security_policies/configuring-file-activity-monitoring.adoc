@@ -1,0 +1,26 @@
+:_mod-docs-content-type: ASSEMBLY
+[id="configuring-file-activity-monitoring"]
+= Configuring file activity monitoring
+:context: file-activity-monitoring
+:toc: macro
+:toclevels: 3
+
+toc::[]
+
+[role="_abstract"]
+Configure policies in Red{nbsp}Hat Advanced Cluster Security (RHACS) to detect and alert on sensitive file accesses or operations, for containerized workloads or cluster nodes. Define criteria to identify high risk accesses of sensitive files, such as opening a file for writing, file deletion or permission changes, and optionally trigger notifications. Set enforcement actions to automatically block noncompliant workloads.
+
+include::modules/common-attributes.adoc[]
+
+:FeatureName: File activity monitoring
+include::snippets/technology-preview.adoc[]
+
+include::modules/detection-of-unauthorized-file-modifications.adoc[leveloffset=+1]
+
+include::modules/event-source-selection-for-file-activity-policies.adoc[leveloffset=+1]
+
+[role="_additional-resources"]
+.Additional resources
+* xref:../../operating/manage_security_policies/custom-security-policies.adoc#custom-security-policies[Creating and modifying security policies]
+
+include::modules/file-activity-monitoring-limitations.adoc[leveloffset=+1]

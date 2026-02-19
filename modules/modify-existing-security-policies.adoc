@@ -1,20 +1,21 @@
 // Module included in the following assemblies:
 //
 // * operating/manage_security_policies/custom-security-policies.adoc
+
 :_mod-docs-content-type: PROCEDURE
 [id="modify-existing-security-policies_{context}"]
 = Modifying existing security policies
 
 [role="_abstract"]
-You can edit the policies you have created and the existing default policies provided by {product-title} that you have cloned.
+You can update security configurations in the {product-title-short} portal to adapt to changing security requirements. Select a specific policy to edit its fields and save your changes. To customize a default system policy, you must clone the policy to create an editable copy.
 
 .Procedure
-. In the {product-title-short} portal, go to *Platform Configuration* -> *Policy Management*.
-. From the *Policies* page, select the policy you want to edit.
-. Select *Actions* -> *Edit policy*.
+. In the {product-title-short} portal, click *Platform Configuration* -> *Policy Management*.
+. Select the policy you want to edit.
+. From the *Actions* list, select *Edit policy*.
 +
 [NOTE]
 ====
 You cannot edit certain fields of default system policies. To make changes to a default policy, clone the policy and edit the copy.
 ====
-. Edit the fields that you want to change and click *Save*.
+. Edit the fields that you want to change, and then click *Save*.

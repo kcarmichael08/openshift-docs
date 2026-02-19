@@ -1,20 +1,28 @@
 // Module included in the following assemblies:
 //
 // * operating/manage_security_policies/custom-security-policies.adoc
+
 :_mod-docs-content-type: PROCEDURE
 [id="select-policy-lifecycle_{context}"]
 = Selecting the policy lifecycle stage
 
 [role="_abstract"]
-Select the lifecycle stage when the policy is used. For more information, see "Understanding the {product-title-short} policy evaluation engine".
+Define when {product-title-short} evaluates policies by assigning a specific lifecycle stage. You can target these specific phases to inspect images during the continuous integration (CI) process or monitor workload activity on a live node, ensuring that enforcement actions occur at the appropriate time.
+
+For more information, see "Understanding the {product-title-short} policy evaluation engine".
 
 .Procedure
 
-. Select the *Lifecycle stages* for the policy: 
-* *Build*: Policies in this stage can only inspect image criteria that are related to the image registry, content, vulnerability data and the scanning process. They are evaluated in the CI pipeline, allowing policy violations to break the build when enforced. Violations from this stage are not stored by {product-title-short}.
-* *Deploy*: Policies in this stage can inspect workload configurations and their images. These policies are evaluated while creating or updating a workload resource, and re-evaluated periodically or on-demand. When enforced, a policy violation can cause the admission controller to reject the deploy or update attempt, or scale the workload replicas down to zero.  
-* *Build and Deploy*: Select this stage if you want your policy to inspect images in both the build pipeline and during workload admission, and to apply enforcement to either or both stages.
-* *Runtime*: Policies in this stage inspect either workload activity or Kubernetes resource operations associated with the following two event sources:
-** *Deployment*: Runtime policies inspecting workload activity require at least one workload activity criterion. Workload activity criteria can be combined with image or workload configuration criteria. Enforcement terminates the offending pod, and then the pod is re-created. 
-** *Audit logs*: Runtime policies that evaluate Kubernetes resource operations look for sensitive operations by using the Kubernetes audit log. You cannot configure enforcement for policies that use this source, because the operations have already occurred.
+. Select the *Lifecycle stages* for the policy:
++
+The following options are associated with the lifecycle stages:
+
+Build:: Policies in this stage inspect image criteria such as the image registry, content, vulnerability data, and the scanning process. The CI pipeline evaluates these policies during the build process. If you enable enforcement, a policy violation fails the build. {product-title-short} does not store violations from this stage.
+Deploy:: Policies in this stage inspect workload configurations and their images. {product-title-short} evaluates these policies when you create or update a workload resource and re-evaluates them periodically or on demand. When you enable enforcement, a policy violation causes the admission controller to reject the deployment or update try, or scale the workload replicas to zero.
+Build and Deploy:: Select this stage if you want your policy to inspect images in both the build pipeline and during workload admission, and to apply enforcement to either or both stages.
+Runtime:: Policies in this stage inspect either workload activity or Kubernetes resource operations associated with the following event sources:
+Deployment::: To use runtime policies for workload activity, you must include at least one workload activity criterion. You can combine workload activity criteria with image or workload configuration criteria. If you enable enforcement, {product-title-short} terminates the offending pod, and the orchestrator then re-creates the pod.
+Audit logs::: Runtime policies that evaluate Kubernetes resource operations look for sensitive operations by using the Kubernetes audit log. You cannot configure enforcement for policies that use this source, because the operations have already occurred.
+Node::: Runtime policies that monitor file activity on the host operating system of your Kubernetes nodes. These policies detect unauthorized file operations, such as changes to sensitive system files, by using the actual file path on the host. Policies that use this event source do not support automated enforcement or exclusions in the {product-title-short} console.
+
 . Click *Next*.
