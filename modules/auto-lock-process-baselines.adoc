@@ -6,9 +6,9 @@
 = Configuring auto-lock for process baselines
 
 [role="_abstract"]
-You can configure {product-title-short} to automatically lock process baselines when they leave the observation period. The auto-lock feature must be enabled in both Central and in the secured cluster. 
+You can configure {product-title} ({product-title-short}) to automatically lock process baselines when they leave the observation period. You must enable auto-lock feature in both Central and in the secured cluster. 
 
-Note the following guidelines when using this feature:
+Follow these guidelines when using auto-lock:
 
 * The feature is enabled in Central by default and disabled in the secured clusters by default. Therefore, enabling the feature does not require restarting Central. However, changing the state of the feature in Central does require a restart of Central. 
 * The feature is only enabled for process baselines for secured clusters where the feature is enabled.

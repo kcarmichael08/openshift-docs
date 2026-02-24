@@ -11,9 +11,9 @@ It shows the number of policy violations, process activities, and container term
 
 You can select *Event Timeline* to view more details.
 
-The *Event Timeline* modal box shows events for all pods for the selected deployment.
+The *Event Timeline* shows events for all pods for the selected deployment.
 
-The events on the timeline are categorized as:
+{product-title} categorizes the events on the timeline as the following types:
 
 * Process activities
 * Policy violations
@@ -21,13 +21,13 @@ The events on the timeline are categorized as:
 * Container terminations
 
 The events appear as icons on a timeline.
-To see more details about an event, hold your mouse pointer over the event icon.
+To see more details about an event, hover over the event icon.
 The details appear in a tooltip.
 
 * Click *Show Legend* to see which icon corresponds to which type of event.
 * Select *Export* -> *Download PDF* or *Export* -> *Download CSV* to download the event timeline information.
-* Select the *Show All* drop-down menu to filter which type of events are visible on the timeline.
-* Click on the expand icon to see events separately for each container in the selected pod.
+* Select *Show All* and choose the filter to restrict which type of events are visible on the timeline.
+* You can expand the display to show events separately for each container in the selected pod.
 
 All events in the timeline are also visible in the minimap control at the bottom.
 The minimap controls the number of events visible in the event timeline.
@@ -36,14 +36,14 @@ To do this, decrease the highlighted area from left or right sides (or both), an
 
 [NOTE]
 ====
-* When containers restart, {product-title}:
+* When containers restart, {product-title} ({product-title-short}) does the following:
 ** Shows information about container termination and restart events for up to 10 inactive container instances for each container in a pod.
-For example, for a pod with two containers `app` and `sidecar`, {product-title} keeps activity for up to 10 `app` instances and up to 10 `sidecar` instances.
+For example, for a pod with two containers `app` and `sidecar`, {product-title-short} keeps activity for up to 10 `app` instances and up to 10 `sidecar` instances.
 ** Does not track process activities associated with the previous instances of the container.
-* {product-title} only shows the most recent execution of each (process name, process arguments, UID) tuple for each pod.
-* {product-title} shows events only for the active pods.
-* {product-title} adjusts the reported timestamps based on time reported by Kubernetes and the Collector.
+* {product-title-short} only shows the most recent execution of each (process name, process arguments, UID) tuple for each pod.
+* {product-title-short} shows events only for the active pods.
+* {product-title-short} adjusts the reported timestamps based on time reported by Kubernetes and Collector.
 Kubernetes timestamps use second-based precision, and it rounds off the time to the nearest second.
-However, the Collector uses more precise timestamps.
-For example, if Kubernetes reports the container start time as `10:54:48`, and the Collector reports a process in that container started at `10:54:47.5349823`, {product-title} adjusts the container start time to `10:54:47.5349823`.
+However, Collector uses more precise timestamps.
+For example, if Kubernetes reports the container start time as `10:54:48`, and the Collector reports a process in that container started at `10:54:47.5349823`, {product-title-short} adjusts the container start time to `10:54:47.5349823`.
 ====

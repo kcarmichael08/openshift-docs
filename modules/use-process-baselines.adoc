@@ -6,13 +6,13 @@
 = Using process baselines
 
 [role="_abstract"]
-You can minimize risk by using process baselining for infrastructure security. With this approach, {product-title} first discovers existing processes and creates a baseline.
+You can minimize risk by using process baselining for infrastructure security. With this approach, {product-title} ({product-title-short}) first discovers existing processes and creates a baseline.
 Then it operates in the default deny-all mode and only allows processes listed in the baseline to run.
 
 Process baselines::
 
-When you install {product-title}, there is no default process baseline.
-As {product-title} discovers deployments, it creates a process baseline for every container type in a deployment.
+When you install {product-title-short}, there is no default process baseline.
+As {product-title-short} discovers deployments, it creates a process baseline for every container type in a deployment.
 Then it adds all discovered processes to their own process baselines.
 
 Process baseline states::
@@ -21,14 +21,14 @@ During the process discovery phase, all baselines are in an unlocked state.
 
 In an *unlocked* state:
 
-* When {product-title} discovers a new process, it adds that process to the process baseline.
+* When {product-title-short} discovers a new process, it adds that process to the process baseline.
 * Processes do not show up as risks and do not trigger any violations.
 
-After an hour from when {product-title} receives the first process indicator from a container in a deployment, it finishes the process discovery phase. For information about how to configure the duration of the discovery phase, see "Configuring the observation period for the process baseline".
+After an hour from when {product-title-short} receives the first process indicator from a container in a deployment, it finishes the process discovery phase. For information about how to configure the duration of the discovery phase, see "Configuring the observation period for the process baseline".
 
 At this point:
 
-* {product-title} stops adding processes to the process baselines.
+* {product-title-short} stops adding processes to the process baselines.
 * New processes that are not in the process baseline show up as risks, but they do not by default trigger any violations.
 
 To generate violations, you must either manually lock the process baseline, or enable process baseline auto-lock feature. 
@@ -43,13 +43,13 @@ For more information about automatically locking process baselines, see "Configu
 
 In a *locked* state:
 
-* {product-title} stops adding processes to the process baselines.
+* {product-title-short} stops adding processes to the process baselines.
 * New processes that are not in the process baseline trigger violations.
 
 Independent of the locked or unlocked baseline state, you can always add or remove processes from the baseline.
 
 [NOTE]
 ====
-For a deployment, if each pod has multiple containers in it, {product-title} creates a process baseline for each container type.
+For a deployment, if each pod has more than one container in it, {product-title-short} creates a process baseline for each container type.
 For such a deployment, if some baselines are locked and some are unlocked, the baseline status for that deployment shows up as *Mixed*.
 ====

@@ -16,3 +16,19 @@ bin
 commercial_package
 .vscode
 .vale
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+.venv/
+env/
+bin/
+lib/
+include/
+
+# Environment variables / Credentials (IMPORTANT!)
+.env
+.secrets

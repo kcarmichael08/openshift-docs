@@ -5,11 +5,11 @@
 [id="remove-process-from-baseline_{context}"]
 = Removing a process from the baseline
 
-You can remove a process from the baseline.
+[role="_abstract"]
+You can remove a process from the baseline so that it is not considered when the system evaluates the baseline.
 
 .Procedure
-. In the {product-title-short} portal, select *Risk* from the navigation menu.
+. In the {product-title} ({product-title-short}) portal, select *Risk* from the navigation menu.
 . Select a deployment from the list of deployments in the default *Risk* view.
-Deployment details open in a panel on the right.
-. In the *Deployment* details panel, select the *Process Discovery* tab.
+. Select the *Process discovery* tab.
 . Under the *Spec Container baselines* section,  click the *Remove* icon for the process you want to remove from the process baseline.
