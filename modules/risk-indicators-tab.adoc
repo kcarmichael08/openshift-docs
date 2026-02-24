@@ -3,12 +3,12 @@
 // * operating/evaluate-security-risks.adoc
 :_mod-docs-content-type: CONCEPT
 [id="risk-indicators-tab_{context}"]
-= Risk Indicators tab
+= Risk indicators tab
 
 [role="_abstract"]
-The *Risk Indicators* tab of the *Risk Details* panel explains the discovered risks.
+The *Risk indicators* tab explains the discovered risks.
 
-The *Risk Indicators* tab includes the following sections:
+The *Risk indicators* tab includes the following sections:
 
 * *Policy Violations*: The names of the policies that are violated for the selected deployment.
 * *Suspicious Process Executions*: Suspicious processes, arguments, and container names that the process ran in.
@@ -22,6 +22,6 @@ The *Risk Indicators* tab includes the following sections:
 
 [NOTE]
 ====
-Not all sections are visible in the *Risk Indicators* tab.
+Not all sections are visible in the *Risk indicators* tab.
 {product-title} displays only relevant sections that affect the selected deployment.
 ====

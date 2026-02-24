@@ -3,11 +3,11 @@
 // * operating/evaluate-security-risks.adoc
 :_mod-docs-content-type: CONCEPT
 [id="understanding-filtering-to-policy-mapping_{context}"]
-= Understanding how {product-title} transforms the filtering criteria into policy criteria
+= Understanding how {product-title-short} transforms the filtering criteria into policy criteria
 
 When you create new security policies from the *Risk* view, based on the filtering criteria you use, not all criteria are directly applied to the new policy.
 
-* {product-title} converts the *Cluster*, *Namespace*, and *Deployment* filters to equivalent policy scopes.
+* {product-title} ({product-title-short}) converts the *Cluster*, *Namespace*, and *Deployment* filters to equivalent policy scopes.
 ** Local page filtering on the *Risk* view combines the search terms by using the following methods:
 
 *** Combines the search terms within the same category with an `OR` operator.
@@ -16,7 +16,7 @@ For example, if the search query is `Cluster:A,B`, the filter matches deployment
 For example, if the search query is `Cluster:A+Namespace:Z`, the filter matches deployments in `cluster A` and in `namespace Z`.
 ** When you add multiple scopes to a policy, the policy matches violations from any of the scopes.
 *** For example, if you search for `(Cluster A OR Cluster B) AND (Namespace Z)` it results in two policy scopes, `(Cluster=A AND Namespace=Z)` OR `(Cluster=B AND Namespace=Z)`.
-* {product-title} drops or modifies filters that do not directly map to policy criteria and reports the dropped filters.
+* {product-title-short} drops or modifies filters that do not directly map to policy criteria and reports the dropped filters.
 
 The following table lists how the filtering search attributes map to the policy criteria:
 

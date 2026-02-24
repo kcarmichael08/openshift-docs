@@ -3,7 +3,7 @@
 // * operating/evaluate-security-risks.adoc
 :_mod-docs-content-type: CONCEPT
 [id="risk-view-details_{context}"]
-= Risk view
+= Viewing deployments at risk
 
 [role="_abstract"]
 The *Risk* view lists all deployments from all clusters, sorted by a multi-factor risk metric based on policy violations, image contents, deployment configuration, and other similar factors.
@@ -17,11 +17,10 @@ The *Risk* view shows list of deployments with following attributes for each row
 * *Namespace*: The namespace in which the deployment exists.
 * *Priority*: A priority ranking based on severity and risk metrics.
 
-In the *Risk* view, you can:
+In the *Risk* view, you can complete these actions:
 
 * Select a column heading to sort the violations in ascending or descending order.
-* Use the filter bar to filter violations.
-//See the link:/docs/search/#use-local-page-filtering[Use local page filtering] topic for more information.
+* Use the filter bar to filter violations. For example, you can use the `Process Name:<name>` query in the filter bar to find deployments that have the specified process. 
 * Create a new policy based on the filtered criteria.
 
 To view more details about the risks for a deployment, select a deployment in the *Risk* view.
