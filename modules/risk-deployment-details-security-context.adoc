@@ -5,6 +5,6 @@
 [id="risk-deployment-details-security-context_{context}"]
 = Security context section
 
-The *Security Context* section shows details about the following:
+The *Security Context* section in the *Deployment details* tab shows the following details about the security context:
 
 * *Privileged*: Lists `true` if the container is privileged.

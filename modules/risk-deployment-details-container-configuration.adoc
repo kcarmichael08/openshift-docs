@@ -5,7 +5,8 @@
 [id="risk-deployment-details-container-configuration_{context}"]
 = Container configuration section
 
-The container configuration section shows details about the following:
+[role="_abstract"]
+The container configuration section in the *Deployment details* tab shows details about the following items:
 
 * *Image Name*: The name of the image that is deployed.
 * *Resources*
