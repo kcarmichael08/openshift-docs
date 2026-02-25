@@ -1,0 +1,27 @@
+// Module included in the following assemblies:
+//
+// * operating/examine-images-for-vulnerabilities.adoc
+:_mod-docs-content-type: PROCEDURE
+[id="base-image-vulnreport_{context}"]
+= Create a report of vulnerabilities in a base image
+
+[role="_abstract"]
+
+You can create a report of vulnerabilities in layers that are identified as the base image layers for an image. 
+
+.Prerequisite
+
+* A user with the `ImageAdministration` permission must configure the base image repository under *Platform Configuration* -> *Base Images* so that the system can identify and detect base images.
+
+.Procedure
+
+. Select *Vulnerability Management* -> *Results*.
+. Click *<number> Images*. 
+. Click the name of the image that you want to examine. You must select an image that has been configured as a base image in *Platform Configuration* -> *Base Images*.
+. To display the common vulnerabilities and exposures (CVEs) only in the base layer, take the following actions:
+.. In the *Observed* tab, in the filter bar, select *Image component* and *Layer type*.
+.. In the filter bar, click *Filter by Layer type* and click *Base image*. The display is filtered to show only CVEs that are contained in the base layer.
+. In the top menu, click *Create report* and select *Export report as CSV*.
+. Click *Generate report*.
+. Click *View status in reports table*.
+. Click *Report ready for download* to download the file. The report includes CVEs affecting the base image layer by component, and some CVEs might affect multiple components. Therefore, the report totals can differ from the number of CVEs for an image shown in the {product-title-short} portal when results have been filtered by using the *Base image* layer type.
