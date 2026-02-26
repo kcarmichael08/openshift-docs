@@ -1,0 +1,35 @@
+// Module included in the following assemblies:
+//
+// * operating/manage_security_policies/custom-security-policies.adoc
+
+:_mod-docs-content-type: PROCEDURE
+[id="verifying-file-activity-policies_{context}"]
+= Verifying file activity policies
+
+[role="_abstract"]
+You can verify that your file activity policies are functioning correctly by manually triggering a violation on a monitored component.
+
+.Prerequisites
+
+* You have configured a file activity policy for a *Deployment* or *Node* event source.
+* You have identified the specific files and operations monitored by your policy.
+* You have access to the command line interface of the monitored node or deployment.
+
+.Procedure
+. Trigger a file activity violation on a monitored node or deployment by running the following command, for example:
++
+[source,terminal]
+----
+$ touch /etc/passwd
+----
+
+. Choose the appropriate method to confirm that the alert is displayed:
+* For deployment policies, complete the following steps:
+.. In the {product-title-short} portal, click *Violations*.
+.. Verify that the alert is displayed in the list.
+* For node policies, verify that the notifier has received an alert, or query the alerts API to locate the violation JSON data.
++
+[NOTE]
+====
+The {product-title-short} portal does not display node violations. To view these alerts, use the API or configured notifiers.
+====

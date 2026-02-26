@@ -228,6 +228,8 @@ Topics:
     File: use-admission-controller-enforcement
   - Name: Creating and modifying security policies
     File: custom-security-policies
+  - Name: Configuring file activity monitoring
+    File: configuring-file-activity-monitoring
   - Name: Managing policies as code
     File: managing-policies-as-code
   - Name: Security policy reference

@@ -34,7 +34,7 @@ To change the name, you must delete and re-create the object.
 | Parameter | Description
 
 |`admissionControl.enforcement`
-| This parameter determines if you configured the admission controller to enforce policies that have enforcement enabled. For a new secured cluster deployed with {product-title-short} 4.9, the default value is `Enabled`. For secured clusters updating from {product-title-short} versions before 4.9, previous values for the admission controller configuration parameters determine the value of this parameter. Before the update, if either of the `admissionControl.listenOnCreates` or `admissionControl.listenOnUpdates` parameters was set to `true`, the value of this parameter defaults to `Enabled` after upgrade. If both of these parameters were set to `false`, the default value becomes `Disabled` on update. 
+| This parameter determines if you configured the admission controller to enforce policies that have enforcement enabled. For a new secured cluster deployed with {product-title-short} 4.9, the default value is `Enabled`. For secured clusters updating from {product-title-short} versions before 4.9, previous values for the admission controller configuration parameters determine the value of this parameter. Before the update, if either of the `admissionControl.listenOnCreates` or `admissionControl.listenOnUpdates` parameters was set to `true`, the value of this parameter defaults to `Enabled` after upgrade. If both of these parameters were set to `false`, the default value becomes `Disabled` on update.
 
 | `admissionControl.listenOnCreates`
 | This parameter is deprecated. {product-title-short} checks the value during updates to version 4.9 and is used to set a default value for the new `admissionControl.enforcement` parameter. On new installations, changing this parameter has no effect.
@@ -72,10 +72,10 @@ The default value is `BreakGlassAnnotation`.
 | This field is deprecated. Setting it has no effect.
 
 |`admissionControl.failurePolicy`
-| Determines whether the API server request is allowed (fail open) or blocked (fail closed) if an error or timeout happens in the {product-title-short} validating webhook's evaluation. Valid values are `Ignore` and `Fail`. The default value is `Ignore` to fail open. 
+| Determines whether the API server request is allowed (fail open) or blocked (fail closed) if an error or timeout happens in the {product-title-short} validating webhook's evaluation. Valid values are `Ignore` and `Fail`. The default value is `Ignore` to fail open.
 
 | `admissionControl.timeoutSeconds`
-| The ability to configure this parameter is deprecated. {product-title-short} uses a preset value for the timeout period and you cannot change it. This parameter is ignored. 
+| The ability to configure this parameter is deprecated. {product-title-short} uses a preset value for the timeout period and you cannot change it. This parameter is ignored.
 |===
 
 [id="scanner-configuration-settings_{context}"]
@@ -252,6 +252,9 @@ This value is deprecated. `Regular` and `Slim` images are identical.
 
 | `perNode.compliance.resources.limits`
 | Use this parameter to override the default resource limits for Compliance.
+
+| `perNode.sfa.agent`
+| Use this parameter to enable file activity monitoring for the secured cluster. Set to `Enabled`.
 
 | `perNode.taintToleration`
 | To ensure comprehensive monitoring of your cluster activity, {product-title}  runs services on every node in the cluster, including tainted nodes by default.

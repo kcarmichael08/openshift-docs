@@ -1,16 +1,18 @@
 // Module included in the following assemblies:
 //
 // * operating/manage_security_policies/about-security-policies.adoc
+
 :_mod-docs-content-type: PROCEDURE
 [id="disable-associated-policies_{context}"]
 = Disabling a policy
 
 [role="_abstract"]
-You can disable a policy by using the {product-title-short} portal.
+Disable a policy in the {product-title-short} portal to prevent the system from using it when evaluating workload operations. To deactivate the policy, edit the policy behavior settings and turn off the activation state.
 
 .Procedure
-. In the {product-title-short} portal, go to *Platform Configuration* -> *Policy Management*. For default policies, you cannot edit enforcement options. 
-. If you do not want the policy to be evaluated against workload operations, select *Actions* -> *Edit policy*.
-. In the left navigation menu, select *Actions*.
+. In the {product-title-short} portal, click *Platform Configuration* -> *Policy Management*. For default policies, you cannot edit enforcement options.
+. Select the policy you want to edit.
+. From the *Actions* list, select *Edit policy*.
+. Expand *Policy behavior*, and then select *Actions*.
 . In the *Activation state* field, select *Disable*.
 . Save the policy.
