@@ -10,7 +10,7 @@ You can enable Scanner V4 after installation.
 
 .Prerequisite
 
-* You set up Central and the secured cluster by using an init bundle or CRS so that they can communicate with each other.
+* You set up Central and the secured cluster by using a CRS or an init bundle so that they can communicate with each other.
 
 .Procedure
 

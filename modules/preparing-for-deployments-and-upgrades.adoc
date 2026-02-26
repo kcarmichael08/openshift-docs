@@ -17,7 +17,11 @@ The following table lists the actions you must take for each deployment scenario
 |No action is needed if Central is also Operator-managed. The Operator automates rotation.
 
 |Helm-managed secured clusters
-|Re-register with a new init bundle or cluster registration secret before the 5-year CA expires.
+a|Remove the cluster and re-register it with a new cluster registration secret (CRS) or init bundle before the 5-year CA expires. Follow these steps:
+
+. Delete the cluster from Central.
+. Remove the Secured Cluster CR (or delete all the `tls-cert-*` certificates and redeploy the cluster. 
+. Register the secured cluster with a new CRS.
 
 |Upgrading a Central instance older than 4 years to {rh-rhacs-first} 4.9
 a|
