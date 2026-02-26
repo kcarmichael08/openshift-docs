@@ -15,7 +15,7 @@ When you apply the init bundle to a secured cluster, it creates the necessary TL
 * `sensor-tls`
 * `admission-control-tls`
 
-You can generate init bundles using either the {product-title-short} portal or the `roxctl` CLI. The bundle is generated as a YAML file containing the required secrets. Because this file contains sensitive credentials, it must be stored securely.
+You can generate init bundles by using either the {product-title-short} portal or the `roxctl` CLI. The bundle is generated as a YAML file containing the required secrets. Because this file contains sensitive credentials, it must be stored securely.
 
 [NOTE]
 ====

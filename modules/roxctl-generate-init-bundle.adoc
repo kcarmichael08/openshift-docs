@@ -24,7 +24,7 @@ ifeval::["{context}" == "init-bundle-cloud-other-generate"]
 :cloud-other-generate:
 endif::[]
 
-You can create an init bundle with secrets by using the `roxctl` CLI.
+You can generate an init bundle with secrets by using the `roxctl` CLI.
 
 [NOTE]
 ====
@@ -77,7 +77,7 @@ $ roxctl -e "$ROX_CENTRAL_ADDRESS" \
 [IMPORTANT]
 ====
 Ensure that you store this bundle securely because it contains secrets.
-You can use the same bundle to set up multiple secured clusters.
+You can use the same bundle to set up more than one secured cluster.
 ====
 
 ifeval::["{context}" == "init-bundle-cloud-other"]

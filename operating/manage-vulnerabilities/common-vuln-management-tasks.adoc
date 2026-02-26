@@ -126,6 +126,19 @@ include::modules/vulnerability-management-accept-deferrals-false-positives.adoc[
 //other
 include::modules/identify-dockerfile-line-component-cve.adoc[leveloffset=+1]
 
+include::modules/base-image-vulnerabilities.adoc[leveloffset=+1]
+
+[role="_additional-resources"]
+.Additional resources
+
+* xref:../../operating/examine-images-for-vulnerabilities.adoc#base-images_examine-images-for-vulnerabilities[Defining base images used in application development]
+
+include::modules/view-base-imageinfo-portal.adoc[leveloffset=+2]
+
+include::modules/view-base-image-vuln.adoc[leveloffset=+3]
+
+include::modules/base-image-vulnreport.adoc[leveloffset=+3]
+
 include::modules/vulnerability-management-upgrade-component.adoc[leveloffset=+1]
 
 include::modules/vulnerability-management-export-workloads.adoc[leveloffset=+1]

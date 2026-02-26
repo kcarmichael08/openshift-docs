@@ -1,6 +1,6 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="init-bundle-cloud-other-generate"]
-= Generating an init bundle or cluster registration secret for Kubernetes secured clusters
+= Generating a cluster registration secret or an init bundle for Kubernetes secured clusters
 include::modules/common-attributes.adoc[]
 :context: init-bundle-cloud-other-generate
 
@@ -8,30 +8,25 @@ toc::[]
 
 [role="_abstract"]
 
-Before you set up a secured cluster, you must create an init bundle or cluster registration secret (CRS). The secured cluster then uses this bundle or CRS to authenticate with the Central instance, also called Central. You can create an init bundle by using either the {product-title-short} portal or the `roxctl` CLI. You then apply the init bundle by using it to create resources.
+Before you set up a secured cluster, you must generate a cluster registration secret (CRS) or an init bundle. The secured cluster then uses the contained secrets for initial authentication with the Central instance, also called Central. To set up the secured connection between Central and your secured clusters, you can use either a CRS or an init bundle, but using a CRS is the preferred method. 
 
+You can generate a CRS or an init bundle by using either of the following methods:
 
-:FeatureName: Cluster registration secrets
-include::snippets/technology-preview.adoc[]
+* In the {product-title-short} portal, go to *Platform Configuration* -> *Clusters* and select *Cluster Registration Secrets* (preferred) or *Init bundles*.
+* Use the `roxctl` CLI to generate a CRS or an init bundle by using the following commands:
+** `roxctl central crs generate` 
+** `roxctl central init-bundles generate` 
 
-You can use either an init bundle or a cluster registration secret (CRS) during installation of a secured cluster. However, {product-title-short} does not yet provide a way to create a CRS by using the portal. Therefore, you must create the CRS by using the `roxctl` CLI.
-
-Before you set up a secured cluster, you must create an init bundle or CRS. The secured cluster then uses this bundle or CRS to authenticate with Central. You can create an init bundle by using either the {product-title-short} portal or the `roxctl` CLI. If you are using a CRS, you must use the `roxctl` CLI to create it.
-
-You can then apply the init bundle or the CRS by using the {ocp} `kubectl` CLI. If you install {product-title-short} by using Helm, you provide the init bundle or CRS when you run the `helm install` command.
+After you generate a CRS or an init bundle, you provide the CRS or the init bundle when you run the `helm install` command.
 
 [id="generate-init-bundle-cloud-kube"]
-== Generating an init bundle
+== Generating a CRS or an init bundle
 
 include::modules/portal-generate-init-bundle.adoc[leveloffset=+2]
-include::modules/roxctl-generate-init-bundle.adoc[leveloffset=+2]
-
-[id="generate-crs-cloud-kube"]
-== Generating a CRS
-
 include::modules/crs-generate-roxctl.adoc[leveloffset=+2]
+include::modules/roxctl-generate-init-bundle.adoc[leveloffset=+2]
 
 [id="next-steps_init-bundle-cloud-other-generate"]
 == Next steps
 
-* xref:../../cloud_service/installing_cloud_other/init-bundle-cloud-other-apply.adoc#create-resource-init-bundle_init-bundle-cloud-other-apply[Creating resources by using the init bundle]
+* xref:../../cloud_service/installing_cloud_other/init-bundle-cloud-other-apply.adoc#create-resource-init-bundle_init-bundle-cloud-other-apply[Creating resources by using the CRS or the init bundle]
