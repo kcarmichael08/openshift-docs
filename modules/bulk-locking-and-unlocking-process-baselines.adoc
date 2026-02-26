@@ -6,7 +6,9 @@
 = Bulk locking and unlocking process baselines
 
 [role="_abstract"]
-You can lock or unlock all process baselines in a cluster by using API endpoints. You can specify an optional set of namespaces to limit the action to just those namespaces. The API endpoints are as follows:
+You can lock or unlock all process baselines in a cluster by using API endpoints. You can specify an optional set of namespaces to limit the action to just those namespaces. 
+
+Use the following API endpoints to lock and unlock the process baseline:
 
 * `/v1/processbaselines/bulk/lock`
 * `/v1/processbaselines/bulk/unlock`
@@ -23,4 +25,4 @@ The following example shows the input for the endpoints:
                       ]
 }
 ----
-These endpoints return success or an error.
+These endpoints return a success message or an error.
