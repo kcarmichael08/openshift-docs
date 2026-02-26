@@ -7,7 +7,7 @@ include::modules/common-attributes.adoc[]
 toc::[]
 
 [role="_abstract"]
-Apply the init bundle by using it to create resources.
+Apply the cluster registration secret (CRS) or the init bundle to the secured cluster.
 
 include::modules/create-resource-init-bundle.adoc[leveloffset=+1]
 

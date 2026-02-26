@@ -10,34 +10,13 @@
 
 . Add the {product-title-short} Helm charts repository.
 . Install the `central-services` Helm chart on the cluster that will contain Central, called the Central cluster.
-. Log in to the {product-title-short} web console from the Central cluster and create an init bundle or cluster registration secret (CRS) that you need to apply to the cluster that you want to secure, called the secured cluster. The init bundle or the CRS contains the cryptographic artifacts that {product-title-short} uses to establish trusted connections between Central and secured clusters.
+. Log in to the {product-title-short} web console from the Central cluster and generate a cluster registration secret (CRS). You need to apply the CRS to the cluster that you want to secure, called the secured cluster. The CRS contains the cryptographic artifacts that {product-title-short} uses to establish trusted connections between Central and secured clusters. 
 +
---
-:FeatureName: Cluster registration secret
-include::snippets/technology-preview.adoc[]
---
+[NOTE]
+====
+Init bundles are still supported, but using a CRS is the preferred method for securing your cluster. 
+====
 . For each secured cluster, install the `secured-cluster-services` Helm chart by running one of the following commands:
-* For an init bundle, run the following command:
-+
-[source,terminal]
-----
-$ helm install -n stackrox \
-  --create-namespace stackrox-secured-cluster-services rhacs/secured-cluster-services \
-  -f <name_of_cluster_init_bundle.yaml> \
-  -f <path_to_values_public.yaml> \
-  -f <path_to_values_private.yaml> \
-  --set imagePullSecrets.username=<username> \
-  --set imagePullSecrets.password=<password>
-----
-+
-where:
-+
---
-`<path_to_values_public.yaml>`:: Specifies the path to your public YAML configuration file.
-`<path_to_values_private.yaml>`:: Specifies the path to your private YAML configuration file.
-`<username>`:: Specifies the user name for your pull secret for Red{nbsp}Hat Container Registry authentication.
-`<password>`:: Specifies the password for your pull secret for Red{nbsp}Hat Container Registry authentication.
---
 * For a CRS, run the following command:
 +
 [source,terminal]
@@ -55,6 +34,28 @@ where:
 +
 --
 `<crs_file_name.yaml>`:: Specifies the name of the file in which the generated CRS has been stored.
+`<path_to_values_public.yaml>`:: Specifies the path to your public YAML configuration file.
+`<path_to_values_private.yaml>`:: Specifies the path to your private YAML configuration file.
+`<username>`:: Specifies the user name for your pull secret for Red{nbsp}Hat Container Registry authentication.
+`<password>`:: Specifies the password for your pull secret for Red{nbsp}Hat Container Registry authentication.
+--
+
+* For an init bundle, run the following command:
++
+[source,terminal]
+----
+$ helm install -n stackrox \
+  --create-namespace stackrox-secured-cluster-services rhacs/secured-cluster-services \
+  -f <name_of_cluster_init_bundle.yaml> \
+  -f <path_to_values_public.yaml> \
+  -f <path_to_values_private.yaml> \
+  --set imagePullSecrets.username=<username> \
+  --set imagePullSecrets.password=<password>
+----
++
+where:
++
+--
 `<path_to_values_public.yaml>`:: Specifies the path to your public YAML configuration file.
 `<path_to_values_private.yaml>`:: Specifies the path to your private YAML configuration file.
 `<username>`:: Specifies the user name for your pull secret for Red{nbsp}Hat Container Registry authentication.

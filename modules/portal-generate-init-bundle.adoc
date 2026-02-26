@@ -5,7 +5,7 @@
 // You must declare the `topic-helm` or `topic-operator` attribute when using this module.
 :_mod-docs-content-type: PROCEDURE
 [id="portal-generate-init-bundle_{context}"]
-= Generating an init bundle by using the RHACS portal
+= Generating a cluster registration secret or init bundle by using the RHACS portal
 
 
 ifeval::["{context}" == "init-bundle-cloud-other"]
@@ -28,17 +28,25 @@ ifeval::["{context}" == "init-bundle-ocp"]
 :openshift:
 endif::[]
 
+ifeval::["{context}" == "init-bundle-cloud-ocp-generate"]
+:cloud-svc:
+endif::[]
+
+ifeval::["{context}" == "init-bundle-cloud-other-generate"]
+:cloud-svc:
+endif::[]
+
 ifndef::cloud-svc[]
-You can create an init bundle containing secrets by using the {product-title-short} portal.
+You can generate a cluster registration secret (CRS) or an init bundle containing secrets by using the {product-title-short} portal.
 endif::cloud-svc[]
 
 ifdef::cloud-svc[]
-You can create an init bundle containing secrets by using the {product-title-short} portal, also called the ACS Console.
+You can generate a cluster registration secret (CRS) or an init bundle containing secrets by using the {product-title-short} portal, also called the ACS Console.
 endif::cloud-svc[]
 
 [NOTE]
 ====
-You must have the `Admin` user role to create an init bundle.
+You must have the `Admin` user role to generate a CRS or an init bundle.
 ====
 
 .Procedure
@@ -46,19 +54,34 @@ You must have the `Admin` user role to create an init bundle.
 ifndef::cloud-svc[]
 . Find the address of the {product-title-short} portal as described in "Verifying Central installation using the Operator method".
 endif::cloud-svc[]
-. Log in to the {product-title-short} portal. 
-. If you do not have secured clusters or existing init bundles, the *Platform Configuration* -> *Clusters* page appears. Click *Create init bundle*.
-. Enter a name for the cluster init bundle.
-. Select your platform.
-. Select the installation method you will use for your secured clusters: *Operator* or *Helm chart*.
-. Click *Download* to generate and download the init bundle, which is created in the form of a YAML file. You can use one init bundle and its corresponding YAML file for all secured clusters if you are using the same installation method.
+. Log in to the {product-title-short} portal. If you do not have secured clusters, or an existing CRS or an init bundle, the *Platform Configuration* -> *Clusters* page appears. 
+. Click *Create cluster registration secret* or *Init bundles installation method*.
++
+[NOTE]
+====
+Init bundles are still supported, but using a CRS to secure clusters is the preferred method.
+====
+Complete only one of the following actions:
+
+* If you chose to generate a CRS, enter a name for the CRS and click *Download* to generate and download it. The CRS is created in the form of a YAML file and you can use it to secure all of your clusters if you are using the same installation method.
 +
 [IMPORTANT]
 ====
-Store this bundle securely because it contains secrets.
+Store this file securely because it contains secrets.
 ====
+* If you chose to generate an init bundle, complete these steps:
+.. Enter a name for the cluster init bundle.
+.. Select your platform.
+.. Select the installation method you will use for your secured clusters: Operator or Helm chart.
+.. Click *Download* to generate and download the init bundle, which is created in the form of a YAML file. You can use one init bundle and its corresponding YAML file for all secured clusters if you are using the same installation method.
++
+[IMPORTANT]
+====
+Store this file securely because it contains secrets.
+====
+
 .Next steps
-. Apply the init bundle by using it to create resources on the secured cluster.
+. Apply the CRS or the init bundle to the secured cluster.
 . Install secured cluster services on each cluster.
 
 ifeval::["{context}" == "init-bundle-cloud-other"]

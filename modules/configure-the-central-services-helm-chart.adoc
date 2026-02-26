@@ -7,7 +7,7 @@
 = Configure the central-services Helm chart
 
 [role="_abstract"]
-You can configure the Helm chart parameters to customize the {rh-rhacs-first} installation for your specific environment. You must create separate configuration files to securely isolate sensitive credentials from standard settings for components like Central and Scanner. Accurately defining these values ensures successful service authentication and proper resource allocation within your cluster.
+You can configure the Helm chart parameters to customize the {rh-rhacs-first} installation for your specific environment. You must create separate configuration files to securely isolate sensitive credentials from standard settings for components such as Central and Scanner. Accurately defining these values ensures successful service authentication and proper resource allocation within your cluster.
 
 Create the following files for configuring the Helm chart for installing {product-title}:
 
