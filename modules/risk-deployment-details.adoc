@@ -1,0 +1,11 @@
+// Module included in the following assemblies:
+//
+// * operating/evaluate-security-risks.adoc
+:_mod-docs-content-type: CONCEPT
+[id="risk-deployment-details_{context}"]
+= Deployment details tab
+
+[role="_abstract"]
+The sections in the *Deployment details* tab of the *Deployment risk* page give you more information so you can make appropriate decisions on how to address the discovered risk.
+
+You can click the arrows to expand the different sections in the page and view more information.

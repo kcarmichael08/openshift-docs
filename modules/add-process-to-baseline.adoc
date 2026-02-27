@@ -9,13 +9,7 @@
 You can manually add a process to the baseline, for example, to add a safe process that was not running when the baseline was created.
 
 .Procedure
-. In the {product-title-short} portal, select *Risk* from the navigation menu.
+. In the {product-title} ({product-title-short}) portal, select *Risk* from the navigation menu.
 . Select a deployment from the list of deployments in the default *Risk* view.
-Deployment details open in a panel on the right.
-. In the *Deployment* details panel, select the *Process Discovery* tab.
-. Under the *Running Processes* section, click the *Add* icon for the process you want to add to the process baseline.
-+
-[NOTE]
-====
-The *Add* icon is available only for the processes that are not in the process baseline.
-====
+. Select the *Process discovery* tab. 
+* In the *History of Running Processes* list, click the plus sign to add a process to the process baseline. You can only add a process that is not already in the baseline.

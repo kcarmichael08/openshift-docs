@@ -6,16 +6,15 @@
 = Process discovery tab
 
 [role="_abstract"]
-The *Process Discovery* tab provides a comprehensive list of all binaries that have been executed in each container in your environment, summarized by deployment.
+The *Process Discovery* tab provides a comprehensive list of all binaries that have been executed in a container in your environment for a deployment that you have selected.
 
-The process discovery tab shows details about the following:
+You can view information about processes and add or remove processes from the baseline. This page provides the following information and options:
 
-* *Binary Name*: The name of the binary that was executed.
-* *Container*: The container in the deployment in which the process executed.
-* *Arguments*: The specific arguments that were passed with the binary.
-* *Time*: The date and time of the most recent time the binary was executed in a given container.
-* *Pod ID*: The identifier of the pod in which the container resides.
-* *UID*: The Linux user identity under which the process executed.
+* *Event Timeline*: Displays the number of policy violations, process activities, restarts and terminations, and a link to a graphical representation of that information.
+* *History of Running Processes*: Displays a list of processes by name of the binary that was executed and the container in the deployment in which the process executed. Click a process to expand and show additional information such as the following fields:
+** *Arguments*: The specific arguments that were passed with the binary.
+** *Time*: The date and time of the most recent time the binary was executed in a given container.
+** *Pod ID*: The identifier of the pod that includes the container.
+** *UID*: The Linux user identity under which the process executed.
+* *Spec Container Baselines*: Used to create baselines that you can use to allow or deny new processes when {product-title-short} discovers them.
 
-Use the `Process Name:<name>` query in the filter bar to find specific processes.
-//See the link:/docs/search/#use-local-page-filtering[Use local page filtering] topic for more information.
