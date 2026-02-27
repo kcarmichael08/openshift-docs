@@ -1,0 +1,45 @@
+// Module included in the following assemblies:
+//
+// * operating/examine-images-for-vulnerabilities.adoc
+:_mod-docs-content-type: PROCEDURE
+[id="troubleshooting-vm-scanning_{context}"]
+= Troubleshooting virtual machine scanning
+
+[role="_abstract"]
+If you have problems when viewing vulnerability results for VMs, you can try some common troubleshooting steps. You can try different steps depending on the type of issue you are having, for example, connectivity or performance issues. You can also make sure your system meets the recommended requirements. See "Resource requirements for virtual machine scanning".
+
+.Procedure
+
+* If `roxagent` cannot connect to the host, try these steps:
+** Verify that virtual socket (vsock) is enabled in the VM configuration.
+** Check that the relay is running on the host node.
+** Ensure that the vsock kernel modules are loaded.
+** Verify that port configuration matches between the `roxagent` and relay.
+* If the scan finds no packages, try these steps:
+** Verify that `--host-path` points to the correct filesystem location.
+** Verify that RPM and DNF databases exist and are readable by `roxagent`.
+** Use the `--verbose` flag to examine index reports.
+** Confirm that the roxagent has root privileges.
+* If vulnerability data does not appear in {product-title-short}, try these steps:
+** Verify that the feature flag is enabled on all components.
+** Check Central logs for enrichment processing.
+** Ensure that the VM has a valid {op-system-base} subscription.
+** Confirm repository-to-CPE mapping downloads are successful. If downloads are not successful, the  "error updating mapping file" message occurs in the logs. The likely cause of an unsuccessful download is a failed internet connection.
+* If there is a network connectivity problem:
+** Verify that the VM has internet access.
+** Check the firewall rules for repository access.
+** Validate DNS resolution from within the VM.
+* If you observe performance issues, such as large memory usage, try these steps:
+** Monitor relay resource consumption and set `ROX_VIRTUAL_MACHINES_MAX_CONCURRENT_VSOCK_CONNECTIONS` to a lower number if needed.
+** Consider reducing scan frequency in daemon mode.
+* If you notice slow scan times, try these steps:
+** Verify that metal nodes are used for VM hosting.
+** Check network latency for repository downloads.
+** Monitor disk I/O during package database reads.
+* If you see that some VMs are not scanned for vulnerabilities, try these steps:
+** Check for a {product-title-short} Administration Events warning that "VM index reports are being rate limited". If you see this warning, you might need to adjust the following items based on your workloads:
+*** `ROX_VM_INDEX_REPORT_RATE_LIMIT`: For more information, see "Advanced virtual machine scanning configuration".
+*** `ROX_VM_INDEX_REPORT_BUCKET_CAPACITY`: For more information, see "Advanced virtual machine scanning configuration".
+*** Scanner V4 resources. For more information, see "Resource requirements for virtual machine scanning".
+** Check the logs of the Compliance container in the Collector pod for instances of the "Could not acquire semaphore, too many concurrent connections" message. If you see this message, you can increase the number of connections in `ROX_VIRTUAL_MACHINES_MAX_CONCURRENT_VSOCK_CONNECTIONS` to allow {product-title-short} to process more VMs in parallel. You might also need to increase the Compliance container memory limit.
+** Check the logs of the Compliance container in the Collector pod for instances of the "data size exceeds the limit" message. If you see this message, you can increase the maximum vsock connection size in `ROX_VIRTUAL_MACHINES_VSOCK_CONN_MAX_SIZE_KB` to allow processing of larger index reports. You might also need to increase the Compliance container memory limit.
