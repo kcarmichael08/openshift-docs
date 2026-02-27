@@ -290,7 +290,7 @@ This configuration defines the settings of the Sensor components, which runs on 
 [id="general-and-miscellaneous-settings-secured-cluster_{context}"]
 == General and miscellaneous settings
 
-[cols="1,3"]
+[cols="1,6"]
 |===
 | Parameter | Description
 
@@ -299,6 +299,55 @@ This configuration defines the settings of the Sensor components, which runs on 
 
 | `customize.envVars`
 | Advanced settings to configure environment variables.
+
+| `customize.deploymentDefaults.pinToNodes`
+a| Automates the placement of all deployment-based components onto specific node types.
+Set to `InfraRole` to target OpenShift infrastructure nodes.
+You cannot use this parameter simultaneously with `nodeSelector` or `tolerations`.
+The default value is `None`.
+
+[NOTE]
+====
+If you configure a specific node selector or tolerations settings for individual components, such as `central.nodeSelector` or `admissionControl.nodeSelector`, those settings override the global values defined in `customize.deploymentDefaults.pinToNodes`.
+
+Setting `pinToNodes` to `InfraRole` is a simple alternative to manually configuring node selectors and tolerations when you want to pin deployments to infrastructure nodes.
+
+It is the exact equivalent of applying the following configuration:
+
+[source,yaml]
+----
+# ...
+nodeSelector:
+  node-role.kubernetes.io/infra: ""
+tolerations:
+- key: node-role.kubernetes.io/infra
+  value: reserved
+  effect: NoSchedule
+- key: node-role.kubernetes.io/infra
+  value: reserved
+# ...
+----
+====
+
+| `customize.deploymentDefaults.nodeSelector`
+a| Applies a default `nodeSelector` to all deployment-based components.
+You cannot use this parameter simultaneously with `pinToNodes`.
+
+[NOTE]
+====
+* If you configure specific `nodeSelector` settings for individual components, such as `admissionControl.nodeSelector`, `scanner.analyzer.nodeSelector`, `scanner.db.nodeSelector`, `scannerV4.db.nodeSelector`, `scannerV4.indexer.nodeSelector`, or `sensor.nodeSelector`, those settings override the global values defined in `customize.deploymentDefaults.nodeSelector`.
+* You can use this setting to define global node selectors and tolerations that are automatically inherited by all resources to reduce repetitive configuration and simplify scheduling.
+====
+
+| `customize.deploymentDefaults.tolerations`
+a| Applies default tolerations to all deployment-based components.
+You cannot use this parameter simultaneously with `pinToNodes`.
+
+[NOTE]
+====
+* If you configure specific `tolerations` settings for individual components, such as `admissionControl.tolerations`, `scanner.analyzer.tolerations`, `scanner.analyzer.tolerations`, `scanner.db.tolerations`, `scannerV4.db.tolerations`, `scannerV4.indexer.tolerations`, or `sensor.tolerations`, those settings override the global values defined in `customize.deploymentDefaults.tolerations`.
+* You can use this setting to define global node selectors and tolerations that are automatically inherited by all resources to reduce repetitive configuration and simplify scheduling.
+====
 
 | `egress.connectivityPolicy`
 | Configures whether {product-title} should run in online or offline mode.
