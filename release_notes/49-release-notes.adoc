@@ -9,6 +9,8 @@ toc::[]
 {rh-rhacs-first} is an enterprise-ready, Kubernetes-native container security solution that protects your vital applications across the build, deploy, and runtime stages of the application lifecycle.
 {product-title} deploys into your infrastructure and integrates with your DevOps tools and workflows. This integration provides better security and compliance, enabling DevOps and InfoSec teams to operationalize security.
 
+//preview for Boaz
+
 .Release dates
 [options="header"]
 |====
