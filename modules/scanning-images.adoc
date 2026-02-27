@@ -160,7 +160,7 @@ Container image layers are `.tar` file archives that might be compressed or unco
 
 [cols="1,1,1",options="header"]
 |===
-| Format | Stackrox Scanner Support | Scanner V4 Support
+| Format | StackRox Scanner Support | Scanner V4 Support
 | No compression
 | Yes
 | Yes
