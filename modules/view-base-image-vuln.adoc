@@ -1,0 +1,26 @@
+// Module included in the following assemblies:
+//
+// * operating/examine-images-for-vulnerabilities.adoc
+:_mod-docs-content-type: PROCEDURE
+[id="view-base-image-vuln_{context}"]
+= Viewing vulnerabilities in a base image layer
+
+[role="_abstract"]
+
+You can view vulnerabilities by layer in an image and filter vulnerabilities to show only the vulnerabilities that exist in the base image layer.
+
+.Prerequisite
+
+* A user with the `ImageAdministration` permission must configure the base image repository under *Platform Configuration* -> *Base Images* so that the system can identify and detect base images.
+
+.Procedure
+
+. Select *Vulnerability Management* -> *Results*.
+. Click *<number> Images*. 
+. Click the name of the image that you want to examine. 
+. To display the CVEs only in the base image layer, take the following actions:
+.. In the *Observed* tab, in the filter bar, select *Image component* and *Layer type*.
+.. In the filter bar, click *Filter by Layer type* and click *Base image*. The display is filtered to only show CVEs contained in the base image layer.
+
+
+

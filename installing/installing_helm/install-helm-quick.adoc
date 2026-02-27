@@ -15,7 +15,7 @@ The following steps represent the high-level installation flow for quickly insta
 
 . Add the RHACS Helm chart repository.
 . Install the `central-services` Helm chart to install the xref:../../architecture/acs-architecture.adoc#centralized-components_acs-architecture[centralized components] (Central and Scanner).
-. Generate an init bundle or CRS.
+. Generate a CRS or an init bundle.
 . Install the `secured-cluster-services` Helm chart to install the xref:../../architecture/acs-architecture.adoc#per-cluster-components_acs-architecture[per-cluster] and xref:../../architecture/acs-architecture.adoc#per-node-components_acs-architecture[per-node] components (Sensor, Admission controller, Collector, and Scanner-slim).
 
 Before you install:
@@ -38,7 +38,7 @@ include::modules/crs-generate-roxctl.adoc[leveloffset=+2]
 [role="_additional-resources"]
 .Additional resources
 * xref:../../cli/installing-the-roxctl-cli.adoc#installing-the-roxctl-cli[Installing the `roxctl` CLI]
-* xref:../../installing/installing_helm/install-helm-customization.adoc#portal-generate-init-bundle_acs-install-helm-customization[Generating an init bundle by using the {product-title-short} portal]
+* xref:../../installing/installing_helm/install-helm-customization.adoc#portal-generate-init-bundle_acs-install-helm-customization[Generating a CRS or an init bundle by using the {product-title-short} portal]
 
 include::modules/acs-quick-install-secured-cluster-using-helm.adoc[leveloffset=+1]
 

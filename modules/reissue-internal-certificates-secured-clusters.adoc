@@ -23,54 +23,9 @@ The information banner only appears 15 days before the certificate expiry date.
 [IMPORTANT]
 ====
 Store the init bundle securely because it contains secrets.
-You can use the same bundle on multiple secured clusters.
+You can use the same bundle to set up more than one secured cluster.
 ====
 
 .Procedure
 
-. Choose the appropriate method to generate an init bundle:
-
-** To generate an init bundle by using the user interface (UI), perform the following steps:
-... In the {product-title-short} portal, click *Platform Configuration* -> *Clusters*.
-... Click *Init bundles*.
-... To create a new init bundle, click *Create bundle*.
-... Enter a name for the cluster init bundle.
-... Choose the appropriate platform of the secured clusters:
-+
-The following values are associated with the platform of the secured clusters:
-
-**** `OpenShift`
-**** `EKS`
-**** `AKS`
-**** `GKE`
-
-... Choose the appropriate installation method for the secured cluster services from the drop-down list:
-+
-The following values are associated with the installation method for the secured cluster services:
-
-**** `Operator (recommended)`
-**** `Helm chart`
-
-... Click *Download*.
-+
-[IMPORTANT]
-====
-You can only download the YAML file once when you create an init bundle.
-Store the YAML file securely because it contains secrets.
-====
-
-** To generate an init bundle by using the `roxctl` CLI, run the following command:
-+
-[source,terminal]
-----
-$ roxctl -e <endpoint> -p <admin_password> central \
-  init-bundles generate --output-secrets <bundle_name> \
-  init-bundle.yaml
-----
-
-. To create the necessary resources on each secured cluster, run the following command:
-+
-[source,terminal]
-----
-$ oc -n stackrox apply -f <init-bundle.yaml>
-----
+. Generate an init bundle by using the {product-title-short} portal or by using the `roxctl CLI`, and then apply the bundle to the secured cluster. For more information, see "Generating and applying a cluster registration secret or an init bundle for RHACS on Red Hat OpenShift" or "Generating and applying a cluster registration secret or an init bundle for RHACS on other platforms".

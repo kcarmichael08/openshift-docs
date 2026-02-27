@@ -157,7 +157,7 @@ If you specify it as `true`, no tolerations are applied, and the collector pods 
 | This parameter is deprecated and {product-title-short} ignores its value.
 
 | `admissionControl.listenOnUpdates`
-| This parameter is deprecated and {product-title-short} ignores its value. 
+| This parameter is deprecated and {product-title-short} ignores its value.
 
 | `admissionControl.listenOnEvents`
 | This parameter is deprecated and {product-title-short} ignores its value.
@@ -176,7 +176,7 @@ If you specify it as `true`, no tolerations are applied, and the collector pods 
 //TODO: Link to admission controller docs
 
 | `admissionControl.dynamic.timeout`
-| The ability to configure this parameter is deprecated. {product-title-short} uses a preset value for the timeout period and you cannot change it. This parameter is ignored. 
+| The ability to configure this parameter is deprecated. {product-title-short} uses a preset value for the timeout period and you cannot change it. This parameter is ignored.
 
 | `admissionControl.resources.requests.memory`
 | The memory request for the Admission Control container. Use this parameter to override the default value.
@@ -237,6 +237,9 @@ If you do not create this account, you must complete future upgrades manually if
 
 | `collector.complianceResources`
 | Resource specification for Collector's Compliance container.
+
+| `perNode.sfa.agent`
+| If you set this option to `Enabled`, you can enable file activity monitoring in your secured cluster.
 
 | `exposeMonitoring`
 | If you set this option to `true`,  {product-title} exposes Prometheus metrics endpoints on port number 9090 for the Sensor, Collector, and the Admission controller.

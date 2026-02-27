@@ -958,6 +958,53 @@ NOT, +
 
 |===
 
+
+File activity::
+
+[cols="<,<,<,<,^,<"]
+|===
+| *Attribute* | *Description* | *JSON Attribute* | *Allowed Values* | *Regex*, *NOT*, *AND, OR* | *Phase*
+
+| Effective path
+| The file path as it appears to the process inside the container.
+| Effective Path
+| One of: +
+
+/etc/passwd +
+/etc/ssh/sshd_config +
+/etc/shadow +
+/etc/sudoers +
+| AND, OR
+| *Runtime*
+
+| Actual path
+| The physical location of the file on the file system of the node.
+| Actual Path
+| One of: +
+
+/etc/passwd +
+/etc/ssh/sshd_config +
+/etc/shadow +
+/etc/sudoers +
+| AND, OR
+| *Runtime*
+
+
+| File operation
+| The specific action performed on the file, such as creating, deleting, or modifying permissions and ownership. When using the File operation criteria, you must specify at least one value for either Effective path or Actual path.
+| File Operation
+| One of: +
+
+Open (Writable) +
+Create +
+Delete +
+Permission change +
+Ownership change +
+| AND, OR
+| *Runtime*
+
+|===
+
 [id="kube-resource-operations_{context}"]
 == Audit log: Kubernetes resource operations
 
@@ -1056,5 +1103,43 @@ NOT, +
 | Boolean
 | ✕
 | *Runtime* ONLY - Audit Log
+
+|===
+
+
+[id="node-activity-criteria_{context}"]
+== Node activity criteria
+
+File activity::
+
+[cols="<,<,<,<,^,<"]
+|===
+| *Attribute* | *Description* | *JSON Attribute* | *Allowed Values* | *Regex*, *NOT*, *AND, OR* | *Phase*
+
+| Actual path
+| The physical location of the file on the file system of the node or the underlying mount.
+| Actual Path
+| One of: +
+
+/etc/passwd +
+/etc/ssh/sshd_config +
+/etc/shadow +
+/etc/sudoers +
+| AND, OR
+| *Runtime*
+
+
+| File operation
+| The specific action performed on the file, such as creating, deleting, or modifying permissions and ownership. When using the File operation criteria, you must specify at least one value for the Actual path.
+| File Operation
+| One of: +
+
+Open (Writable) +
+Create +
+Delete +
+Permission change +
+Ownership change +
+| AND, OR
+| *Runtime*
 
 |===

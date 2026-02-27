@@ -7,17 +7,14 @@ include::modules/common-attributes.adoc[]
 toc::[]
 
 [role="_abstract"]
-{product-title} ({product-title-short}) provides security services for your self-managed {osp} Kubernetes systems or platforms such as {ocp}, Amazon Elastic Kubernetes Service (Amazon EKS), Google Kubernetes Engine (Google GKE), and Microsoft Azure Kubernetes Service (Microsoft AKS).
+{product-title} ({product-title-short}) provides security services for your self-managed {osp} Kubernetes systems or platforms such as {ocp}, Amazon Elastic Kubernetes Service (Amazon EKS), Google Kubernetes Engine (Google GKE), and Microsoft Azure Kubernetes Service (Microsoft AKS). There are several methods of installation available, depending on the type of platform you are using.
 
 For information about supported platforms and architecture, see the link:https://access.redhat.com/articles/7045053[{product-title} Support Matrix]. For life cycle support information for {product-title-short}, see the link:https://access.redhat.com/support/policy/updates/rhacs[{product-title} Support Policy].
 
-[id="general-guidelines_{context}"]
-== General installation guidelines
-
 To ensure the best installation experience, follow these guidelines:
 
-. Understand the installation platforms and methods described in this module.
-. Understand xref:../architecture/acs-architecture.adoc#acs-architecture_acs-architecture[{product-title} architecture].
+. Understand the installation platforms and methods that are available.
+. Understand the xref:../architecture/acs-architecture.adoc#acs-architecture_acs-architecture[{product-title} architecture].
 . Check the xref:../installing/acs-default-requirements.adoc#acs-default-requirements[default resource requirements].
 
 
@@ -75,7 +72,8 @@ Not all installation methods are supported for all platforms. See the link:https
 
 include::modules/installation-methods-for-different-architectures.adoc[leveloffset=+1]
 
-//browser support info removed - this info is in the support matrix
+include::modules/installation-secrets-auth.adoc[leveloffset=+1]
 
 include::modules/installing-rhacs-ocp-steps.adoc[leveloffset=+1]
+
 include::modules/installing-rhacs-kubernetes-steps.adoc[leveloffset=+1]

@@ -1,39 +1,47 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="custom-security-policies"]
 = Creating and modifying security policies
-include::modules/common-attributes.adoc[]
 :context: custom-security-policies
+:toc: macro
+:toclevels: 3
 
 toc::[]
 
 [role="_abstract"]
-In {product-title} ({product-title-short}), you can use the {product-title-short} portal to create policies, or create and manage policies as code by saving policies as Kubernetes custom resources (CRs) and by applying them to clusters by using a continuous delivery tool such as Argo CD.
+Create custom security policies in the {product-title-short} portal to enforce configuration rules and minimize risks. Define detailed criteria, lifecycle stages, and automated enforcement options to detect and block noncompliant images or workloads. By using these policies, you support consistent security standards across the build, deploy, and runtime phases.
+
+include::modules/common-attributes.adoc[]
 
 include::modules/create-policy-from-system-policies-view.adoc[leveloffset=+1]
+
 include::modules/enter-policy-details.adoc[leveloffset=+2]
+
 include::modules/select-policy-lifecycle.adoc[leveloffset=+2]
+
 include::modules/configure-policy-rules.adoc[leveloffset=+2]
 
 [role="_additional-resources"]
 .Additional resources
-
 * xref:../../operating/manage_security_policies/security-policy-reference.adoc#policy-criteria_security-policy-reference[Policy criteria]
 
 include::modules/configure-policy-scope.adoc[leveloffset=+2]
+
 include::modules/enable-policy.adoc[leveloffset=+2]
+
 include::modules/configure-policy-enforcement-creating-policies.adoc[leveloffset=+2]
 
 [role="_additional-resources"]
 .Additional resources
-
 * xref:../../operating/manage_security_policies/about-security-policies.adoc#policy-enforcement-deploy_about-security-policies[Deploy stage enforcement]
 
 include::modules/selecting-policy-notifiers.adoc[leveloffset=+2]
+
 include::modules/preview-policy-violations.adoc[leveloffset=+2]
+
+include::modules/verifying-file-activity-policies.adoc[leveloffset=+2]
 
 include::modules/create-policy-from-risk-view.adoc[leveloffset=+1]
 
-//Modifying existing security policies
 include::modules/modify-existing-security-policies.adoc[leveloffset=+1]
 
 include::modules/disable-associated-policies.adoc[leveloffset=+2]

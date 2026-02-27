@@ -1,6 +1,6 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="init-bundle-other"]
-= Generating and applying an init bundle or cluster registration secret for RHACS on other platforms
+= Generating and applying a cluster registration secret or an init bundle for RHACS on other platforms
 :context: init-bundle-other
 :topic-helm:
 :toc: macro
@@ -9,16 +9,21 @@
 toc::[]
 
 [role="_abstract"]
-Red{nbsp}Hat Advanced Cluster Security for Kubernetes (RHACS) uses a special artifact during installation that allows Central to communicate securely with the secured clusters that you are adding.
+Red{nbsp}Hat Advanced Cluster Security for Kubernetes (RHACS) uses a special artifact during installation that allows Central to communicate securely with the secured clusters that you are adding. This file is called a cluster registration secret (CRS) or an init bundle. Init bundles are still supported, but using a CRS is the preferred way to set up a secured cluster.
 
 include::modules/common-attributes.adoc[]
-
-:FeatureName: Cluster registration secrets
-include::snippets/technology-preview.adoc[]
 
 include::snippets/cluster-registration-secrets.adoc[]
 
 include::modules/init-bundles-and-cluster-registration-secrets.adoc[leveloffset=+1]
+
+include::modules/cluster-registration-secrets.adoc[leveloffset=+1]
+
+include::modules/portal-generate-crs.adoc[leveloffset=+1]
+
+include::modules/crs-generate-roxctl.adoc[leveloffset=+2]
+
+include::modules/crs-apply-secured-cluster.adoc[leveloffset=+2]
 
 include::modules/init-bundles-for-secured-cluster-authentication.adoc[leveloffset=+1]
 
@@ -27,12 +32,6 @@ include::modules/portal-generate-init-bundle.adoc[leveloffset=+2]
 include::modules/roxctl-generate-init-bundle.adoc[leveloffset=+2]
 
 include::modules/create-resource-init-bundle.adoc[leveloffset=+2]
-
-include::modules/cluster-registration-secrets.adoc[leveloffset=+1]
-
-include::modules/crs-generate-roxctl.adoc[leveloffset=+2]
-
-include::modules/crs-apply-secured-cluster.adoc[leveloffset=+2]
 
 include::modules/next-steps-init-bundle.adoc[leveloffset=+1]
 
