@@ -321,4 +321,3 @@ a| For security at the network level, {product-title-short} creates default `Net
 Disabling creation of default network policies can break communication between {product-title-short} components. If you disable creation of default policies, you must create your own network policies to allow this communication.
 ====
 |===
-
