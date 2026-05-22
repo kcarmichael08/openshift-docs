@@ -51,7 +51,7 @@ $ helm install -n stackrox --create-namespace \
     --set-file crs.file=<crs_file_name.yaml> \
     -f <path_to_pull_secret.yaml> \
     --set clusterName=<name_of_the_secured_cluster> \
-    --set centralEndpoint=<endpoint_of_central_service> 
+    --set centralEndpoint=<endpoint_of_central_service>
 ----
 +
 where:
@@ -70,7 +70,7 @@ $ helm install -n stackrox --create-namespace \
     -f <path_to_cluster_init_bundle.yaml> \
     -f <path_to_pull_secret.yaml> \
     --set clusterName=<name_of_the_secured_cluster> \
-    --set centralEndpoint=<endpoint_of_central_service> 
+    --set centralEndpoint=<endpoint_of_central_service>
 ----
 +
 where:
@@ -94,7 +94,7 @@ $ helm install -n stackrox --create-namespace \
     --set-file crs.file=<crs_file_name.yaml> \
     -f <path_to_pull_secret.yaml> \
     --set clusterName=<name_of_the_secured_cluster> \
-    --set centralEndpoint=<endpoint_of_central_service> 
+    --set centralEndpoint=<endpoint_of_central_service>
 ----
 +
 where:
@@ -119,7 +119,7 @@ $ helm install -n stackrox --create-namespace \
     -f <path_to_cluster_init_bundle.yaml> \
     -f <path_to_pull_secret.yaml> \
     --set clusterName=<name_of_the_secured_cluster> \
-    --set centralEndpoint=<endpoint_of_central_service> 
+    --set centralEndpoint=<endpoint_of_central_service>
 ----
 +
 where:
@@ -234,6 +234,10 @@ where:
 `<path_to_cluster_init_bundle.yaml>`:: Specifies the path for the init bundle.
 `<path_to_pull_secret.yaml>`:: Specifies the path for the pull secret for Red{nbsp}Hat Container Registry authentication.
 `<endpoint_of_central_service>`:: Specifies the *Central API Endpoint* address. You can view this information by choosing *Advanced Cluster Security* -> *ACS Instances* from the Red{nbsp}Hat Hybrid Cloud Console navigation menu, then clicking the {product-title-short} instance you created.
+<<<<<<< HEAD
 `--set` scanner.disable=false:: Sets the value of the `scanner.disable` parameter to `false`, which enables Scanner-slim during the installation. In Kubernetes, the secured cluster services now include Scanner-slim.
+=======
+`--set scanner.disable=false`:: Sets the value of the `scanner.disable` parameter to `false`, which enables Scanner-slim during the installation. In Kubernetes, the secured cluster services now include Scanner-slim.
+>>>>>>> 480949327f (ROX33164 Fixing DITA errors in cloud_service/installing_cloud_ocp/install-secured-cluster-cloud-ocp.adoc)
 --
 endif::cloud-svc[]
