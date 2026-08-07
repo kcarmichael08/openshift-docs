@@ -21,10 +21,16 @@ To perform an installation by using the manifest installation method, follow _on
 * Use the `roxctl` CLI to generate the required sensor configuration for your {ocp} cluster and associate it with your Central instance.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d6515afad9 (ROX33164 Fix DITA errors in installing/installing_other/install-secured-cluster-other.adoc)
 [IMPORTANT]
 ====
 You must have already installed Central services, or you can access Central services by selecting your *ACS instance* on {rh-rhacscs-first}.
 ====
+<<<<<<< HEAD
 =======
 You must have already installed Central services, or you can access Central services by selecting your *ACS instance* on {rh-rhacscs-first}.
 >>>>>>> 480949327f (ROX33164 Fixing DITA errors in cloud_service/installing_cloud_ocp/install-secured-cluster-cloud-ocp.adoc)
+=======
+>>>>>>> d6515afad9 (ROX33164 Fix DITA errors in installing/installing_other/install-secured-cluster-other.adoc)
