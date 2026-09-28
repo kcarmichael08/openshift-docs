@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>Installing secured cluster services for RHACS on other platforms</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
+dfn{font-style:italic}
+hr{height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,::before,::after{box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock pre>code{display:block}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+li>p:empty:only-child::before{content:"";display:inline-block}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body id="install-secured-cluster-other" class="article">
+<div id="header">
+<h1>Installing secured cluster services for RHACS on other platforms</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div id="toc" class="toc">
+<div id="toctitle" class="title"></div>
+<ul class="sectlevel1">
+<li><a href="#installing-sc-helm-other_install-secured-cluster-other">Install RHACS on secured clusters by using Helm charts</a>
+<ul class="sectlevel2">
+<li><a href="#installing-sc-helm-default-other_install-secured-cluster-other">Install RHACS on secured clusters by using Helm charts without customizations</a></li>
+<li><a href="#configure-secured-cluster-services-helm-chart-customizations-other_install-secured-cluster-other">Configure the secured-cluster-services Helm chart with customizations</a></li>
+<li><a href="#change-config-options-after-deployment_install-secured-cluster-other">Changing configuration options after deploying the secured-cluster-services Helm chart</a></li>
+</ul>
+</li>
+<li><a href="#installing-sc-roxctl-sc-other_install-secured-cluster-other">Install RHACS on secured clusters by using the roxctl CLI</a>
+<ul class="sectlevel2">
+<li><a href="#installing-roxctl-cli-ocp_install-secured-cluster-other">Install the roxctl CLI</a></li>
+<li><a href="#install-sensor-roxctl_install-secured-cluster-other">Install Sensor</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="paragraph _abstract">
+<p>You can install Red&#160;Hat Advanced Cluster Security for Kubernetes (RHACS) on your secured clusters for the following platforms:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Amazon Elastic Kubernetes Service (Amazon EKS)</p>
+</li>
+<li>
+<p>Google Kubernetes Engine (GKE)</p>
+</li>
+<li>
+<p>Microsoft Azure Kubernetes Service (Microsoft AKS)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="installing-sc-helm-other_install-secured-cluster-other">Install RHACS on secured clusters by using Helm charts</h2>
+<div class="sectionbody">
+<div class="paragraph _abstract">
+<p>You can install RHACS on secured clusters by using Helm charts with no customization, using the default values, or with customizations of configuration parameters.</p>
+</div>
+<div class="sect2">
+<h3 id="installing-sc-helm-default-other_install-secured-cluster-other">Install RHACS on secured clusters by using Helm charts without customizations</h3>
+<div class="paragraph _abstract">
+<p>This procedure describes how to install Red&#160;Hat Advanced Cluster Security for Kubernetes (RHACS) on secured clusters by using Helm charts with default configuration values and no customizations.</p>
+</div>
+<div class="sect3">
+<h4 id="adding-helm-repository_install-secured-cluster-other">Adding the Helm chart repository</h4>
+<div class="paragraph _abstract">
+<p>Add the RHACS Helm chart repository to access installation charts for Central services and secured cluster components.</p>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Add the RHACS charts repository.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ helm repo add rhacs https://mirror.openshift.com/pub/rhacs/charts/</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Helm repository for Red&#160;Hat Advanced Cluster Security for Kubernetes includes Helm charts for installing different components, including:</p>
+</div>
+</li>
+<li>
+<p>Central services Helm chart (<code>central-services</code>) for installing the centralized components (Central and Scanner).</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You deploy centralized components only once and you can monitor many separate clusters by using the same installation.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Secured Cluster Services Helm chart (<code>secured-cluster-services</code>) for installing the per-cluster and per-node components (Sensor, Admission Controller, Collector, and Scanner-slim).</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Deploy the per-cluster components into each cluster that you want to monitor and deploy the per-node components in all nodes that you want to monitor.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Run the following command to verify the added chart repository:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ helm search repo -l rhacs/</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="installing-secured-cluster-services-quickly_install-secured-cluster-other">Installing the secured-cluster-services Helm chart without customization</h4>
+<div class="paragraph _abstract">
+<p>Use the following instructions to install the <code>secured-cluster-services</code> Helm chart to deploy the per-cluster and per-node components (Sensor, Admission controller, Collector, and Scanner-slim).</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You must have generated a RHACS cluster registration secret (CRS) or an init bundle for your cluster.</p>
+</li>
+<li>
+<p>You must have access to the Red&#160;Hat Container Registry and a pull secret for authentication. For information about downloading images from <code>registry.redhat.io</code>, see <a href="https://access.redhat.com/RegistryAuthentication">Red&#160;Hat Container Registry Authentication</a>.</p>
+</li>
+<li>
+<p>You must have the address that you are exposing the Central service on.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Run one of the following commands on your Kubernetes-based clusters:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If you are using a CRS, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ helm install -n stackrox --create-namespace \
+    stackrox-secured-cluster-services rhacs/secured-cluster-services \
+    --set-file crs.file=&lt;crs_file_name.yaml&gt; \
+    -f &lt;path_to_pull_secret.yaml&gt; \
+    --set clusterName=&lt;name_of_the_secured_cluster&gt; \
+    --set centralEndpoint=&lt;endpoint_of_central_service&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;crs_file_name.yaml&gt;</code></dt>
+<dd>
+<p>Specifies the name of the file in which you stored the generated CRS.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;path_to_pull_secret.yaml&gt;</code></dt>
+<dd>
+<p>Specifies the path for the pull secret for Red&#160;Hat Container Registry authentication. Or, you can specify <code>--set imagePullSecrets.username=&lt;your redhat.com username&gt;</code> and <code>--set imagePullSecrets.password=&lt;your redhat.com password&gt;</code> in the command.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;endpoint_of_central_service&gt;</code></dt>
+<dd>
+<p>Specifies the address and port number for Central. For example, <code>acs.domain.com:443</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>If you are using an init bundle, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ helm install -n stackrox --create-namespace \
+    stackrox-secured-cluster-services rhacs/secured-cluster-services \
+    -f &lt;path_to_cluster_init_bundle.yaml&gt; \
+    -f &lt;path_to_pull_secret.yaml&gt; \
+    --set clusterName=&lt;name_of_the_secured_cluster&gt; \
+    --set centralEndpoint=&lt;endpoint_of_central_service&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;path_to_cluster_init_bundle.yaml&gt;</code></dt>
+<dd>
+<p>Specifies the path for the init bundle.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;path_to_pull_secret.yaml&gt;</code></dt>
+<dd>
+<p>Specifies the path for the pull secret for Red&#160;Hat Container Registry authentication. Or, you can specify <code>--set imagePullSecrets.username=&lt;your redhat.com username&gt;</code> and <code>--set imagePullSecrets.password=&lt;your redhat.com password&gt;</code> in the command.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;endpoint_of_central_service&gt;</code></dt>
+<dd>
+<p>Specifies the address and port number for Central. For example, <code>acs.domain.com:443</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Run one of the following commands on an OpenShift Container Platform cluster:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If you are using a CRS, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ helm install -n stackrox --create-namespace \
+    stackrox-secured-cluster-services rhacs/secured-cluster-services \
+    --set-file crs.file=&lt;crs_file_name.yaml&gt; \
+    -f &lt;path_to_pull_secret.yaml&gt; \
+    --set clusterName=&lt;name_of_the_secured_cluster&gt; \
+    --set centralEndpoint=&lt;endpoint_of_central_service&gt; \
+    --set scanner.disable=false</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;crs_file_name.yaml&gt;</code></dt>
+<dd>
+<p>Specifies the name of the file in which you stored the generated CRS.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;path_to_pull_secret.yaml&gt;</code></dt>
+<dd>
+<p>Specifies the path for the pull secret for Red&#160;Hat Container Registry authentication. Or, you can specify <code>--set imagePullSecrets.username=&lt;your redhat.com username&gt;</code> and <code>--set imagePullSecrets.password=&lt;your redhat.com password&gt;</code> in the command.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;endpoint_of_central_service&gt;</code></dt>
+<dd>
+<p>Specifies specify the address and port number for Central. For example, <code>acs.domain.com:443</code>.</p>
+</dd>
+<dt class="hdlist1"><code>--set scanner.disable=false</code></dt>
+<dd>
+<p>Sets the value of the <code>scanner.disable</code> parameter to <code>false</code>, which enables Scanner-slim during the installation. In Kubernetes, the secured cluster services now include Scanner-slim.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>If you are using an init bundle, run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ helm install -n stackrox --create-namespace \
+    stackrox-secured-cluster-services rhacs/secured-cluster-services \
+    -f &lt;path_to_cluster_init_bundle.yaml&gt; \
+    -f &lt;path_to_pull_secret.yaml&gt; \
+    --set clusterName=&lt;name_of_the_secured_cluster&gt; \
+    --set centralEndpoint=&lt;endpoint_of_central_service&gt; \
+    --set scanner.disable=false</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;path_to_cluster_init_bundle.yaml&gt;</code></dt>
+<dd>
+<p>Specifies the path for the init bundle.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;path_to_pull_secret.yaml&gt;</code></dt>
+<dd>
+<p>Specifies the path for the pull secret for Red&#160;Hat Container Registry authentication.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;endpoint_of_central_service&gt;</code></dt>
+<dd>
+<p>Specifies the address and port number for Central. For example, <code>acs.domain.com:443</code>.</p>
+</dd>
+<dt class="hdlist1"><code>--set scanner.disable=false</code></dt>
+<dd>
+<p>Sets the value of the <code>scanner.disable</code> parameter to <code>false</code>, which enables Scanner-slim during the installation. In Kubernetes, the secured cluster services now include Scanner-slim.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="../../installing/installing_other/init-bundle-other.html#init-bundle-other">Generating and applying a cluster registration secret or init bundle for RHACS on other platforms</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="configure-secured-cluster-services-helm-chart-customizations-other_install-secured-cluster-other">Configure the secured-cluster-services Helm chart with customizations</h3>
+<div class="paragraph _abstract">
+<p>You can use Helm chart configuration parameters with the <code>helm install</code> and <code>helm upgrade</code> commands.
+You can specify these parameters by using the <code>--set</code> option or by creating YAML configuration files.</p>
+</div>
+<div class="paragraph">
+<p>Create the following files for configuring the Helm chart for installing Red&#160;Hat Advanced Cluster Security for Kubernetes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Public configuration file <code>values-public.yaml</code>: Use this file to save all non-sensitive configuration options.</p>
+</li>
+<li>
+<p>Private configuration file <code>values-private.yaml</code>: Use this file to save all sensitive configuration options. Ensure that you store this file securely.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>While using the <code>secured-cluster-services</code> Helm chart, do not change the <code>values.yaml</code> file that is part of the chart.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="secured-cluster-services-config_install-secured-cluster-other">Configuration parameters</h4>
+<div class="paragraph _abstract">
+<p>Reference of configuration parameters for customizing the secured-cluster-services Helm chart installation.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clusterName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of your cluster.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>centralEndpoint</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Address of the Central endpoint. If you are using a non-gRPC capable load balancer, use the WebSocket protocol by prefixing the endpoint address with <code>wss://</code>. When configuring many clusters, use the hostname for the address. For example, <code>central.example.com</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>env.grpcEnforceALPN</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use <code>true</code> to force application-level protocol negotiation (ALPN) during the TLS handshake.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sensor.endpoint</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Address of the Sensor endpoint including port number.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sensor.imagePullPolicy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image pull policy for the Sensor container.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sensor.serviceTLS.cert</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The internal service-to-service TLS certificate that Sensor uses.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sensor.serviceTLS.key</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The internal service-to-service TLS certificate key that Sensor uses.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sensor.resources.requests.memory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The memory request for the Sensor container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sensor.resources.requests.cpu</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The CPU request for the Sensor container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sensor.resources.limits.memory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The memory limit for the Sensor container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sensor.resources.limits.cpu</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The CPU limit for the Sensor container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sensor.nodeSelector</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify a node selector label as <code>label-key: label-value</code> to force Sensor to only schedule on nodes with the specified label.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sensor.tolerations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the node selector selects tainted nodes, use this parameter to specify a taint toleration key, value, and effect for Sensor. This parameter is mainly used for infrastructure nodes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>image.main.name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the <code>main</code> image.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>image.collector.name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the Collector image.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>image.main.registry</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The address of the registry you are using for the main image.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>image.collector.registry</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The address of the registry you are using for the Collector image.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>image.scanner.registry</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The address of the registry you are using for the Scanner image.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>image.scannerDb.registry</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The address of the registry you are using for the Scanner DB image.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>image.scannerV4.registry</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The address of the registry you are using for the Scanner V4 image.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>image.scannerV4DB.registry</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The address of the registry you are using for the Scanner V4 DB image.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>image.main.pullPolicy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image pull policy for <code>main</code> images.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>image.collector.pullPolicy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image pull policy for the Collector images.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>image.main.tag</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tag of <code>main</code> image to use.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>image.collector.tag</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tag of <code>collector</code> image to use.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.collectionMethod</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Either <code>CORE_BPF</code> or <code>NO_COLLECTION</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.imagePullPolicy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image pull policy for the Collector container.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.complianceImagePullPolicy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image pull policy for the Compliance container.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.disableTaintTolerations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If you specify <code>false</code>, tolerations apply to Collector, and the collector pods can schedule onto all nodes with taints.
+If you specify it as <code>true</code>, no tolerations apply, and the collector pods do not schedule onto nodes with taints.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.resources.requests.memory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The memory request for the Collector container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.resources.requests.cpu</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The CPU request for the Collector container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.resources.limits.memory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The memory limit for the Collector container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.resources.limits.cpu</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The CPU limit for the Collector container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.complianceResources.requests.memory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The memory request for the Compliance container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.complianceResources.requests.cpu</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The CPU request for the Compliance container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.complianceResources.limits.memory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The memory limit for the Compliance container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.complianceResources.limits.cpu</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The CPU limit for the Compliance container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.serviceTLS.cert</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The internal service-to-service TLS certificate that Collector uses.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.serviceTLS.key</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The internal service-to-service TLS certificate key that Collector uses.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.enforce</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This parameter determines if you configured the admission controller to enforce policies that have enforcement enabled. For a new secured cluster deployed with RHACS 4.9, the default value is <code>true</code>. For secured clusters updating from RHACS versions before 4.9, earlier values for the admission controller configuration parameters decide the value of this parameter. Before the update, if you set either of the <code>admissionControl.enforceOnCreates</code> or <code>admissionControl.enforceOnUpdates</code> parameters to <code>true</code>, the value of this parameter defaults to <code>true</code> after upgrade. If you set both of these parameters to <code>false</code>, the default value becomes <code>false</code> on update.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.failurePolicy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Controls whether to allow the API server request (fail open) or block it (fail closed) if an error or timeout happens in the RHACS validating webhook&#8217;s evaluation. Valid values are <code>Ignore</code> and <code>Fail</code>. The default value is <code>Ignore</code> to fail open.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.listenOnCreates</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This parameter is deprecated and RHACS ignores its value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.listenOnUpdates</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This parameter is deprecated and RHACS ignores its value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.listenOnEvents</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This parameter is deprecated and RHACS ignores its value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.dynamic.enforceOnCreates</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This parameter is deprecated. RHACS checks its value during updates to version 4.9 and uses it to set a default value for the new <code>admissionControl.enforce</code> parameter. On new installations, changing this parameter has no effect.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.dynamic.enforceOnUpdates</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This parameter is deprecated. RHACS checks its value during updates to version 4.9 and uses it to set a default value for the new <code>admissionControl.enforce</code> parameter. On new installations, changing this parameter has no effect.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.dynamic.scanInline</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This parameter is deprecated and RHACS ignores its value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.dynamic.disableBypass</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set this parameter to <code>true</code> to disable bypassing the admission controller. The default value is <code>false</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.dynamic.timeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ability to configure this parameter is deprecated. RHACS uses a preset value for the timeout period and you cannot change it. RHACS ignores this parameter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.resources.requests.memory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The memory request for the Admission Control container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.resources.requests.cpu</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The CPU request for the Admission Control container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.resources.limits.memory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The memory limit for the Admission Control container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.resources.limits.cpu</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The CPU limit for the Admission Control container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.nodeSelector</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify a node selector label as <code>label-key: label-value</code> to force Admission Control to only schedule on nodes with the specified label.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.tolerations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the node selector selects tainted nodes, use this parameter to specify a taint toleration key, value, and effect for Admission Control. This parameter is mainly used for infrastructure nodes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.namespaceSelector</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the admission controller webhook needs a specific <code>namespaceSelector</code>, you can specify the corresponding selector here. Use this parameter to override the default, which avoids a few system namespaces.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.serviceTLS.cert</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The internal service-to-service TLS certificate that Admission Control uses.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.serviceTLS.key</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The internal service-to-service TLS certificate key that Admission Control uses.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>registryOverride</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use this parameter to override the default <code>docker.io</code> registry.
+Specify the name of your registry if you are using some other registry.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.disableTaintTolerations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If you specify <code>false</code>, tolerations apply to Collector, and the Collector pods can schedule onto all nodes with taints.
+If you specify it as <code>true</code>, no tolerations apply, and the Collector pods do not schedule onto nodes with taints.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createUpgraderServiceAccount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify <code>true</code> to create the <code>sensor-upgrader</code> account.
+By default, Red&#160;Hat Advanced Cluster Security for Kubernetes creates a service account called <code>sensor-upgrader</code> in each secured cluster.
+This account is highly privileged but is only used during upgrades.
+If you do not create this account, you must complete future upgrades manually if the Sensor does not have enough permissions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createSecrets</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify <code>false</code> to skip the orchestrator secret creation for the Sensor, Collector, and Admission controller.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.slimMode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deprecated. Specify <code>true</code> if you want to use a slim Collector image for deploying Collector.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sensor.resources</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource specification for Sensor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>admissionControl.resources</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource specification for Admission controller.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.resources</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource specification for Collector.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>collector.complianceResources</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource specification for Collector&#8217;s Compliance container.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>perNode.sfa.agent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If you set this option to <code>Enabled</code>, you can enable file activity monitoring in your secured cluster.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exposeMonitoring</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If you set this option to <code>true</code>,  Red&#160;Hat Advanced Cluster Security for Kubernetes exposes Prometheus metrics endpoints on port number 9090 for the Sensor, Collector, and the Admission controller.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>auditLogs.disableCollection</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If you set this option to <code>true</code>, Red&#160;Hat Advanced Cluster Security for Kubernetes disables the audit log detection features used to detect access and modifications to configuration maps and secrets.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>autoLockProcessBaselines.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If you set this option to <code>true</code>, Red&#160;Hat Advanced Cluster Security for Kubernetes enables automatically locking process baselines. The default is <code>false</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.disable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If you set this option to <code>false</code>, Red&#160;Hat Advanced Cluster Security for Kubernetes deploys a Scanner-slim and Scanner DB in the secured cluster to allow scanning images on the integrated OpenShift image registry. Enabling Scanner-slim is supported on OpenShift Container Platform and Kubernetes secured clusters. Defaults to <code>true</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.dbTolerations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the node selector selects tainted nodes, use this parameter to specify a taint toleration key, value, and effect for Scanner DB.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.replicas</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource specification for Collector&#8217;s Compliance container.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.logLevel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set this parameter to change the scanner log level. Use this option only for troubleshooting purposes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.autoscaling.disable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If you set this option to <code>true</code>, Red&#160;Hat Advanced Cluster Security for Kubernetes disables autoscaling on the Scanner deployment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.autoscaling.minReplicas</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The minimum number of replicas for autoscaling. Defaults to 2.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.autoscaling.maxReplicas</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The maximum number of replicas for autoscaling. Defaults to 5.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.nodeSelector</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify a node selector label as <code>label-key: label-value</code> to force Scanner to only schedule on nodes with the specified label.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.tolerations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the node selector selects tainted nodes, use this parameter to specify a taint toleration key, value, and effect for Scanner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.dbNodeSelector</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify a node selector label as <code>label-key: label-value</code> to force Scanner DB to only schedule on nodes with the specified label.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.dbTolerations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the node selector selects tainted nodes, use this parameter to specify a taint toleration key, value, and effect for Scanner DB.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.resources.requests.memory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The memory request for the Scanner container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.resources.requests.cpu</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The CPU request for the Scanner container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.resources.limits.memory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The memory limit for the Scanner container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.resources.limits.cpu</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The CPU limit for the Scanner container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.dbResources.requests.memory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The memory request for the Scanner DB container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.dbResources.requests.cpu</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The CPU request for the Scanner DB container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.dbResources.limits.memory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The memory limit for the Scanner DB container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanner.dbResources.limits.cpu</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The CPU limit for the Scanner DB container. Use this parameter to override the default value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>monitoring.openshift.enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If you set this option to <code>false</code>, Red&#160;Hat Advanced Cluster Security for Kubernetes will not set up Red&#160;Hat OpenShift monitoring. Defaults to <code>true</code> on Red&#160;Hat OpenShift 4.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>network.enableNetworkPolicies</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>For security at the network level, RHACS creates default <code>NetworkPolicy</code> resources in the namespace where you install secured cluster resources. These network policies allow ingress to specific components on specific ports. If you do not want RHACS to create these policies, set this parameter to <code>False</code>. This is a Boolean value. The default value is <code>True</code>, which means the default policies are automatically created.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Warning">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Disabling creation of default network policies can break communication between RHACS components. If you disable creation of default policies, you must create your own network policies to allow this communication.</p>
+</div>
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="secured-cluster-services-environment-variables_install-secured-cluster-other">Environment variables</h5>
+<div class="paragraph _abstract">
+<p>You can specify environment variables for Sensor and Admission controller in the following format:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-yaml" data-lang="yaml">customize:
+  envVars:
+    ENV_VAR1: "value1"
+    ENV_VAR2: "value2"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With the <code>customize</code> setting, you can specify custom Kubernetes metadata (labels and annotations) for all objects created by this Helm chart and additional pod labels, pod annotations, and container environment variables for workloads.</p>
+</div>
+<div class="paragraph">
+<p>The configuration is hierarchical, in the sense that metadata defined at a more generic scope (for example, for all objects) can be overridden by metadata defined at a narrower scope (for example, only for the Sensor deployment).</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="install-secured-cluster-services-helm-chart_install-secured-cluster-other">Installing the secured-cluster-services Helm chart with customizations</h4>
+<div class="paragraph _abstract">
+<p>Install the secured-cluster-services Helm chart with custom configuration to deploy Sensor, Admission Controller, Collector, and Scanner components.</p>
+</div>
+<div class="paragraph">
+<p>After you configure the <code>values-public.yaml</code> and <code>values-private.yaml</code> files, install the <code>secured-cluster-services</code> Helm chart to deploy the following per-cluster and per-node components:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sensor</p>
+</li>
+<li>
+<p>Admission controller</p>
+</li>
+<li>
+<p>Collector</p>
+</li>
+<li>
+<p>Scanner: optional for secured clusters when you install the StackRox Scanner</p>
+</li>
+<li>
+<p>Scanner DB: optional for secured clusters when you install the StackRox Scanner</p>
+</li>
+<li>
+<p>Scanner V4 Indexer and Scanner V4 DB: optional for secured clusters when you install Scanner V4</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>You must have generated a cluster registration secret (CRS) or an init bundle for your cluster.</p>
+</li>
+<li>
+<p>You must have access to the Red&#160;Hat Container Registry and a pull secret for authentication. For information about downloading images from <code>registry.redhat.io</code>, see <a href="https://access.redhat.com/RegistryAuthentication">Red&#160;Hat Container Registry Authentication</a>.</p>
+</li>
+<li>
+<p>You must have the address and the port number that you are exposing the Central service on.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Run the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ helm install -n stackrox \
+  --create-namespace stackrox-secured-cluster-services rhacs/secured-cluster-services \
+  -f &lt;name_of_cluster_init_bundle.yaml&gt; \
+  -f &lt;path_to_values_public.yaml&gt; \
+  -f &lt;path_to_values_private.yaml&gt; \
+  --set imagePullSecrets.username=&lt;username&gt; \
+  --set imagePullSecrets.password=&lt;password&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;path_to_values_public.yaml&gt;</code></dt>
+<dd>
+<p>Specifies the path to your public YAML configuration file.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;path_to_values_private.yaml&gt;</code></dt>
+<dd>
+<p>Specifies the path to your private YAML configuration file.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;username&gt;</code></dt>
+<dd>
+<p>Specifies the user name for your pull secret for Red&#160;Hat Container Registry authentication.</p>
+</dd>
+<dt class="hdlist1"><code>&lt;password&gt;</code></dt>
+<dd>
+<p>Specifies the password for your pull secret for Red&#160;Hat Container Registry authentication.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To deploy <code>secured-cluster-services</code> Helm chart by using a continuous integration (CI) system, pass the CRS or the init bundle YAML file as an environment variable to the <code>helm install</code> command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ helm install ... -f &lt;(echo "$INIT_BUNDLE_YAML_SECRET")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are using base64 encoded variables, use the <code>helm install &#8230;&#8203; -f &lt;(echo "$INIT_BUNDLE_YAML_SECRET" | base64 --decode)</code> command instead.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="../../installing/installing_other/init-bundle-other.html#init-bundle-other">Generating and applying a cluster registration secret or an init bundle for RHACS on other platforms</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="change-config-options-after-deployment_install-secured-cluster-other">Changing configuration options after deploying the secured-cluster-services Helm chart</h3>
+<div class="paragraph _abstract">
+<p>Change configuration options for the secured-cluster-services Helm chart after deployment by using the helm upgrade command.</p>
+</div>
+<div class="paragraph">
+<p>You can make changes to any configuration options after you have deployed the <code>secured-cluster-services</code> Helm chart.</p>
+</div>
+<div class="paragraph">
+<p>When using the <code>helm upgrade</code> command to make changes, the following guidelines and requirements apply:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can also specify configuration values using the <code>--set</code> or <code>--set-file</code> parameters.
+However, these options are not saved, and you must manually specify all the options again whenever you make changes.</p>
+</li>
+<li>
+<p>Some changes, such as enabling a new component, require issuing new certificates for the component. Therefore, you must include a CA when making these changes.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If the Helm chart generated the CA during the initial installation, you must retrieve these automatically generated values from the cluster and pass them to the <code>helm upgrade</code> command. The postinstallation notes of the <code>central-services</code> Helm chart include a command for retrieving the automatically generated values.</p>
+</li>
+<li>
+<p>If you generated the CA outside of the Helm chart and included it during the installation of the <code>central-services</code> chart, then you must perform that action again when using the <code>helm upgrade</code> command, for example, by using the <code>--reuse-values</code> flag with the <code>helm upgrade</code> command.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Update the <code>values-public.yaml</code> and <code>values-private.yaml</code> configuration files with new values.</p>
+</li>
+<li>
+<p>Run the <code>helm upgrade</code> command and specify the configuration files using the <code>-f</code> option:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ helm upgrade -n stackrox \
+  stackrox-secured-cluster-services rhacs/secured-cluster-services \
+  --reuse-values \
+  -f &lt;path_to_values_public.yaml&gt; \
+  -f &lt;path_to_values_private.yaml&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>--reuse-values</code></dt>
+<dd>
+<p>Specifies that the modified values are not included in the <code>values_public.yaml</code> and <code>values_private.yaml</code> files.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="installing-sc-roxctl-sc-other_install-secured-cluster-other">Install RHACS on secured clusters by using the roxctl CLI</h2>
+<div class="sectionbody">
+<div class="paragraph _abstract">
+<p>To install RHACS on secured clusters by using the <code>roxctl</code> CLI, you must first install the <code>roxctl</code> CLI and then install Sensor by using either the RHACS portal or the <code>roxctl</code> CLI.</p>
+</div>
+<div class="sect2">
+<h3 id="installing-roxctl-cli-ocp_install-secured-cluster-other">Install the roxctl CLI</h3>
+<div class="paragraph _abstract">
+<p>To install Red&#160;Hat Advanced Cluster Security for Kubernetes you must install the <code>roxctl</code> CLI by downloading the binary.
+You can install <code>roxctl</code> on Linux, Windows, or macOS.</p>
+</div>
+<div class="sect3">
+<h4 id="installing-cli-on-linux_install-secured-cluster-other">Installing the roxctl CLI on Linux</h4>
+<div class="paragraph _abstract">
+<p>You can install the <code>roxctl</code> CLI binary on Linux by using the following procedure.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>roxctl</code> CLI for Linux is available for <code>amd64</code>, <code>arm64</code>, <code>ppc64le</code>, and <code>s390x</code> architectures.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Find the <code>roxctl</code> architecture for the target operating system:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ arch="$(uname -m | sed "s/x86_64//")"; arch="${arch:+-$arch}"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Download the <code>roxctl</code> CLI:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ curl -L -f -o roxctl "https://mirror.openshift.com/pub/rhacs/assets/4.11.0/bin/Linux/roxctl${arch}"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Make the <code>roxctl</code> binary executable:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ chmod +x roxctl</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Place the <code>roxctl</code> binary in a directory that is on your <code>PATH</code>:</p>
+<div class="paragraph">
+<p>To check your <code>PATH</code>, run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ echo $PATH</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Verify the <code>roxctl</code> version you have installed:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ roxctl version</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="installing-cli-on-macos_install-secured-cluster-other">Installing the roxctl CLI on macOS</h4>
+<div class="paragraph _abstract">
+<p>You can install the <code>roxctl</code> CLI binary on macOS by using the following procedure.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>roxctl</code> CLI for macOS is available for <code>amd64</code> and <code>arm64</code> architectures.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Find the <code>roxctl</code> architecture for the target operating system:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ arch="$(uname -m | sed "s/x86_64//")"; arch="${arch:+-$arch}"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Download the <code>roxctl</code> CLI:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ curl -L -f -o roxctl "https://mirror.openshift.com/pub/rhacs/assets/4.11.0/bin/Darwin/roxctl${arch}"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Remove all extended attributes from the binary:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ xattr -c roxctl</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Make the <code>roxctl</code> binary executable:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ chmod +x roxctl</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Place the <code>roxctl</code> binary in a directory that is on your <code>PATH</code>:</p>
+<div class="paragraph">
+<p>To check your <code>PATH</code>, run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ echo $PATH</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Verify the <code>roxctl</code> version you have installed:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ roxctl version</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="installing-cli-on-windows_install-secured-cluster-other">Installing the roxctl CLI on Windows</h4>
+<div class="paragraph _abstract">
+<p>You can install the <code>roxctl</code> CLI binary on Windows by using the following procedure.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Note">
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>roxctl</code> CLI for Windows is available for the <code>amd64</code> architecture.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Download the <code>roxctl</code> CLI:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ curl -f -O https://mirror.openshift.com/pub/rhacs/assets/4.11.0/bin/Windows/roxctl.exe</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Verification</div>
+<ul>
+<li>
+<p>Verify the <code>roxctl</code> version you have installed:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ roxctl version</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="install-sensor-roxctl_install-secured-cluster-other">Install Sensor</h3>
+<div class="paragraph _abstract">
+<p>Deploy Sensor to a cluster by using the manifest installation method by using the RHACS portal or the <code>roxctl</code> CLI.</p>
+</div>
+<div class="paragraph">
+<p>To monitor a cluster, you must deploy Sensor. You must deploy Sensor into each cluster that you want to monitor. This installation method is also called the manifest installation method.</p>
+</div>
+<div class="paragraph">
+<p>To perform an installation by using the manifest installation method, follow <em>only one</em> of the following procedures:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the RHACS web portal to download the cluster bundle, and then extract and run the sensor script.</p>
+</li>
+<li>
+<p>Use the <code>roxctl</code> CLI to generate the required sensor configuration for your OpenShift Container Platform cluster and associate it with your Central instance.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You must have already installed Central services, or you can access Central services by selecting your <strong>ACS instance</strong> on Red&#160;Hat Advanced Cluster Security Cloud Service (RHACS Cloud Service).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="installing-manifest-web-portal_install-secured-cluster-other">Manifest installation method by using the web portal</h4>
+<div class="paragraph _abstract">
+<p>To help ensure your cluster reports security information to Central, you can deploy Sensor by installing a manifest by using the RHACS web portal.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>On your secured cluster, in the RHACS portal, go to <strong>Platform Configuration</strong> &#8594; <strong>Clusters</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Secure a cluster</strong> &#8594; <strong>Legacy installation method</strong>.</p>
+</li>
+<li>
+<p>Specify a name for the cluster.</p>
+</li>
+<li>
+<p>Give appropriate values for the fields based on where you are deploying the Sensor.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If you are deploying Sensor in the same cluster, accept the default values for all the fields.</p>
+</li>
+<li>
+<p>If you are deploying into a different cluster, replace <code>central.stackrox.svc:443</code> with a load balancer, node port, or other address, including the port number, that is accessible from the other cluster.</p>
+</li>
+<li>
+<p>If you are using a non-gRPC capable load balancer, such as HAProxy, AWS Application Load Balancer (ALB), or AWS Elastic Load Balancing (ELB), use the WebSocket Secure (<code>wss</code>) protocol. To use <code>wss</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Prefix the address with <strong><code>wss://</code></strong>.</p>
+</li>
+<li>
+<p>Add the port number after the address, for example, <code>wss://stackrox-central.example.com:443</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <strong>Next</strong> to continue with the Sensor setup.</p>
+</li>
+<li>
+<p>Click <strong>Download YAML File and Keys</strong> to download the cluster bundle (zip archive).</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="data:image/png;base64," alt="Important">
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The cluster bundle zip archive includes unique configurations and keys for each cluster.
+Do not reuse the same files in another cluster.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>From a system that has access to the monitored cluster, extract and run the <code>sensor</code> script from the cluster bundle:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ unzip -d sensor sensor-&lt;cluster_name&gt;.zip</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ ./sensor/sensor.sh</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you get a warning that you do not have the required permissions to deploy Sensor, follow the on-screen instructions, or contact your cluster administrator for help.</p>
+</div>
+<div class="paragraph">
+<p>After RHACS deploys Sensor, Sensor contacts Central and provides cluster information.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Return to the RHACS portal and check if the deployment is successful.
+If successful, when viewing your list of clusters in <strong>Platform Configuration</strong> &#8594; <strong>Clusters</strong>, the cluster status displays a checkmark and a <strong>Healthy</strong> status.
+If you do not see a checkmark, use the following command to check for problems:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>On Kubernetes, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ kubectl get pod -n stackrox -w</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <strong>Finish</strong> to close the window.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>After installation, Sensor starts reporting security information to RHACS and the RHACS portal dashboard begins showing deployments, images, and policy violations from the cluster on which you have installed the Sensor.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="manifest-roxctl_install-secured-cluster-other">Manifest installation by using the roxctl CLI</h4>
+<div class="paragraph _abstract">
+<p>To monitor your cluster for policy violations, deploy the required Sensor resources. You can generate the configuration bundle by using the <code>roxctl</code> CLI and running the extracted script to connect your cluster to RHACS.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Generate the required sensor configuration for your OpenShift Container Platform cluster and associate it with your Central instance by running the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ roxctl sensor generate openshift --openshift-version <em>&lt;ocp_version&gt;</em> --name <em>&lt;cluster_name&gt;</em> --central "$ROX_ENDPOINT"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>&lt;ocp_version&gt;</code></dt>
+<dd>
+<p>Specifies the major OpenShift Container Platform version number for your cluster. For example, specify <code>3</code> for OpenShift Container Platform version <code>3.x</code> and specify <code>4</code> for OpenShift Container Platform version <code>4.x</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>From a system that has access to the monitored cluster, extract and run the <code>sensor</code> script from the cluster bundle:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ unzip -d sensor sensor-&lt;cluster_name&gt;.zip</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ ./sensor/sensor.sh</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you get a warning that you do not have the required permissions to deploy Sensor, follow the on-screen instructions, or contact your cluster administrator for help.</p>
+</div>
+<div class="paragraph">
+<p>After RHACS deploys Sensor, Sensor contacts Central and provides cluster information.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Return to the RHACS portal and check if the deployment is successful.
+If successful, when viewing your list of clusters in <strong>Platform Configuration</strong> &#8594; <strong>Clusters</strong>, the cluster status displays a checkmark and a <strong>Healthy</strong> status.
+If you do not see a checkmark, use the following command to check for problems:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>On Kubernetes, enter the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-terminal" data-lang="terminal">$ kubectl get pod -n stackrox -w</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <strong>Finish</strong> to close the window.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>After installation, Sensor starts reporting security information to RHACS and the RHACS portal dashboard begins showing deployments, images, and policy violations from the cluster on which you have installed the Sensor.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-09-28 16:59:31 -0400
+</div>
+</div>
+</body>
+</html>
