@@ -1,6 +1,7 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="roxctl-central"]
 = roxctl central
+
 :context: roxctl-central
 
 toc::[]

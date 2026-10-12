@@ -1,6 +1,7 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="managing-secured-clusters"]
 = Managing secured clusters
+
 :context: managing-secured-clusters
 
 toc::[]

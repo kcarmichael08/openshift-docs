@@ -1,6 +1,7 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="roxctl-collector"]
 = roxctl collector
+
 :context: roxctl-collector
 
 toc::[]

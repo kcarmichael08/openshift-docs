@@ -1,6 +1,7 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="roxctl-image"]
 = roxctl image
+
 :context: roxctl-image
 
 toc::[]

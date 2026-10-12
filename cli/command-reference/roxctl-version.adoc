@@ -1,6 +1,7 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="roxctl-version"]
 = roxctl version
+
 :context: roxctl-version
 
 toc::[]

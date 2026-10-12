@@ -1,6 +1,7 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="image-scanning-by-using-the-roxctl-cli"]
 = Image scanning by using the roxctl CLI
+
 :context: image-scanning-by-using-the-roxctl-cli
 
 toc::[]

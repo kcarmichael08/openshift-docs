@@ -1,6 +1,7 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="roxctl-sensor"]
 = roxctl sensor
+
 :context: roxctl-sensor
 
 toc::[]
