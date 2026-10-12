@@ -1,5 +1,4 @@
 :_mod-docs-content-type: ASSEMBLY
-include::modules/common-attributes.adoc[]
 [id="acs-architecture"]
 = Red Hat Advanced Cluster Security for Kubernetes architecture
 :context: acs-architecture
@@ -10,6 +9,8 @@ toc::[]
 Discover {rh-rhacs-first} architecture and concepts.
 
 //{product-title} architecture overview
+
+include::modules/common-attributes.adoc[]
 include::modules/acs-architecture-overview.adoc[leveloffset=+1]
 
 include::modules/acs-central-services-overview.adoc[leveloffset=+1]

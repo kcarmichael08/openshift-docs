@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="look-up-policy-categories-criteria-and-default-policies">
+  <title>Look up policy categories, criteria, and default policies</title>
+  <topicref href="modules/look-up-policy-categories-criteria-and-default-policies.dita">
+    <topicref href="operating/manage_security_policies/security-policy-reference.dita">
+      <topicref href="modules/con-policy-categories.dita" />
+      <topicref href="modules/policy-criteria.dita" chunk="to-content">
+        <topicref href="modules/reference-image-criteria.dita" toc="no" />
+        <topicref href="modules/workload-config-criteria.dita" toc="no" />
+        <topicref href="modules/reference-workload-activity-criteria.dita" toc="no" />
+        <topicref href="modules/kube-resource-operations.dita" toc="no" />
+        <topicref href="modules/node-activity-criteria.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/default-security-policies-about.dita" chunk="to-content">
+        <topicref href="modules/critical-sev-security-policies.dita" toc="no" />
+        <topicref href="modules/high-sev-security-policies.dita" toc="no" />
+        <topicref href="modules/medium-sev-security-policies.dita" toc="no" />
+        <topicref href="modules/low-sev-security-policies.dita" toc="no" />
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

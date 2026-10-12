@@ -1,5 +1,4 @@
 :_mod-docs-content-type: ASSEMBLY
-include::modules/common-attributes.adoc[]
 [id="install-secured-cluster-cloud-other"]
 = Installing secured cluster services from RHACS Cloud Service on Kubernetes clusters
 :context: install-secured-cluster-cloud-other
@@ -14,6 +13,8 @@ You can install {product-title-managed-short} on your secured clusters by using 
 * By using the `roxctl` CLI (do not use this method unless you have a specific installation need that requires using it)
 
 //Installing by Helm charts
+
+include::modules/common-attributes.adoc[]
 include::modules/install-sc-helm-cloud-other.adoc[leveloffset=+1]
 
 //Adding the Helm chart repository

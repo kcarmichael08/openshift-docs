@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping-administer">
+  <title>Administer</title>
+  <topichead navtitle="Administer">
+    <mapref href="scan-images-for-vulnerabilities.ditamap" />
+    <mapref href="manage-vulnerabilities.ditamap" />
+    <mapref href="monitor-security-posture-and-risk.ditamap" />
+    <mapref href="manage-compliance-monitoring.ditamap" />
+    <mapref href="manage-security-policies.ditamap" />
+    <mapref href="respond-to-security-policy-violations.ditamap" />
+  </topichead>
+</map>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-cloud-service-onboarding-and-day-1-operations">
+  <title>RHACS Cloud Service onboarding and Day 1 operations</title>
+  <topicref href="modules/rhacs-cloud-service-onboarding-and-day-1-operations.dita">
+    <topicref href="cloud_service/rhacs-cloud-service-service-description.dita">
+      <topicref href="modules/introduction-to-rhacs.dita" />
+      <topicref href="modules/architecture.dita" />
+      <topicref href="modules/billing.dita" />
+      <topicref href="modules/security-compliance-overview.dita" chunk="to-content">
+        <topicref href="modules/cloud-info-security.dita" toc="no" />
+        <topicref href="modules/sdlc-security.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/access-control-overview.dita" chunk="to-content">
+        <topicref href="modules/authentication-provider.dita" toc="no" />
+        <topicref href="modules/password-management.dita" toc="no" />
+        <topicref href="modules/remote-access.dita" toc="no" />
+        <topicref href="modules/central-access-restriction.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/cloud-svc-compliance.dita" />
+      <topicref href="modules/data-protection.dita" chunk="to-content">
+        <topicref href="modules/data-storage-media-protection.dita" toc="no">
+          <topicref href="modules/data-retention-destruction.dita" toc="no" />
+          <topicref href="modules/encryption.dita" toc="no" />
+          <topicref href="modules/multi-tenancy.dita" toc="no" />
+          <topicref href="modules/data-ownership.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="modules/metrics-and-logging.dita" chunk="to-content">
+        <topicref href="modules/service-metrics.dita" toc="no" />
+        <topicref href="modules/customer-metrics.dita" toc="no" />
+        <topicref href="modules/service-logging.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/updates-and-upgrades.dita" />
+      <topicref href="modules/availability.dita" chunk="to-content">
+        <topicref href="modules/backup-and-disaster-recovery.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/cloud-getting-support.dita" />
+      <topicref href="modules/cloud-service-removal.dita" />
+      <topicref href="modules/pricing.dita" />
+      <topicref href="modules/service-level-agreement.dita" />
+    </topicref>
+    <topicref href="cloud_service/acs-cloud-responsibility-matrix.dita">
+      <topicref href="modules/acs-cloud-responsibilities.dita" chunk="to-content">
+        <topicref href="modules/acs-cloud-responsibility-matrix-table.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="cloud_service/acscs-architecture.dita">
+      <topicref href="modules/acscs-architecture-overview.dita" />
+      <topicref href="modules/acscs-central-overview.dita" chunk="to-content">
+        <topicref href="modules/con-vuln-sources.dita" toc="no">
+          <topicref href="modules/scanner-v4-vuln-sources.dita" toc="no" />
+          <topicref href="modules/stackrox-scanner-vuln-sources.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="modules/acs-secured-cluster-services-overview.dita" />
+      <topicref href="modules/acscs-data-access-permissions.dita" />
+    </topicref>
+    <topicref href="cloud_service/getting-started-rhacs-cloud-ocp.dita">
+      <topicref href="modules/getting-started-prerequisites.dita" />
+      <topicref href="modules/installation-overview.dita" />
+      <topicref href="modules/securing-ocp-clusters.dita" chunk="to-content">
+        <topicref href="modules/securing-ocp-operator.dita" toc="no" />
+        <topicref href="modules/securing-ocp-helm.dita" toc="no" />
+        <topicref href="modules/securing-ocp-roxctl.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/securing-kube-clusters.dita" chunk="to-content">
+        <topicref href="modules/securing-kube-helm.dita" toc="no" />
+        <topicref href="modules/securing-kube-roxctl.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/default-access-acs-console.dita" />
+    </topicref>
+    <topicref href="cloud_service/acscs-default-requirements.dita">
+      <topicref href="modules/acs-cloud-requirements.dita" chunk="to-content">
+        <topicref href="modules/acscs-system-requirements.dita" toc="no" />
+        <topicref href="modules/acscs-helm-requirements.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/default-requirements-secured-cluster-services.dita" />
+    </topicref>
+    <topicref href="cloud_service/acscs-recommended-requirements.dita">
+      <topicref href="modules/recommended-requirements-secured-cluster-services.dita" chunk="to-content">
+        <topicref href="modules/recommended-requirements-sensor-overview.dita" toc="no" />
+        <topicref href="modules/recommended-requirements-sensor-requirements.dita" toc="no" />
+        <topicref href="modules/recommended-requirements-admission-controller-overview.dita" toc="no" />
+        <topicref href="modules/recommended-requirements-admission-controller-requirements.dita" toc="no" />
+      </topicref>
+      <topicref href="cloud_service/installing_cloud_ocp/cloud-create-instance-ocp.dita" chunk="to-content">
+        <topicref href="modules/cloud-create-instance-steps.dita" toc="no" />
+        <topicref href="modules/cloud-create-instance-ocp-next-steps.dita" toc="no" />
+      </topicref>
+      <topicref href="cloud_service/installing_cloud_ocp/cloud-ocp-create-project.dita" chunk="to-content">
+        <topicref href="modules/cloud-ocp-create-stackrox-project.dita" toc="no" />
+        <topicref href="modules/cloud-ocp-create-project-next-steps.dita" toc="no" />
+      </topicref>
+      <topicref href="cloud_service/installing_cloud_ocp/init-bundle-cloud-ocp-generate.dita" chunk="to-content">
+        <topicref href="modules/init-bundle-cloud-ocp-generate-overview.dita" toc="no" />
+        <topicref href="modules/generate-crs-init-bundle.dita" toc="no">
+          <topicref href="modules/portal-generate-init-bundle.dita" toc="no" />
+          <topicref href="modules/crs-generate-roxctl.dita" toc="no" />
+          <topicref href="modules/roxctl-generate-init-bundle.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/init-bundle-cloud-ocp-generate-next-steps.dita" toc="no" />
+      </topicref>
+      <topicref href="cloud_service/installing_cloud_ocp/init-bundle-cloud-ocp-apply.dita" chunk="to-content">
+        <topicref href="modules/crs-apply-secured-cluster.dita" toc="no" />
+        <topicref href="modules/create-resource-init-bundle.dita" toc="no" />
+        <topicref href="modules/init-bundle-cloud-ocp-apply-next-steps.dita" toc="no" />
+      </topicref>
+      <topicref href="cloud_service/installing_cloud_ocp/cloud-install-operator.dita" chunk="to-content">
+        <topicref href="modules/install-acs-operator-cloud.dita" toc="no">
+          <topicref href="modules/configuring-the-rhacs-operator-for-infrastructure-nodes.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/next-steps-cloud-install-operator.dita" toc="no" />
+      </topicref>
+      <topicref href="cloud_service/installing_cloud_ocp/install-secured-cluster-cloud-ocp.dita" chunk="to-content">
+        <topicref href="modules/install-secured-cluster-cloud-ocp-prerequisites.dita" toc="no" />
+        <topicref href="modules/installing-sc-operator-cloud-ocp.dita" toc="no">
+          <topicref href="modules/install-acs-operator-annotations.dita" toc="no" />
+          <topicref href="modules/install-secured-cluster-operator.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/installing-sc-helm-cloud-ocp.dita" toc="no">
+          <topicref href="modules/adding-helm-repository.dita" toc="no" />
+          <topicref href="modules/installing-sc-helm-default-cloud-ocp.dita" toc="no" />
+          <topicref href="modules/acs-quick-install-secured-cluster-using-helm.dita" toc="no" />
+          <topicref href="modules/configure-sc-helm-customizations-cloud-ocp.dita" toc="no" />
+          <topicref href="modules/secured-cluster-services-config.dita" toc="no" />
+          <topicref href="modules/install-secured-cluster-services-helm-chart.dita" toc="no" />
+          <topicref href="modules/change-config-options-after-deployment.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/installing-sc-roxctl-cloud-ocp.dita" toc="no">
+          <topicref href="modules/installing-roxctl-cli-sc-cloud-ocp.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-linux.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-macos.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-windows.dita" toc="no" />
+          <topicref href="modules/install-sensor-roxctl.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/install-secured-cluster-cloud-ocp-next-steps.dita" toc="no" />
+      </topicref>
+      <topicref href="cloud_service/installing_cloud_ocp/configuring-the-proxy-for-secured-cluster-services-in-rhacs-cloud-service.dita" chunk="to-content">
+        <topicref href="modules/specifying-the-environment-variables-in-the-securedcluster-cr.dita" toc="no" />
+      </topicref>
+      <topicref href="cloud_service/installing_cloud_ocp/verify-installation-cloud-ocp.dita" chunk="to-content">
+        <topicref href="modules/verifying-installation-secured-clusters-cloud.dita" toc="no">
+          <topicref href="modules/troubleshooting-verification-secured-clusters-cloud.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="cloud_service/installing_cloud_other/cloud-create-instance-other.dita" chunk="to-content">
+        <topicref href="modules/cloud-create-instance-steps.dita" toc="no" />
+        <topicref href="modules/cloud-create-instance-other-next-steps.dita" toc="no" />
+      </topicref>
+      <topicref href="cloud_service/installing_cloud_other/init-bundle-cloud-other-generate.dita" chunk="to-content">
+        <topicref href="modules/generate-crs-init-bundle-methods-overview.dita" toc="no" />
+        <topicref href="modules/generate-init-bundle-cloud-kube.dita" toc="no">
+          <topicref href="modules/portal-generate-init-bundle.dita" toc="no" />
+          <topicref href="modules/crs-generate-roxctl.dita" toc="no" />
+          <topicref href="modules/roxctl-generate-init-bundle.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/init-bundle-cloud-other-generate-next-steps.dita" toc="no" />
+      </topicref>
+      <topicref href="cloud_service/installing_cloud_other/init-bundle-cloud-other-apply.dita" chunk="to-content">
+        <topicref href="modules/create-resource-init-bundle.dita" toc="no" />
+        <topicref href="modules/init-bundle-cloud-other-apply-next-steps.dita" toc="no" />
+      </topicref>
+      <topicref href="cloud_service/installing_cloud_other/install-secured-cluster-cloud-other.dita" chunk="to-content">
+        <topicref href="modules/install-sc-helm-cloud-other.dita" toc="no">
+          <topicref href="modules/adding-helm-repository.dita" toc="no" />
+          <topicref href="modules/install-sc-helm-default-cloud-other.dita" toc="no" />
+          <topicref href="modules/acs-quick-install-secured-cluster-using-helm.dita" toc="no" />
+          <topicref href="modules/configure-sc-helm-customizations-cloud-other.dita" toc="no" />
+          <topicref href="modules/secured-cluster-services-config.dita" toc="no" />
+          <topicref href="modules/secured-cluster-services-environment-variables.dita" toc="no" />
+          <topicref href="modules/install-secured-cluster-services-helm-chart.dita" toc="no" />
+          <topicref href="modules/change-config-options-after-deployment.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/install-sc-roxctl-cloud-other.dita" toc="no">
+          <topicref href="modules/install-roxctl-cli-sc-cloud-other.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-linux.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-macos.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-windows.dita" toc="no" />
+          <topicref href="modules/install-sensor-roxctl.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="cloud_service/installing_cloud_other/verify-installation-cloud-other.dita" chunk="to-content">
+        <topicref href="modules/verify-installation-cloud-other-procedure.dita" toc="no" />
+      </topicref>
+      <topicref href="cloud_service/upgrading-cloud/upgrade-cloudsvc-operator.dita" chunk="to-content">
+        <topicref href="modules/prepare-operator-upgrades.dita" toc="no">
+          <topicref href="modules/change-collection-method.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/rollback-operator-upgrade-cloud.dita" toc="no">
+          <topicref href="modules/rollback-operator-upgrades-cli.dita" toc="no" />
+          <topicref href="modules/rollback-operator-upgrades-console.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/operator-upgrade-troubleshooting.dita" toc="no">
+          <topicref href="modules/operator-upgrade-fail-to-deploy.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="cloud_service/upgrading-cloud/upgrade-cloudsvc-helm.dita" chunk="to-content">
+        <topicref href="modules/updating-helm-repository.dita" toc="no" />
+        <topicref href="modules/upgrade-helm-chart.dita" toc="no" />
+      </topicref>
+      <topicref href="cloud_service/upgrading-cloud/upgrade-cloudsvc-roxctl.dita" chunk="to-content">
+        <topicref href="modules/upgrade-roxctl-cli.dita" toc="no">
+          <topicref href="modules/uninstall-roxctl-cli.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-linux.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-macos.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-windows.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/upgrade-secured-clusters-cloud.dita" toc="no">
+          <topicref href="modules/update-other-images.dita" toc="no" />
+          <topicref href="modules/migrating-sccs-during-the-manual-upgrade.dita" toc="no" />
+          <topicref href="modules/verify-secured-cluster-upgrade.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/rhcos-enable-node-scan.dita" toc="no" />
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

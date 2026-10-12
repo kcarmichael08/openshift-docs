@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="generate-a-diagnostic-bundle-with-system-health-data">
+  <title>Generate a diagnostic bundle with system health data</title>
+  <topicref href="modules/generate-a-diagnostic-bundle-with-system-health-data.dita">
+    <topicref href="support/generating-diagnostic-bundle.dita">
+      <topicref href="modules/diagnostic-bundle-overview.dita" />
+      <topicref href="modules/diagnostic-bundle-data.dita" />
+      <topicref href="modules/generate-diagnostic-bundle-using-acs-portal.dita" />
+      <topicref href="modules/generate-diagnostic-bundle-using-roxctl-cli.dita" chunk="to-content">
+        <topicref href="modules/generate-diagnostic-bundle-roxctl-admin-password.dita" toc="no" />
+        <topicref href="modules/generate-diagnostic-bundle-roxctl-api-token.dita" toc="no" />
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

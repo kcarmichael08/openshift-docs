@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="manage-vulnerabilities">
+  <title>Manage vulnerabilities</title>
+  <topicref href="modules/manage-vulnerabilities.dita">
+    <topicref href="operating/manage-vulnerabilities/vulnerability-management.dita" chunk="to-content">
+      <topicref href="modules/vulnerability-management-process.dita" toc="no">
+        <topicref href="modules/vulnerability-management-asset-assessment.dita" toc="no" />
+        <topicref href="modules/vulnerability-management-prioritizing.dita" toc="no" />
+        <topicref href="modules/vulnerability-management-assess-exposure.dita" toc="no" />
+        <topicref href="modules/vulnerability-management-take-action.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="operating/manage-vulnerabilities/common-vuln-management-tasks.dita" chunk="to-content">
+      <topicref href="modules/vulnerability-management-overview.dita" toc="no" />
+      <topicref href="modules/vulnerability-management-components-portal.dita" toc="no">
+        <topicref href="modules/vulnerability-management20-view-workload-cve.dita" toc="no" />
+        <topicref href="modules/vulnerability-management20-view-platform-cve.dita" toc="no" />
+        <topicref href="modules/viewing-node-cves.dita" toc="no" />
+        <topicref href="modules/disable-identify-vulnerabilities-in-nodes.dita" toc="no" />
+        <topicref href="modules/view-vms-cves.dita" toc="no" />
+        <topicref href="modules/vulnerability-management-accessing-additional-views.dita" toc="no" />
+        <topicref href="modules/vulnerability-management-more-views-all-vuln-images.dita" toc="no" />
+        <topicref href="modules/scan-inactive-images.dita" toc="no" />
+        <topicref href="modules/analyze-images-and-deployments-without-observed-cves.dita" toc="no" />
+        <topicref href="modules/vulnerability-management-viewing-kubernetes-vulnerabilities.dita" toc="no" />
+        <topicref href="modules/cves-tab.dita" toc="no" />
+        <topicref href="modules/images-tab.dita" toc="no" />
+        <topicref href="modules/deployments-tab.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/excluding-cves-overview.dita" toc="no">
+        <topicref href="modules/snooze-cves-vm20.dita" toc="no" />
+        <topicref href="modules/unsnooze-cves-vm20.dita" toc="no" />
+        <topicref href="modules/viewing-snoozed-cves.dita" toc="no" />
+        <topicref href="modules/vulnerability-management-mark-false-positive.dita" toc="no" />
+        <topicref href="modules/vulnerability-management-mark-false-positive-image.dita" toc="no" />
+        <topicref href="modules/vulnerability-management-review-deferred.dita" toc="no" />
+        <topicref href="modules/vulnerability-management-accept-risks.dita" toc="no" />
+        <topicref href="modules/vulnerability-management-exception-time-config.dita" toc="no" />
+        <topicref href="modules/vulnerability-management-accept-deferrals-false-positives.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/identify-dockerfile-line-component-cve.dita" toc="no" />
+      <topicref href="modules/base-image-vulnerabilities.dita" toc="no">
+        <topicref href="modules/view-base-imageinfo-portal.dita" toc="no" />
+        <topicref href="modules/view-base-image-vuln.dita" toc="no" />
+        <topicref href="modules/base-image-vulnreport.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/vulnerability-management-upgrade-component.dita" toc="no" />
+      <topicref href="modules/vulnerability-management-export-workloads.dita" toc="no" />
+    </topicref>
+    <topicref href="operating/manage-vulnerabilities/vulnerability-reporting.dita" chunk="to-content">
+      <topicref href="modules/vulnerability-reporting-overview.dita" toc="no" />
+      <topicref href="modules/vulnerability-management-reporting.dita" toc="no" />
+      <topicref href="modules/vulnerability-management20-creating-report.dita" toc="no">
+        <topicref href="modules/vulnerability-management20-configure-report-delivery-destinations-schedule.dita" toc="no" />
+        <topicref href="modules/vulnerability-management20-report-review-create.dita" toc="no" />
+        <topicref href="modules/vulnerability-management20-permissions.dita" toc="no" />
+        <topicref href="modules/user-permissions-for-vulnerability-reports.dita" toc="no" />
+        <topicref href="modules/vulnerability-report-row-limit.dita" toc="no" />
+        <topicref href="modules/configure-vulnerability-report-row-limit.dita" toc="no" />
+        <topicref href="modules/exporting-vulnerability-report-as-a-csv-file.dita" toc="no" />
+        <topicref href="modules/checking-job-status-and-downloading-a-vulnerability-report-in-csv-format.dita" toc="no" />
+        <topicref href="modules/vulnerability-management20-edit-reports.dita" toc="no" />
+        <topicref href="modules/vulnerability-management20-download-reports.dita" toc="no" />
+        <topicref href="modules/vulnerability-management20-send-reports.dita" toc="no" />
+        <topicref href="modules/vulnerability-management20-clone-reports.dita" toc="no" />
+        <topicref href="modules/vulnerability-management20-delete-reports.dita" toc="no" />
+        <topicref href="modules/vulnerability-management20-retention-settings.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="operating/manage-vulnerabilities/scan-rhcos-node-host.dita" chunk="to-content">
+      <topicref href="modules/rhcos-node-scanning-overview.dita" toc="no" />
+      <topicref href="modules/rhcos-enable-node-scan.dita" toc="no" />
+      <topicref href="modules/rhcos-enable-node-scan-scannerv4.dita" toc="no" />
+      <topicref href="modules/rhcos-analyse-detect.dita" toc="no" />
+      <topicref href="modules/rhcos-match-vulnerability.dita" toc="no" />
+      <topicref href="modules/rhcos-environment-variables.dita" toc="no" />
+      <topicref href="modules/identify-vulnerabilities-in-nodes.dita" toc="no" />
+      <topicref href="modules/viewing-node-cves.dita" toc="no" />
+      <topicref href="modules/understanding-node-cves-scanner-v4.dita" toc="no">
+        <topicref href="modules/node-cve-scanning-discrepancies-example.dita" toc="no" />
+        <topicref href="modules/cves-reported-stackrox-scanner-only.dita" toc="no" />
+        <topicref href="modules/cves-reported-scanner-v4-only.dita" toc="no" />
+        <topicref href="modules/cves-reported-both-scanners.dita" toc="no" />
+        <topicref href="modules/verifying-node-vulnerability-status.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="operating/manage-vulnerabilities/scanner-generate-sbom.dita" chunk="to-content">
+      <topicref href="modules/sbom-generation-overview.dita" toc="no" />
+      <topicref href="modules/sbom-about.dita" toc="no" />
+      <topicref href="modules/sbom-generate.dita" toc="no">
+        <topicref href="modules/generating-sboms-by-using-the-rhacs-portal.dita" toc="no" />
+        <topicref href="modules/generating-sboms-by-using-the-roxctl-cli.dita" toc="no" />
+        <topicref href="modules/generating-sboms-by-using-the-api.dita" toc="no" />
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

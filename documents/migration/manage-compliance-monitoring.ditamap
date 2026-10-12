@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="manage-compliance-monitoring">
+  <title>Manage compliance monitoring</title>
+  <topicref href="modules/manage-compliance-monitoring.dita">
+    <topicref href="operating/compliance-operator-rhacs.dita">
+      <topicref href="modules/compliance-operator-rhacs-overview.dita" />
+      <topicref href="modules/compliance-operator-install.dita" />
+      <topicref href="modules/compliance-operator-configure-scanning.dita" />
+    </topicref>
+    <topicref href="operating/manage-compliance/compliance-feature-overview.dita">
+      <topicref href="modules/openshift-infrastructure-compliance-overview.dita" />
+      <topicref href="modules/compliance-dashboard-deprecated-overview.dita" />
+      <topicref href="modules/compliance-assessment-and-reporting-by-using-rhacs.dita" />
+    </topicref>
+    <topicref href="‎operating/manage-compliance/using-openshift-compliance.dita">
+      <topicref href="modules/using-openshift-compliance-overview.dita" />
+      <topicref href="modules/customizing-and-automating-your-compliance-scans.dita" chunk="to-content">
+        <topicref href="modules/analyzing-compliance-scan-schedules.dita" toc="no" />
+        <topicref href="modules/schedules-page-overview.dita" toc="no">
+          <topicref href="modules/configuration-details-tab.dita" toc="no" />
+          <topicref href="modules/configuration-details-parameters-section.dita" toc="no" />
+          <topicref href="modules/configuration-details-clusters-section.dita" toc="no" />
+          <topicref href="modules/configuration-details-profiles-section.dita" toc="no" />
+          <topicref href="modules/configuration-details-delivery-destinations-section.dita" toc="no" />
+          <topicref href="modules/all-report-jobs-tab.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="modules/assessing-the-profile-compliance-across-clusters.dita" chunk="to-content">
+        <topicref href="modules/coverage-page-overview.dita" toc="no" />
+        <topicref href="modules/monitoring-and-analyzing-the-health-of-your-clusters.dita" toc="no" />
+        <topicref href="modules/compliance-scan-status-overview.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/understanding-tailored-profiles-in-compliance-scans.dita" chunk="to-content">
+        <topicref href="modules/tailored-profiles-appearance.dita" toc="no" />
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

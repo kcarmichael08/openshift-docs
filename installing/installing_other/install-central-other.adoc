@@ -1,5 +1,4 @@
 :_mod-docs-content-type: ASSEMBLY
-include::modules/common-attributes.adoc[]
 [id="install-central-other"]
 = Installing Central services for RHACS on other platforms
 :context: install-central-other
@@ -10,6 +9,8 @@ toc::[]
 Central handles data persistence, API interactions, and {product-title-short} portal access. You can install Central services on other platforms by using Helm charts or by using the `roxctl` CLI.
 
 //Central services installation overview
+
+include::modules/common-attributes.adoc[]
 include::modules/install-central-other-overview.adoc[leveloffset=+1]
 
 // Install using Helm

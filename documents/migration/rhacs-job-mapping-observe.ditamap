@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping-observe">
+  <title>Observe</title>
+  <topichead navtitle="Observe">
+    <topicref href="modules/monitor-rhacs-system-health.dita">
+      <topicref href="operating/use-system-health-dashboard.dita" chunk="to-content">
+        <topicref href="modules/analyzing-and-managing-the-system-health-information.dita" toc="no" />
+        <topicref href="modules/system-health-dashboard-page-overview.dita" toc="no">
+          <topicref href="modules/image-integrations-section.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/administration-usage-page-overview.dita" toc="no" />
+      </topicref>
+      <topicref href="configuration/monitor-acs.dita" chunk="to-content">
+        <topicref href="modules/monitoring-overview.dita" toc="no" />
+        <topicref href="modules/monitoring-osp.dita" toc="no" />
+        <topicref href="modules/monitoring-custom-prometheus.dita" toc="no">
+          <topicref href="modules/monitor-osp-disable-operator.dita" toc="no" />
+          <topicref href="modules/monitor-osp-disable-helm.dita" toc="no" />
+          <topicref href="modules/enable-monitoring-central-operator.dita" toc="no" />
+          <topicref href="modules/enable-monitoring-central-helm.dita" toc="no" />
+          <topicref href="modules/prometheus-service-monitor.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/custom-prometheus-metrics.dita" toc="no">
+          <topicref href="modules/custom-metric-categories.dita" toc="no" />
+          <topicref href="modules/configure-custom-prometheus-metrics.dita" toc="no" />
+          <topicref href="modules/configuring-custom-prometheus-metrics-by-using-the-api.dita" toc="no" />
+          <topicref href="modules/configuring-custom-prometheus-metrics-by-using-the-rhacs-portal.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/setting-up-a-prometheus-server-scraping-from-central-service.dita" toc="no" />
+        <topicref href="modules/prometheus-server-example.dita" toc="no" />
+        <topicref href="modules/metric-categories-for-custom-metrics.dita" toc="no" />
+        <topicref href="modules/system-metrics-and-labels.dita" toc="no" />
+      </topicref>
+      <topicref href="configuration/configure-audit-logging.dita">
+        <topicref href="modules/enable-audit-log.dita" />
+        <topicref href="modules/sample-audit-log-message.dita" />
+      </topicref>
+    </topicref>
+    <mapref href="review-administration-events.ditamap" />
+    <mapref href="telemetry-data-collection-and-optout-choices.ditamap" />
+  </topichead>
+</map>

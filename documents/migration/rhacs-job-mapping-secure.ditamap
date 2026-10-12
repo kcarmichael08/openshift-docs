@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping-secure">
+  <title>Secure</title>
+  <topichead navtitle="Secure">
+    <mapref href="manage-user-access.ditamap" />
+  </topichead>
+</map>

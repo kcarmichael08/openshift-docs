@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="authenticate-and-authorize-with-declarative-configuration">
+  <title>Authenticate and authorize with declarative configuration</title>
+  <topicref href="modules/authenticate-and-authorize-with-declarative-configuration.dita">
+    <topicref href="configuration/declarative-configuration-using.dita">
+      <topicref href="modules/declarative-configuration-overview.dita" />
+      <topicref href="modules/declarative-configuration-restrictions.dita" />
+      <topicref href="modules/declarative-configuration-resource-create.dita" />
+      <topicref href="modules/declarative-configuration-examples.dita" chunk="to-content">
+        <topicref href="modules/declarative-config-example-auth-provider.dita" toc="no" />
+        <topicref href="modules/declarative-config-example-short-lived-token.dita" toc="no" />
+        <topicref href="modules/declarative-config-example-permission-set.dita" toc="no" />
+        <topicref href="modules/declarative-config-example-access-scope.dita" toc="no" />
+        <topicref href="modules/declarative-config-example-role.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/declarative-configuration-troubleshooting.dita" />
+    </topicref>
+  </topicref>
+</map>

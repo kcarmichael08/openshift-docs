@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="upgrade-rhacs-by-using-the-operator">
+  <title>Upgrade RHACS by using the Operator</title>
+  <topicref href="modules/upgrade-rhacs-by-using-the-operator.dita">
+    <topicref href="upgrading/upgrade-operator.dita">
+      <topicref href="modules/prepare-operator-upgrades.dita" chunk="to-content">
+        <topicref href="modules/change-collection-method.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/operator-upgrade-modify-central-custom-resource.dita" />
+      <topicref href="modules/operator-upgrade-modify-central-custom-resource-external-db.dita" />
+      <topicref href="modules/operator-upgrade-change-subscription-channel.dita" chunk="to-content">
+        <topicref href="modules/operator-upgrade-change-subscription-channel-console.dita" toc="no" />
+        <topicref href="modules/operator-upgrade-change-subscription-channel-cli.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/rollback-operator-upgrade.dita" chunk="to-content">
+        <topicref href="modules/rollback-operator-upgrades-cli.dita" toc="no" />
+        <topicref href="modules/rollback-operator-upgrades-console.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/operator-upgrade-troubleshooting.dita" chunk="to-content">
+        <topicref href="modules/operator-upgrade-centraldb-cannot-be-scheduled.dita" toc="no" />
+        <topicref href="modules/operator-upgrade-fail-to-deploy.dita" toc="no" />
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

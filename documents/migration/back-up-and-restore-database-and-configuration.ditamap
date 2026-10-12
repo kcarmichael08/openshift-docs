@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="back-up-and-restore-database-and-configuration">
+  <title>Back up and restore database and configuration</title>
+  <topicref href="modules/back-up-and-restore-database-and-configuration.dita">
+    <topicref href="backup_and_restore/backing-up-acs.dita">
+      <topicref href="modules/backup-considerations-for-external-databases-and-cloud-users.dita" chunk="to-content">
+        <topicref href="modules/backup-external-database.dita" toc="no" />
+        <topicref href="modules/backup-cloud-users.dita" toc="no" />
+        <topicref href="modules/backing-up-your-postgresql-database-and-certificates.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/backing-up-central-db-roxctl.dita" chunk="to-content">
+        <topicref href="modules/on-demand-backups-roxctl-api.dita" toc="no" />
+        <topicref href="modules/on-demand-backups-roxctl-admin-pass.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/backing-up-central-deployment.dita" chunk="to-content">
+        <topicref href="modules/backup-deployment-config-operator.dita" toc="no" />
+        <topicref href="modules/backup-deployment-config-helm.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="backup_and_restore/restore-acs.dita">
+      <topicref href="modules/restoring-an-external-postgresql-database.dita" />
+      <topicref href="modules/restoring-central-certificates-and-redeploying-central.dita" />
+      <topicref href="modules/restore-central-db-roxctl.dita" chunk="to-content">
+        <topicref href="modules/restore-acs-roxctl-api.dita" toc="no" />
+        <topicref href="modules/restore-acs-roxctl-admin-pass.dita" toc="no" />
+        <topicref href="modules/resume-acs-restore.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/restore-central-deployment-roxctl.dita" chunk="to-content">
+        <topicref href="modules/restore-cert-roxctl.dita" toc="no" />
+        <topicref href="modules/install-central-roxctl.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/restore-deployment-config-operator.dita" />
+      <topicref href="modules/restore-deployment-config-helm.dita" />
+      <topicref href="modules/restore-central-another-cluster.dita" />
+    </topicref>
+  </topicref>
+</map>

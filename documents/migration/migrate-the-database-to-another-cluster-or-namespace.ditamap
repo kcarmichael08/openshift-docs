@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="migrate-the-database-to-another-cluster-or-namespace">
+  <title>Migrate the database to another cluster or namespace</title>
+  <topicref href="modules/migrate-the-database-to-another-cluster-or-namespace.dita">
+    <topicref href="modules/restore-central-another-cluster.dita" />
+  </topicref>
+</map>

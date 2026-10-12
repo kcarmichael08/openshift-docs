@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="upgrade-rhacs-by-using-helm-charts">
+  <title>Upgrade RHACS by using Helm charts</title>
+  <topicref href="modules/upgrade-rhacs-by-using-helm-charts.dita">
+    <topicref href="upgrading/upgrade-helm.dita">
+      <topicref href="modules/helm-upgrade-overview.dita" />
+      <topicref href="modules/back-up-central-database.dita" />
+      <topicref href="modules/helm-optimize-central-db-and-pvc.dita" />
+      <topicref href="modules/helm-generate-root-certificates.dita" />
+      <topicref href="modules/updating-helm-repository.dita" />
+      <topicref href="modules/upgrade-crd-helm.dita" />
+      <topicref href="modules/upgrade-helm-chart.dita" />
+      <topicref href="modules/rollback-helm-upgrade.dita" />
+    </topicref>
+  </topicref>
+</map>

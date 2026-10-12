@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="search-and-filter-resources">
+  <title>Search and filter resources</title>
+  <topicref href="modules/search-and-filter-resources.dita">
+    <topicref href="operating/search-filter.dita">
+      <topicref href="modules/search-syntax.dita" />
+      <topicref href="modules/search-autocomplete.dita" />
+      <topicref href="modules/use-global-search.dita" />
+      <topicref href="modules/use-local-page-filtering.dita" />
+      <topicref href="modules/common-search-queries.dita" chunk="to-content">
+        <topicref href="modules/search-query-cve.dita" toc="no" />
+        <topicref href="modules/search-query-privileged.dita" toc="no" />
+        <topicref href="modules/search-query-exposure.dita" toc="no" />
+        <topicref href="modules/search-query-processes.dita" toc="no" />
+        <topicref href="modules/search-query-fixable-vulns.dita" toc="no" />
+        <topicref href="modules/search-query-env-passwords.dita" toc="no" />
+        <topicref href="modules/search-query-components.dita" toc="no" />
+        <topicref href="modules/search-query-users-groups.dita" toc="no">
+          <topicref href="modules/search-query-deployment-owner.dita" toc="no" />
+          <topicref href="modules/search-query-public-registry-images.dita" toc="no" />
+          <topicref href="modules/search-query-default-namespace.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="modules/search-attributes.dita" />
+    </topicref>
+  </topicref>
+</map>

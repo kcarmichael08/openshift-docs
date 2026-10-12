@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="find-misconfigurations-in-your-cluster">
+  <title>Find misconfigurations in your cluster</title>
+  <topicref href="modules/find-misconfigurations-in-your-cluster.dita">
+    <topicref href="operating/review-cluster-configuration.dita">
+      <topicref href="modules/configuration-management-overview.dita" />
+      <topicref href="modules/using-the-configuration-management-view.dita" />
+      <topicref href="modules/misconfigurations-kubernetes-rbac.dita" chunk="to-content">
+        <topicref href="modules/kubernetes-role-assignment.dita" toc="no" />
+        <topicref href="modules/service-accounts-permissions.dita" toc="no" />
+        <topicref href="modules/unused-kubernetes-roles.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/view-kubernetes-secrets.dita" />
+      <topicref href="modules/find-policy-violations.dita" />
+      <topicref href="modules/find-failing-cis-controls.dita" />
+    </topicref>
+  </topicref>
+</map>

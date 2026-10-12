@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping-integrate">
+  <title>Integrate</title>
+  <topichead navtitle="Integrate">
+    <mapref href="integrate-rhacs-with-other-security-and-operational-tools.ditamap" />
+    <topicref href="modules/integrate-with-red-hat-developer-hub.dita">
+      <topicref href="configuration/configuring-and-integrating-the-rhacs-plugin-with-red-hat-developer-hub.dita">
+        <topicref href="modules/configuring-rhacs-plugin-rhdh-overview.dita" />
+        <topicref href="modules/viewing-security-information-in-red-hat-developer-hub.dita" />
+        <topicref href="modules/rebuilding-the-oci-artifact.dita" />
+      </topicref>
+    </topicref>
+    <topicref href="modules/integrate-with-the-openshift-container-platform-web-console.dita">
+      <topicref href="configuration/accessing-vulnerability-information-in-web-console.dita">
+        <topicref href="modules/rhacs-console-plugin-overview.dita" />
+        <topicref href="modules/enabling-the-plugin.dita" />
+        <topicref href="modules/viewing-vulnerability-information-in-web-console.dita" />
+      </topicref>
+    </topicref>
+  </topichead>
+</map>

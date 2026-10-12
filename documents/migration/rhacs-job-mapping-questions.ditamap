@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping-questions">
+  <title>QUESTIONS</title>
+  <topichead navtitle="QUESTIONS">
+    <mapref href="migrate-the-database-to-another-cluster-or-namespace.ditamap" />
+  </topichead>
+</map>

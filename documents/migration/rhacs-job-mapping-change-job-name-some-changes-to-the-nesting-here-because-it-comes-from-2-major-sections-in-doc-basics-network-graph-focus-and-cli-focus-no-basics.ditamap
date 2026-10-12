@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping-change-job-name-some-changes-to-the-nesting-here-because-it-comes-from-2-major-sections-in-doc-basics-network-graph-focus-and-cli-focus-no-basics">
+  <title>CHANGE job name?
+Some changes to the nesting here because it comes from 2 major sections in doc: basics + network graph focus and CLI focus (no basics)</title>
+  <topichead navtitle="CHANGE job name?&#10;Some changes to the nesting here because it comes from 2 major sections in doc: basics + network graph focus and CLI focus (no basics)">
+    <mapref href="secure-network-traffic-by-managing-network-policies.ditamap" />
+    <mapref href="trust-only-signed-container-images.ditamap" />
+    <mapref href="find-misconfigurations-in-your-cluster.ditamap" />
+    <mapref href="create-deployment-collections.ditamap" />
+    <mapref href="configure-collector-runtime.ditamap" />
+    <mapref href="back-up-and-restore-database-and-configuration.ditamap" />
+    <mapref href="search-and-filter-resources.ditamap" />
+  </topichead>
+</map>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping-configure">
+  <title>Configure</title>
+  <topichead navtitle="Configure">
+    <mapref href="authorize-external-automation-and-system-integrations.ditamap" />
+    <mapref href="configure-network-proxy-access.ditamap" />
+    <mapref href="implement-gitops-workflows.ditamap" />
+    <mapref href="authenticate-and-authorize-with-declarative-configuration.ditamap" />
+    <mapref href="manage-certificate-lifecycle.ditamap" />
+    <mapref href="enable-offline-mode-for-airgapped-deployments.ditamap" />
+    <mapref href="configure-custom-network-endpoints.ditamap" />
+    <mapref href="automate-upgrades-for-secured-clusters.ditamap" />
+    <mapref href="remove-monitoring-for-nonactive-clusters.ditamap" />
+    <topicref href="modules/configure-notifications-to-users.dita">
+      <topicref href="configuration/add-security-notices.dita">
+        <topicref href="modules/add-security-notices-overview.dita" />
+        <topicref href="modules/add-a-custom-login-message.dita" />
+        <topicref href="modules/add-a-custom-header-and-footer.dita" />
+      </topicref>
+      <topicref href="configuration/customizing-platform-components.dita">
+        <topicref href="modules/customizing-platform-components-overview.dita" />
+        <topicref href="modules/understanding-platform-components.dita" />
+        <topicref href="modules/modifying-platform-component-definitions.dita" />
+      </topicref>
+      <topicref href="configuration/enable-alert-data-retention.dita">
+        <topicref href="modules/alert-data-retention-overview.dita" />
+        <topicref href="modules/configure-alert-data-retention.dita" />
+      </topicref>
+      <topicref href="configuration/expose-portal-over-http.dita">
+        <topicref href="modules/expose-portal-http-overview.dita" />
+        <topicref href="modules/expose-portal-http-prerequisites.dita" />
+        <topicref href="modules/expose-portal-http-during-installation.dita" />
+        <topicref href="modules/expose-portal-http-existing-deployment.dita" />
+      </topicref>
+    </topicref>
+  </topichead>
+</map>

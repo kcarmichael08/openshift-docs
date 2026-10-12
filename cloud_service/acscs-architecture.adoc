@@ -1,5 +1,4 @@
 :_mod-docs-content-type: ASSEMBLY
-include::modules/common-attributes.adoc[]
 [id="acscs-architecture"]
 = {product-title-managed} architecture
 :context: acscs-architecture
@@ -10,6 +9,8 @@ toc::[]
 {rh-rhacscs-first} has a cloud-based control plane managed by Red{nbsp}Hat and secured cluster services that you install on your clusters. This section describes the architecture and components.
 
 //Architecture overview
+
+include::modules/common-attributes.adoc[]
 include::modules/acscs-architecture-overview.adoc[leveloffset=+1]
 
 include::modules/acscs-central-overview.adoc[leveloffset=+1]

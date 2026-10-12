@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="configure-custom-network-endpoints">
+  <title>Configure custom network endpoints</title>
+  <topicref href="modules/configure-custom-network-endpoints.dita">
+    <topicref href="‎configuration/configure-endpoints.dita">
+      <topicref href="modules/configure-endpoints-overview.dita" />
+      <topicref href="modules/custom-yaml-configuration.dita" />
+      <topicref href="modules/configure-endpoints-new-install.dita" />
+      <topicref href="modules/configure-endpoints-existing.dita" chunk="to-content">
+        <topicref href="modules/restarting-the-central-container.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/enable-traffic-flow-through-custom-ports.dita" />
+    </topicref>
+  </topicref>
+</map>

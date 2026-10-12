@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="scan-images-for-vulnerabilities">
+  <title>Scan images for vulnerabilities</title>
+  <topicref href="modules/scan-images-for-vulnerabilities.dita">
+    <topicref href="operating/examine-images-for-vulnerabilities.dita">
+      <topicref href="modules/scanning-about.dita" />
+      <topicref href="modules/consolidated-scanner.dita" />
+      <topicref href="modules/scannerv4-enabling.dita" chunk="to-content">
+        <topicref href="modules/enabling-scanner-v4-after-operator-installation-central.dita" toc="no" />
+        <topicref href="modules/enabling-scanner-v4-after-operator-installation-secured-cluster.dita" toc="no" />
+        <topicref href="modules/enabling-scanner-v4-after-helm-installation-central.dita" toc="no" />
+        <topicref href="modules/enabling-scanner-v4-after-helm-installation-secured-cluster.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/scanning-images.dita" chunk="to-content">
+        <topicref href="modules/common-scanner-warning-messages.dita" toc="no" />
+        <topicref href="modules/supported-operating-systems.dita" toc="no" />
+        <topicref href="modules/supported-package-formats.dita" toc="no" />
+        <topicref href="modules/supported-programming-languages.dita" toc="no" />
+        <topicref href="modules/supported-layer-compression-formats.dita" toc="no" />
+        <topicref href="modules/supported-runtimes-frameworks.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/scanning-virtual-machines.dita" chunk="to-content">
+        <topicref href="modules/vm-scanning-requirements.dita" toc="no" />
+        <topicref href="modules/vm-scanning-limitations.dita" toc="no" />
+        <topicref href="modules/configuring-vm-scanning.dita" toc="no">
+          <topicref href="modules/advanced-vm-scanning.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/deploy-roxagent.dita" toc="no">
+          <topicref href="modules/deploy-roxagent-quadlet.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/troubleshooting-vm-scanning.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/redirecting-image-pulls-from-a-source-registry-to-a-mirrored-registry.dita" />
+      <topicref href="modules/accessing-delegated-image-scanning.dita" chunk="to-content">
+        <topicref href="modules/enhancing-image-scanning-by-accessing-delegated-image-scanning.dita" toc="no" />
+        <topicref href="modules/scanning-images-by-using-secured-clusters.dita" toc="no" />
+        <topicref href="modules/installing-scanner-slim.dita" toc="no" />
+        <topicref href="modules/installing-scanner-slim-operator.dita" toc="no" />
+        <topicref href="modules/installing-scanner-slim-helm.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/verifying-scanner-installation.dita" />
+      <topicref href="modules/using-image-scanning.dita" chunk="to-content">
+        <topicref href="modules/setting-up-scanning.dita" toc="no" />
+        <topicref href="modules/periodic-scanning-of-images.dita" toc="no" />
+        <topicref href="modules/scan-inactive-images.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/about-vulnerabilities.dita" chunk="to-content">
+        <topicref href="modules/fetching-vulnerability-definitions.dita" toc="no" />
+        <topicref href="modules/understanding-vulnerability-scores.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/disable-language-specific-vulnerability-scanning.dita" />
+      <topicref href="modules/base-images.dita" chunk="to-content">
+        <topicref href="modules/define-base-images.dita" toc="no">
+          <topicref href="modules/base-images-api.dita" toc="no" />
+        </topicref>
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

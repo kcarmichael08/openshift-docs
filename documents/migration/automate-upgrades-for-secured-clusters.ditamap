@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="automate-upgrades-for-secured-clusters">
+  <title>Automate upgrades for secured clusters</title>
+  <topicref href="modules/automate-upgrades-for-secured-clusters.dita">
+    <topicref href="configuration/configure-automatic-upgrades.dita">
+      <topicref href="modules/automatic-upgrades-overview.dita" />
+      <topicref href="modules/enable-automatic-upgrades.dita" />
+      <topicref href="modules/disable-automatic-upgrades.dita" />
+      <topicref href="modules/automatic-upgrade-status.dita" />
+      <topicref href="modules/automatic-upgrade-failure.dita" />
+      <topicref href="modules/manual-upgrade-secured-clusters.dita" />
+    </topicref>
+  </topicref>
+</map>

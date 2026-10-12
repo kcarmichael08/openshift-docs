@@ -1,5 +1,4 @@
 :_mod-docs-content-type: ASSEMBLY
-include::modules/common-attributes.adoc[]
 [id="configuring-file-activity-monitoring"]
 = Configuring file activity monitoring
 :context: file-activity-monitoring
@@ -14,6 +13,8 @@ Configure policies in {rh-rhacs-first} to detect and alert on sensitive file acc
 
 :FeatureName: File activity monitoring
 //Detection of unauthorized file modifications
+
+include::modules/common-attributes.adoc[]
 include::modules/detection-of-unauthorized-file-modifications.adoc[leveloffset=+1]
 
 //Dynamic path support for file activity monitoring

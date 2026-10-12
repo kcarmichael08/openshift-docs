@@ -1,5 +1,4 @@
 :_mod-docs-content-type: ASSEMBLY
-include::modules/common-attributes.adoc[]
 [id="init-bundle-other"]
 = Generating and applying a cluster registration secret or an init bundle for RHACS on other platforms
 :context: init-bundle-other
@@ -11,6 +10,8 @@ toc::[]
 {rh-rhacs-first} uses a special artifact during installation that allows Central to communicate securely with the secured clusters that you are adding. This artifact is a cluster registration secret (CRS) or an init bundle. Init bundles are still supported, but using a CRS is the preferred way to set up a secured cluster.
 
 //Cluster registration secrets overview
+
+include::modules/common-attributes.adoc[]
 include::snippets/cluster-registration-secrets.adoc[]
 
 //Init bundles and cluster registration secrets

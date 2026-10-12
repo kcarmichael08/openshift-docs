@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping-reference">
+  <title>Reference</title>
+  <topichead navtitle="Reference">
+    <mapref href="roxctl-cli-reference.ditamap" />
+    <topicref href="modules/automate-workflows-by-using-the-rhacs-api.dita" />
+    <mapref href="look-up-policy-categories-criteria-and-default-policies.ditamap" />
+  </topichead>
+</map>

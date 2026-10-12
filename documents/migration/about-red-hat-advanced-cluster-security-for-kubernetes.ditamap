@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="about-red-hat-advanced-cluster-security-for-kubernetes">
+  <title>About Red Hat Advanced Cluster Security for Kubernetes</title>
+  <topicref href="modules/about-red-hat-advanced-cluster-security-for-kubernetes.dita">
+    <topicref href="modules/welcome-installation-activities.dita" />
+    <topicref href="modules/welcome-operating-acs.dita" />
+    <topicref href="modules/welcome-configuring-acs.dita" />
+  </topicref>
+</map>

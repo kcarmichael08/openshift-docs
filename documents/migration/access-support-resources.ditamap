@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="access-support-resources">
+  <title>Access support resources</title>
+  <topicref href="modules/access-support-resources.dita">
+    <topicref href="support/getting-support.dita">
+      <topicref href="modules/support-knowledgebase-about.dita" />
+      <topicref href="modules/support-knowledgebase-search.dita" />
+      <topicref href="modules/generate-diagnostic-bundle-using-roxctl-cli.dita" chunk="to-content">
+        <topicref href="modules/generate-diagnostic-bundle-using-acs-portal.dita" toc="no" />
+        <topicref href="modules/generate-diagnostic-bundle-using-roxctl-cli.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/support-submitting-a-case.dita" />
+    </topicref>
+  </topicref>
+</map>

@@ -1,5 +1,4 @@
 :_mod-docs-content-type: ASSEMBLY
-include::modules/common-attributes.adoc[]
 [id="init-bundle-cloud-ocp-apply"]
 = Applying a cluster registration secret or an init bundle for secured clusters
 :context: init-bundle-cloud-ocp-apply
@@ -15,6 +14,8 @@ You must have the `Admin` user role to apply a CRS or an init bundle.
 ====
 
 //Applying the cluster registration secret (CRS) on the secured cluster
+
+include::modules/common-attributes.adoc[]
 include::modules/crs-apply-secured-cluster.adoc[leveloffset=+1]
 
 include::modules/create-resource-init-bundle.adoc[leveloffset=+1]

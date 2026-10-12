@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="upgrade-rhacs-by-using-the-roxctl-cli">
+  <title>Upgrade RHACS by using the roxctl CLI</title>
+  <topicref href="modules/upgrade-rhacs-by-using-the-roxctl-cli.dita">
+    <topicref href="upgrading/upgrade-roxctl.dita">
+      <topicref href="modules/back-up-central-database.dita" />
+      <topicref href="modules/upgrading-roxctl-cli-overview.dita" chunk="to-content">
+        <topicref href="modules/uninstall-roxctl-cli.dita" toc="no" />
+        <topicref href="modules/install-roxctl-cli-linux.dita" toc="no" />
+        <topicref href="modules/install-roxctl-cli-macos.dita" toc="no" />
+        <topicref href="modules/install-roxctl-cli-windows.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/upgrading-central-cluster-overview.dita" chunk="to-content">
+        <topicref href="modules/upgrade-central-cluster-crds.dita" toc="no" />
+        <topicref href="modules/upgrade-central-cluster-central.dita" toc="no" />
+        <topicref href="modules/upgrade-central-cluster-scanner.dita" toc="no" />
+        <topicref href="modules/verify-central-cluster-upgrade.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/upgrading-secured-clusters-overview.dita" chunk="to-content">
+        <topicref href="modules/update-other-images.dita" toc="no" />
+        <topicref href="modules/add-pod-namespace-to-sensor-and-admission-control.dita" toc="no" />
+        <topicref href="modules/migrating-sccs-during-the-manual-upgrade.dita" toc="no">
+          <topicref href="modules/verify-secured-cluster-upgrade.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="modules/rhcos-enable-node-scan.dita" />
+      <topicref href="modules/rollback-central-normal.dita" chunk="to-content">
+        <topicref href="modules/rollback-central-forced.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/verify-upgrades.dita" />
+      <topicref href="modules/revoke-the-api-token.dita" />
+      <topicref href="modules/troubleshooting-cluster-upgrader.dita" chunk="to-content">
+        <topicref href="modules/troubleshooting-upgrader-missing-permissions.dita" toc="no" />
+        <topicref href="modules/troubleshooting-upgrader-missing-image.dita" toc="no" />
+        <topicref href="modules/troubleshooting-upgrader-unknown-reason.dita" toc="no">
+          <topicref href="modules/getting-upgrader-logs.dita" toc="no" />
+        </topicref>
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

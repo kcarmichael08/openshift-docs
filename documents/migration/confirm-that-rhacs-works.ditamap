@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="confirm-that-rhacs-works">
+  <title>Confirm that RHACS works</title>
+  <topicref href="modules/confirm-that-rhacs-works.dita">
+    <topicref href="installing/installing_ocp/verify-installation-rhacs-ocp.dita" chunk="to-content">
+      <topicref href="modules/verify-acs-installation-ocp.dita" toc="no" />
+    </topicref>
+    <topicref href="installing/installing_other/verify-installation-rhacs-other.dita" chunk="to-content">
+      <topicref href="modules/verify-acs-installation-kube.dita" toc="no" />
+    </topicref>
+  </topicref>
+</map>

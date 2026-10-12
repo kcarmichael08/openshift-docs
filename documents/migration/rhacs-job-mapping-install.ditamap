@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping-install">
+  <title>Install</title>
+  <topichead navtitle="Install">
+    <mapref href="install-rhacs-on-red-hat-openshift.ditamap" />
+    <mapref href="install-rhacs-on-other-kubernetes-platforms.ditamap" />
+    <mapref href="confirm-that-rhacs-works.ditamap" />
+    <mapref href="uninstall-rhacs.ditamap" />
+    <mapref href="control-earlyaccess-and-experimental-capabilities.ditamap" />
+  </topichead>
+</map>

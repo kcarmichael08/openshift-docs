@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="verify-default-resource-requirements">
+  <title>Verify default resource requirements</title>
+  <topicref href="modules/verify-default-resource-requirements.dita">
+    <topicref href="installing/acs-default-requirements.dita">
+      <topicref href="modules/acs-requirements.dita" chunk="to-content">
+        <topicref href="modules/acs-system-requirements.dita" toc="no" />
+        <topicref href="modules/acs-helm-requirements.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/default-requirements-central-services.dita" chunk="to-content">
+        <topicref href="modules/central-component-overview.dita" toc="no" />
+        <topicref href="modules/central-resource-requirements.dita" toc="no" />
+        <topicref href="modules/scanner-overview.dita" toc="no" />
+        <topicref href="modules/stackrox-scanner-requirements.dita" toc="no" />
+        <topicref href="modules/scanner-v4-indexer-requirements.dita" toc="no" />
+        <topicref href="modules/scanner-v4-matcher-requirements.dita" toc="no" />
+        <topicref href="modules/scanner-v4-db-requirements.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/default-requirements-secured-cluster-services.dita" chunk="to-content">
+        <topicref href="modules/sensor-overview.dita" toc="no" />
+        <topicref href="modules/sensor-resource-requirements.dita" toc="no" />
+        <topicref href="modules/admission-controller-overview.dita" toc="no" />
+        <topicref href="modules/admission-controller-resource-requirements.dita" toc="no" />
+        <topicref href="modules/collector-overview.dita" toc="no" />
+        <topicref href="modules/collector-collection-requirements.dita" toc="no" />
+        <topicref href="modules/collector-cpu-memory-requirements.dita" toc="no" />
+        <topicref href="modules/collector-container-requirements.dita" toc="no" />
+        <topicref href="modules/compliance-container-requirements.dita" toc="no" />
+        <topicref href="modules/node-inventory-container-requirements.dita" toc="no" />
+        <topicref href="modules/collector-total-requirements.dita" toc="no" />
+        <topicref href="modules/scanner-overview.dita" toc="no" />
+        <topicref href="modules/scanner-v4-indexer-requirements.dita" toc="no" />
+        <topicref href="modules/scanner-v4-db-requirements.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/default-requirements-external-db.dita" chunk="to-content">
+        <topicref href="modules/external-db-type-version.dita" toc="no" />
+        <topicref href="modules/external-db-user-permissions.dita" toc="no" />
+        <topicref href="modules/external-db-connection-string.dita" toc="no" />
+        <topicref href="modules/external-db-ca-certificates.dita" toc="no" />
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

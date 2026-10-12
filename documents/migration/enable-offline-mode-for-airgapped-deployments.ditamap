@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="enable-offline-mode-for-airgapped-deployments">
+  <title>Enable offline mode for air-gapped deployments</title>
+  <topicref href="modules/enable-offline-mode-for-air-gapped-deployments.dita">
+    <topicref href="configuration/enable-offline-mode.dita">
+      <topicref href="modules/enable-offline-mode-deployment-steps.dita" />
+      <topicref href="modules/downloading-images-offline-overview.dita" chunk="to-content">
+        <topicref href="modules/image-versions.dita" toc="no">
+          <topicref href="modules/retag-images.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="modules/enabling-offline-mode-installation-overview.dita" chunk="to-content">
+        <topicref href="modules/enable-offline-mode-operator.dita" toc="no" />
+        <topicref href="modules/enable-offline-mode-helm.dita" toc="no" />
+        <topicref href="modules/enable-offline-mode-roxctl.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/updating-scanner-definitions-offline-overview.dita" chunk="to-content">
+        <topicref href="modules/download-scanner-definitions.dita" toc="no" />
+        <topicref href="modules/uploading-scanner-definitions-overview.dita" toc="no">
+          <topicref href="modules/upload-definitions-to-central-api-token.dita" toc="no" />
+          <topicref href="modules/upload-definitions-to-central-admin-pass.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="modules/update-kernel-support-packages.dita" chunk="to-content">
+        <topicref href="modules/download-kernel-support-package.dita" toc="no" />
+        <topicref href="modules/upload-kernel-support-package-to-central.dita" toc="no" />
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

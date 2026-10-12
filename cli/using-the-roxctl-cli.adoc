@@ -1,7 +1,6 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="using-the-roxctl-cli"]
 = Using the roxctl CLI
-include::modules/common-attributes.adoc[]
 :context: using-roxctl-cli
 
 toc::[]
@@ -19,6 +18,8 @@ $ export ROX_ENDPOINT=_<host:port>_
 where `<host:port>` specifies the host and port information for Central.
 
 //Getting authentication information
+
+include::modules/common-attributes.adoc[]
 include::modules/getting-authentication-information.adoc[leveloffset=+1]
 
 //Authenticating by using the roxctl CLI

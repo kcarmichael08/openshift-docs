@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="control-earlyaccess-and-experimental-capabilities">
+  <title>Control early-access and experimental capabilities</title>
+  <topicref href="modules/control-early-access-and-experimental-capabilities.dita">
+    <topicref href="configuration/managing-preview-features.dita">
+      <topicref href="modules/managing-feature-flags.dita" chunk="to-content">
+        <topicref href="modules/managing-feature-flags-prerequisites.dita" toc="no" />
+        <topicref href="managing-feature-flags-procedure.dita" toc="no" />
+        <topicref href="modules/managing-feature-flags-best-practices.dita" toc="no" />
+        <topicref href="modules/managing-feature-flags-troubleshooting.dita" toc="no" />
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

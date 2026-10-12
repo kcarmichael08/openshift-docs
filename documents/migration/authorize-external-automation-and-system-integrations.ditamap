@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="authorize-external-automation-and-system-integrations">
+  <title>Authorize external automation and system integrations</title>
+  <topicref href="modules/authorize-external-automation-and-system-integrations.dita">
+    <topicref href="cli/using-the-roxctl-cli.dita">
+      <topicref href="modules/setting-up-environment-variables.dita" />
+      <topicref href="modules/getting-authentication-information.dita" />
+      <topicref href="modules/authenticating-by-using-the-roxctl-cli.dita" chunk="to-content">
+        <topicref href="modules/create-api-token.dita" toc="no" />
+        <topicref href="modules/cli-authentication.dita" toc="no" />
+        <topicref href="modules/using-an-authentication-provider-to-authenticate-with-roxctl.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/configuring-and-using-the-roxctl-cli-in-rhacs-cloud-service.dita" />
+    </topicref>
+  </topicref>
+</map>

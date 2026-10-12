@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="roxctl-cli-reference">
+  <title>roxctl CLI reference</title>
+  <topicref href="modules/roxctl-cli-reference.dita">
+    <topicref href="cli/installing-the-roxctl-cli.dita">
+      <topicref href="modules/install-roxctl-cli-binary.dita" chunk="to-content">
+        <topicref href="modules/install-roxctl-cli-linux.dita" toc="no" />
+        <topicref href="modules/install-roxctl-cli-macos.dita" toc="no" />
+        <topicref href="modules/install-roxctl-cli-windows.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/run-roxctl-from-container.dita" />
+    </topicref>
+    <topicref href="cli/using-the-roxctl-cli.dita">
+      <topicref href="modules/setting-up-environment-variables.dita" />
+      <topicref href="modules/getting-authentication-information.dita" />
+      <topicref href="modules/authenticating-by-using-the-roxctl-cli.dita" chunk="to-content">
+        <topicref href="modules/create-api-token.dita" toc="no" />
+        <topicref href="modules/cli-authentication.dita" toc="no" />
+        <topicref href="modules/using-an-authentication-provider-to-authenticate-with-roxctl.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/configuring-and-using-the-roxctl-cli-in-rhacs-cloud-service.dita" />
+    </topicref>
+    <topicref href="cli/managing-secured-clusters.dita">
+      <topicref href="modules/setting-up-environment-variables.dita" />
+      <topicref href="modules/generating-sensor-deployment-files.dita" chunk="to-content">
+        <topicref href="modules/generating-sensor-k8s.dita" toc="no" />
+        <topicref href="modules/generating-sensor-openshift.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/installing-sensor-by-using-the-generate-yaml-files.dita" />
+      <topicref href="modules/downloading-sensor-bundle-for-existing-clusters.dita" />
+      <topicref href="modules/deleting-cluster-integration.dita" />
+    </topicref>
+    <topicref href="cli/checking-policy-compliance.dita">
+      <topicref href="modules/setting-up-environment-variables.dita" />
+      <topicref href="modules/configuring-output-format.dita" chunk="to-content">
+        <topicref href="modules/configuring-output-format-options.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/checking-deployment-yaml-files.dita" />
+      <topicref href="modules/checking-images.dita" />
+      <topicref href="modules/checking-image-scan-results.dita" />
+    </topicref>
+    <topicref href="cli/debugging-issues.dita">
+      <topicref href="modules/setting-up-environment-variables.dita" />
+      <topicref href="modules/viewing-the-logs.dita" />
+      <topicref href="modules/viewing-current-log-level.dita" />
+      <topicref href="modules/changing-the-log-level.dita" />
+      <topicref href="modules/retrieving-debugging-information.dita" />
+    </topicref>
+    <topicref href="cli/image-scanning-by-using-the-roxctl-cli.dita">
+      <topicref href="modules/scanning-images-remote-cluster.dita" chunk="to-content">
+        <topicref href="modules/scanning-images-remote-cluster-procedure.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/roxctl-image-scan-command-options.dita" />
+    </topicref>
+  </topicref>
+</map>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="red-hat-advanced-cluster-security-for-kubernetes-architecture-first-look">
+  <title>Red Hat Advanced Cluster Security for Kubernetes architecture first look</title>
+  <topicref href="modules/red-hat-advanced-cluster-security-for-kubernetes-architecture-first-look.dita">
+    <topicref href="architecture/acs-architecture.dita">
+      <topicref href="modules/acs-architecture-overview.dita" />
+      <topicref href="modules/acs-central-services-overview.dita" chunk="to-content">
+        <topicref href="modules/con-vuln-sources.dita" toc="no">
+          <topicref href="modules/scanner-v4-vuln-sources.dita" toc="no" />
+          <topicref href="modules/stackrox-scanner-vuln-sources.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="modules/acs-secured-cluster-services-overview.dita" />
+      <topicref href="modules/acs-architecture-external-components.dita" />
+      <topicref href="modules/acs-architecture-interaction-between-services.dita" />
+    </topicref>
+  </topicref>
+</map>

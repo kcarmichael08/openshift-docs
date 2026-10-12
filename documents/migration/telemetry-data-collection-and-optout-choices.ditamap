@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="telemetry-data-collection-and-optout-choices">
+  <title>Telemetry data collection and opt-out choices</title>
+  <topicref href="modules/telemetry-data-collection-and-opt-out-choices.dita">
+    <topicref href="telemetry/about-telemetry.dita" chunk="to-content">
+      <topicref href="modules/information-collected-by-telemetry.dita" toc="no" />
+    </topicref>
+    <topicref href="telemetry/opting-out-of-telemetry.dita" chunk="to-content">
+      <topicref href="modules/consequences-of-disabling-telemetry.dita" toc="no" />
+      <topicref href="modules/disabling-telemetry.dita" toc="no" />
+    </topicref>
+  </topicref>
+</map>

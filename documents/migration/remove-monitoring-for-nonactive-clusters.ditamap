@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="remove-monitoring-for-nonactive-clusters">
+  <title>Remove monitoring for nonactive clusters</title>
+  <topicref href="modules/remove-monitoring-for-nonactive-clusters.dita">
+    <topicref href="configuration/configure-inactive-cluster-deletion.dita">
+      <topicref href="modules/configure-inactive-cluster-deletion-overview.dita" />
+      <topicref href="modules/configure-cluster-decommissioning.dita" />
+      <topicref href="modules/view-nonactive-clusters.dita" />
+    </topicref>
+  </topicref>
+</map>

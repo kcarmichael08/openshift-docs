@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="monitor-security-posture-and-risk">
+  <title>Monitor security posture and risk</title>
+  <topicref href="modules/monitor-security-posture-and-risk.dita">
+    <topicref href="operating/view-dashboard.dita">
+      <topicref href="modules/dashboard-status-bar.dita" />
+      <topicref href="modules/dashboard-filter.dita" />
+      <topicref href="modules/dashboard-actionable-widgets.dita" />
+      <topicref href="modules/dashboard-widget-options.dita" />
+    </topicref>
+    <topicref href="operating/evaluate-security-risks.dita">
+      <topicref href="modules/risk-view-details.dita" chunk="to-content">
+        <topicref href="modules/risk-view-deployment.dita" toc="no" />
+        <topicref href="modules/risk-indicators-tab.dita" toc="no" />
+        <topicref href="modules/risk-deployment-details.dita" toc="no">
+          <topicref href="modules/risk-deployment-details-overview.dita" toc="no" />
+          <topicref href="modules/risk-deployment-details-container-configuration.dita" toc="no" />
+          <topicref href="modules/risk-deployment-details-security-context.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/process-discovery-tab.dita" toc="no">
+          <topicref href="modules/process-discovery-event-timeline.dita" toc="no" />
+          <topicref href="modules/use-process-baselines.dita" toc="no" />
+          <topicref href="modules/configuring-process-baseline-generation-duration.dita" toc="no" />
+          <topicref href="modules/view-process-baselines.dita" toc="no" />
+          <topicref href="modules/add-process-to-baseline.dita" toc="no" />
+          <topicref href="modules/remove-process-from-baseline.dita" toc="no" />
+          <topicref href="modules/lock-and-unlock-process-baselines.dita" toc="no" />
+          <topicref href="modules/auto-lock-process-baselines.dita" toc="no" />
+          <topicref href="modules/auto-lock-process-baselines-known-limitations.dita" toc="no" />
+          <topicref href="modules/bulk-locking-and-unlocking-process-baselines.dita" toc="no" />
+        </topicref>
+      </topicref>
+    </topicref>
+    <topicref href="operating/visualizing-external-entities.dita">
+      <topicref href="modules/visualizing-external-entities-overview.dita" />
+      <topicref href="modules/enabling-external-ip-collection-secured-clusters.dita" />
+      <topicref href="modules/querying-external-entities-using-api.dita" />
+      <topicref href="modules/visualizing-external-entities-known-limitations.dita" />
+    </topicref>
+    <topicref href="operating/audit-listening-endpoints.dita">
+      <topicref href="modules/audit-listening-endpoints-overview.dita" />
+    </topicref>
+  </topicref>
+</map>

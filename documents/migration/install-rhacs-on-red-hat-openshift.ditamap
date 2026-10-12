@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="install-rhacs-on-red-hat-openshift">
+  <title>Install RHACS on Red Hat OpenShift</title>
+  <topicref href="modules/install-rhacs-on-red-hat-openshift.dita">
+    <topicref href="installing/installing_ocp/install-central-ocp.dita">
+      <topicref href="modules/install-central-using-the-operator.dita" chunk="to-content">
+        <topicref href="modules/install-acs-operator-annotations.dita" toc="no" />
+        <topicref href="modules/install-acs-operator.dita" toc="no">
+          <topicref href="modules/configuring-the-rhacs-operator-for-infrastructure-nodes.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/install-central-operator.dita" toc="no" />
+        <topicref href="modules/provision-postgresql-database.dita" toc="no" />
+        <topicref href="modules/install-central-operator-external-db.dita" toc="no" />
+        <topicref href="modules/verify-central-install-operator.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/install-central-using-helm-charts.dita" chunk="to-content">
+        <topicref href="modules/install-central-using-helm-charts-without-customization.dita" toc="no">
+          <topicref href="modules/adding-helm-repository.dita" toc="no" />
+          <topicref href="modules/acs-quick-install-using-helm.dita" toc="no" />
+          <topicref href="modules/automatically-generated-ca.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/install-central-using-helm-charts-with-customizations.dita" toc="no">
+          <topicref href="modules/central-services-private-config.dita" toc="no" />
+          <topicref href="modules/image-pull-secrets-private-config.dita" toc="no" />
+          <topicref href="modules/proxy-configuration-private-config.dita" toc="no" />
+          <topicref href="modules/central-private-config.dita" toc="no" />
+          <topicref href="modules/scanner-private-config.dita" toc="no" />
+          <topicref href="modules/central-services-public-config.dita" toc="no" />
+          <topicref href="modules/image-pull-secrets-public-config.dita" toc="no" />
+          <topicref href="modules/image-public-config.dita" toc="no" />
+          <topicref href="modules/policy-as-code-public-config.dita" toc="no" />
+          <topicref href="modules/environment-variables-public-config.dita" toc="no" />
+          <topicref href="modules/additional-trusted-certificate-authorities-public-config.dita" toc="no" />
+          <topicref href="modules/default-network-policies-public-config.dita" toc="no" />
+          <topicref href="modules/central-public-config.dita" toc="no" />
+          <topicref href="modules/stackrox-scanner-public-config.dita" toc="no" />
+          <topicref href="modules/scanner-v4-public-config.dita" toc="no" />
+          <topicref href="modules/customization-public-config.dita" toc="no" />
+          <topicref href="modules/advanced-customization-public-config.dita" toc="no" />
+          <topicref href="modules/declarative-configuration-values.dita" toc="no" />
+          <topicref href="modules/install-central-services-helm-chart.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/change-config-options-after-deployment-central-service.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/install-central-using-the-roxctl-cli.dita" chunk="to-content">
+        <topicref href="modules/installing-the-roxctl-cli.dita" toc="no">
+          <topicref href="modules/install-roxctl-cli-linux.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-macos.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-windows.dita" toc="no" />
+          <topicref href="modules/using-the-interactive-installer.dita" toc="no" />
+          <topicref href="modules/install-central-roxctl.dita" toc="no" />
+        </topicref>
+      </topicref>
+    </topicref>
+    <topicref href="installing/installing_ocp/install-central-config-options-ocp.dita">
+      <topicref href="modules/central-configuration-options-operator.dita" chunk="to-content">
+        <topicref href="modules/central-settings-operator.dita" toc="no" />
+        <topicref href="modules/scanner-settings-operator.dita" toc="no" />
+        <topicref href="modules/scannerv4-settings-operator.dita" toc="no" />
+        <topicref href="modules/general-and-miscellaneous-settings-operator.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/customize-installation-operator-overlays.dita" chunk="to-content">
+        <topicref href="modules/overlays-overview.dita" toc="no">
+          <topicref href="modules/adding-an-overlay.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/overlay-examples.dita" toc="no">
+          <topicref href="modules/adding-eks-role-arn-annotation.dita" toc="no" />
+          <topicref href="modules/adding-env-variable-to-deployment.dita" toc="no" />
+          <topicref href="modules/adding-ingress-to-network-policy.dita" toc="no" />
+          <topicref href="modules/changing-configmap-data.dita" toc="no" />
+          <topicref href="modules/adding-container-to-deployment.dita" toc="no" />
+        </topicref>
+      </topicref>
+    </topicref>
+    <topicref href="installing/installing_ocp/init-bundle-ocp.dita">
+      <topicref href="modules/secured-cluster-authentication-options.dita" />
+      <topicref href="modules/cluster-registration-secrets-overview.dita" chunk="to-content">
+        <topicref href="modules/portal-generate-crs.dita" toc="no" />
+        <topicref href="modules/crs-generate-roxctl.dita" toc="no" />
+        <topicref href="modules/crs-apply-secured-cluster.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/init-bundle-generation-methods.dita" chunk="to-content">
+        <topicref href="modules/portal-generate-init-bundle.dita" toc="no" />
+        <topicref href="modules/roxctl-generate-init-bundle.dita" toc="no" />
+        <topicref href="modules/create-resource-init-bundle.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/next-steps-init-bundle-ocp.dita" />
+    </topicref>
+    <topicref href="installing/installing_ocp/install-secured-cluster-ocp.dita">
+      <topicref href="modules/secured-cluster-services-installation-overview.dita" chunk="to-content">
+        <topicref href="modules/install-acs-operator-annotations.dita" toc="no" />
+        <topicref href="modules/install-secured-cluster-operator.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/install-rhacs-on-secured-clusters-by-using-helm-charts.dita" chunk="to-content">
+        <topicref href="modules/install-rhacs-on-secured-clusters-by-using-helm-charts-without-customizations.dita" toc="no">
+          <topicref href="modules/adding-helm-repository.dita" toc="no" />
+          <topicref href="modules/acs-quick-install-secured-cluster-using-helm.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/install-rhacs-on-secured-clusters-by-using-helm-charts-with-customizations.dita" toc="no">
+          <topicref href="modules/secured-cluster-services-config.dita" toc="no" />
+          <topicref href="modules/secured-cluster-services-environment-variables.dita" toc="no" />
+          <topicref href="modules/install-secured-cluster-services-helm-chart.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/change-config-options-after-deployment.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/installing-rhacs-on-secured-clusters-by-using-the-roxctl-cli.dita" chunk="to-content">
+        <topicref href="modules/install-the-roxctl-cli.dita" toc="no">
+          <topicref href="modules/install-roxctl-cli-linux.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-macos.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-windows.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/install-sensor-roxctl.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="installing/installing_ocp/install-secured-cluster-config-options-ocp.dita">
+      <topicref href="modules/secured-cluster-configuration-options-operator.dita" chunk="to-content">
+        <topicref href="modules/required-configuration-settings.dita" toc="no" />
+        <topicref href="modules/admission-controller-settings.dita" toc="no" />
+        <topicref href="modules/scanner-configuration-settings-operator.dita" toc="no" />
+        <topicref href="modules/image-configuration-settings.dita" toc="no" />
+        <topicref href="modules/per-node-settings.dita" toc="no" />
+        <topicref href="modules/sensor-configuration-settings.dita" toc="no" />
+        <topicref href="modules/general-and-miscellaneous-settings-secured-cluster.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/customize-installation-operator-overlays.dita" chunk="to-content">
+        <topicref href="modules/adding-an-overlay.dita" toc="no" />
+        <topicref href="modules/adding-an-overlay.dita" toc="no">
+          <topicref href="modules/adding-eks-role-arn-annotation.dita" toc="no" />
+          <topicref href="modules/adding-an-environment-variable-to-a-deployment.dita" toc="no" />
+          <topicref href="modules/adding-an-ingress-to-a-network-policy.dita" toc="no" />
+          <topicref href="modules/changing-configmap-data.dita" toc="no" />
+          <topicref href="modules/adding-a-container-to-a-deployment.dita" toc="no" />
+        </topicref>
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

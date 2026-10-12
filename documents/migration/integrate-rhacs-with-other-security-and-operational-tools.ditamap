@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="integrate-rhacs-with-other-security-and-operational-tools">
+  <title>Integrate RHACS with other security and operational tools</title>
+  <topicref href="modules/integrate-rhacs-with-other-security-and-operational-tools.dita">
+    <topicref href="integration/integrate-with-image-registries.dita">
+      <topicref href="modules/integrate-image-registries-overview.dita" />
+      <topicref href="modules/automatic-configuration-image-registry.dita" />
+      <topicref href="modules/amazon-ecr-integrations.dita" />
+      <topicref href="modules/manual-configuration-image-registry-overview.dita" chunk="to-content">
+        <topicref href="modules/manual-configuration-image-registry-ocp.dita" toc="no" />
+        <topicref href="modules/manual-configuration-image-registry-ecr.dita" toc="no">
+          <topicref href="modules/use-assumerole-with-ecr.dita" toc="no" />
+          <topicref href="modules/configuring-assumerole-with-iam.dita" toc="no" />
+          <topicref href="modules/configuring-assumerole-without-iam.dita" toc="no" />
+          <topicref href="modules/configuring-assumerole-acs.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/manual-configuration-image-registry-gcr.dita" toc="no" />
+        <topicref href="modules/manual-configuration-image-registry-gar.dita" toc="no" />
+        <topicref href="modules/manual-configuration-image-registry-acr.dita" toc="no" />
+        <topicref href="modules/manual-configuration-image-registry-jfrog.dita" toc="no" />
+        <topicref href="modules/manual-configuration-image-registry-qcr.dita" toc="no" />
+        <topicref href="modules/quay-keyless-eso.dita" toc="no" />
+        <topicref href="modules/manual-configuration-image-registry-ghcr.dita" toc="no" />
+        <topicref href="modules/manual-configuration-image-registry-ibm.dita" toc="no" />
+        <topicref href="modules/manual-configuration-image-registry-redhat.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="integration/integrate-with-ci-systems.dita">
+      <topicref href="modules/ci-integration-overview.dita" />
+      <topicref href="modules/configure-build-policies.dita" chunk="to-content">
+        <topicref href="modules/integrate-ci-check-existing-build-phase-policies.dita" toc="no">
+          <topicref href="modules/policy-enforcement-deploy.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="modules/configure-registry-integration.dita" chunk="to-content">
+        <topicref href="modules/check-for-existing-registry-integration.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/configure-access.dita" chunk="to-content">
+        <topicref href="modules/cli-authentication.dita" toc="no" />
+        <topicref href="modules/install-roxctl-cli-binary.dita" toc="no">
+          <topicref href="modules/install-roxctl-cli-linux.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-macos.dita" toc="no" />
+          <topicref href="modules/install-roxctl-cli-windows.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/run-roxctl-from-container.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/integrate-with-your-ci-pipeline.dita" chunk="to-content">
+        <topicref href="modules/using-jenkins.dita" toc="no" />
+        <topicref href="modules/integrate-circle-ci.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="integration/integrate-with-pagerduty.dita">
+      <topicref href="modules/pagerduty-integration-workflow-overview.dita" />
+      <topicref href="modules/configure-pagerduty.dita" />
+      <topicref href="modules/pagerduty-configuring-acs.dita" />
+      <topicref href="modules/configure-policy-notifications.dita" />
+    </topicref>
+    <topicref href="integration/integrate-with-slack.dita">
+      <topicref href="modules/slack-integration-overview.dita" />
+      <topicref href="modules/configure-slack.dita" chunk="to-content">
+        <topicref href="modules/send-alerts-to-different-slack-channels.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/pagerduty-configuring-acs.dita" />
+      <topicref href="modules/configure-policy-notifications.dita" />
+    </topicref>
+    <topicref href="integration/integrate-using-generic-webhooks.dita">
+      <topicref href="modules/webhook-configuring-acs.dita" />
+      <topicref href="modules/configure-policy-notifications.dita" />
+    </topicref>
+    <topicref href="integration/integrate-with-qradar.dita">
+      <topicref href="modules/qradar-integration-workflow-overview.dita" />
+      <topicref href="modules/webhook-configuring-acs.dita" />
+      <topicref href="modules/configure-policy-notifications.dita" />
+    </topicref>
+    <topicref href="integration/integrate-with-servicenow.dita">
+      <topicref href="modules/servicenow-integration-overview.dita" />
+      <topicref href="modules/webhook-configuring-acs.dita" />
+      <topicref href="modules/configure-policy-notifications.dita" />
+    </topicref>
+    <topicref href="integration/integrate-with-sumologic.dita">
+      <topicref href="modules/sumologic-integration-workflow-overview.dita" />
+      <topicref href="modules/configure-sumologic.dita" />
+      <topicref href="modules/sumologic-configuring-acs.dita" />
+      <topicref href="modules/configure-policy-notifications.dita" />
+      <topicref href="modules/view-alerts-in-sumo-logic.dita" />
+    </topicref>
+    <topicref href="integration/integrate-with-google-cloud-storage.dita">
+      <topicref href="modules/google-cloud-storage-integration-overview.dita" />
+      <topicref href="modules/google-cloud-storage-configuring-acs.dita" chunk="to-content">
+        <topicref href="modules/perform-on-demand-backups-google-cloud-storage.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="integration/integrate-using-syslog-protocol.dita">
+      <topicref href="modules/syslog-integration-overview.dita" />
+      <topicref href="modules/syslog-configuring-acs.dita" />
+    </topicref>
+    <topicref href="integration/integrate-with-amazon-s3.dita">
+      <topicref href="modules/integrate-amazon-s3-overview.dita" />
+      <topicref href="modules/amazon-s3-configuring-acs.dita" />
+      <topicref href="modules/perform-on-demand-backups-amazon-s3.dita" />
+    </topicref>
+    <topicref href="integration/integrate-with-s3-api-compatible-services.dita">
+      <topicref href="modules/s3-api-compatible-integration-overview.dita" />
+      <topicref href="modules/s3-api-compatible-services-configuring-acs.dita" />
+      <topicref href="modules/perform-on-demand-backups-s3-api-compatible-services.dita" />
+    </topicref>
+    <topicref href="integration/integrate-with-google-cloud-scc.dita">
+      <topicref href="modules/configure-google-cloud-scc.dita" />
+      <topicref href="modules/google-cloud-scc-configuring-acs.dita" />
+      <topicref href="modules/configure-policy-notifications.dita" />
+    </topicref>
+    <topicref href="integration/integrate-with-splunk.dita">
+      <topicref href="modules/integrate-splunk-overview.dita" />
+      <topicref href="modules/integrate-splunk-enable-http-event-collector.dita" chunk="to-content">
+        <topicref href="modules/add-http-event-collector-splunk.dita" toc="no">
+          <topicref href="modules/integrate-splunk-enable-http-event-collector.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/splunk-configuring-acs.dita" toc="no" />
+        <topicref href="modules/configure-policy-notifications.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/integrate-splunk-add-on-overview.dita" chunk="to-content">
+        <topicref href="modules/install-and-configure-the-splunk-add-on.dita" toc="no" />
+        <topicref href="modules/update-the-splunk-add-on.dita" toc="no" />
+        <topicref href="modules/troubleshoot-the-splunk-add-on.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="integration/integrate-with-image-vulnerability-scanners.dita">
+      <topicref href="modules/supported-container-image-registries.dita" />
+      <topicref href="modules/scanners-included-in-rhacs.dita" />
+      <topicref href="modules/alternative-scanners-overview.dita" />
+      <topicref href="modules/integrate-with-clair.dita" />
+      <topicref href="modules/integrate-with-gcr-container-analysis.dita" />
+      <topicref href="modules/integrate-with-qcr-scanner.dita" />
+    </topicref>
+    <topicref href="integration/integrate-with-jira.dita">
+      <topicref href="modules/jira-integration-workflow-overview.dita" />
+      <topicref href="modules/configure-jira.dita" />
+      <topicref href="modules/jira-configuring-acs.dita" chunk="to-content">
+        <topicref href="modules/create-issues-in-different-jira-projects.dita" toc="no" />
+        <topicref href="modules/configure-custom-priorities-in-jira.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/configure-policy-notifications.dita" />
+      <topicref href="modules/troubleshoot-jira-integration.dita" />
+    </topicref>
+    <topicref href="integration/integrate-with-email.dita">
+      <topicref href="modules/integrate-email-rhacs-overview.dita" chunk="to-content">
+        <topicref href="modules/configure-acs-email.dita" toc="no" />
+        <topicref href="modules/configure-policy-notifications.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/integrate-email-rhacs-cloud-overview.dita" chunk="to-content">
+        <topicref href="modules/configure-acscs-email.dita" toc="no" />
+        <topicref href="modules/configure-policy-notifications.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="integration/integrate-with-cloud-management-platforms.dita">
+      <topicref href="modules/cloud-management-platforms-overview.dita" />
+      <topicref href="modules/cloud-management-platforms-paladin-cloud.dita" />
+      <topicref href="modules/cloud-management-platforms-ocm.dita" />
+    </topicref>
+    <topicref href="integration/integrate-using-short-lived-tokens.dita">
+      <topicref href="modules/short-lived-tokens-integration-overview.dita" />
+      <topicref href="modules/aws-secure-token-service-overview.dita" chunk="to-content">
+        <topicref href="modules/aws-secure-token-service-eks.dita" toc="no" />
+        <topicref href="modules/aws-secure-token-service-openshift.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/google-workload-identity-federation-overview.dita" chunk="to-content">
+        <topicref href="modules/google-workload-identity-federation-gke.dita" toc="no" />
+        <topicref href="modules/google-workload-identity-federation-openshift.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/azure-entra-id-federation-overview.dita" chunk="to-content">
+        <topicref href="modules/azure-workload-identity-federation-aks.dita" toc="no" />
+        <topicref href="modules/azure-workload-identity-federation-openshift.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="integration/integrating-with-microsoft-sentinel-notifier.dita">
+      <topicref href="modules/viewing-the-log-analytics-to-detect-threats.dita" />
+    </topicref>
+  </topicref>
+</map>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="manage-user-access">
+  <title>Manage user access</title>
+  <topicref href="modules/manage-user-access.dita">
+    <topicref href="operating/manage-user-access/manage-role-based-access-control-3630.dita" chunk="to-content">
+      <topicref href="modules/rbac-system-roles-3630.dita" toc="no">
+        <topicref href="modules/view-system-roles-permission-scope.dita" toc="no" />
+        <topicref href="modules/create-a-custom-role-3630.dita" toc="no" />
+        <topicref href="modules/assign-role-to-user-or-group.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/rbac-permission-sets.dita" toc="no">
+        <topicref href="modules/view-system-permission-set.dita" toc="no" />
+        <topicref href="modules/create-a-custom-permission-set.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/rbac-access-scopes.dita" toc="no">
+        <topicref href="modules/view-system-access-scopes.dita" toc="no" />
+        <topicref href="modules/create-a-custom-access-scope.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/rbac-resource-definitions.dita" toc="no" />
+      <topicref href="modules/declarative-configuration-auth-resources.dita" toc="no" />
+    </topicref>
+    <topicref href="operating/manage-user-access/enable-pki-authentication.dita" chunk="to-content">
+      <topicref href="modules/configure-pki-authentication-portal.dita" toc="no" />
+      <topicref href="modules/configure-pki-authentication-roxctl.dita" toc="no" />
+      <topicref href="modules/update-authentication-keys-and-certificates.dita" toc="no" />
+      <topicref href="modules/log-in-using-client-certificate.dita" toc="no" />
+    </topicref>
+    <topicref href="operating/manage-user-access/understanding-authentication-providers.dita" chunk="to-content">
+      <topicref href="modules/authentication-providers-overview.dita" toc="no" />
+      <topicref href="modules/auth-provider-claim-mappings.dita" toc="no">
+        <topicref href="modules/auth-provider-oidc-default-claim-mappings.dita" toc="no" />
+        <topicref href="modules/auth-provider-auth0-default-claim-mappings.dita" toc="no" />
+        <topicref href="modules/auth-provider-saml20-default-claim-mappings.dita" toc="no" />
+        <topicref href="modules/auth-provider-google-iap-default-claim-mappings.dita" toc="no" />
+        <topicref href="modules/auth-provider-userpki-default-claim-mappings.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/auth-provider-rules.dita" toc="no" />
+      <topicref href="modules/auth-provider-minimum-access-role.dita" toc="no" />
+      <topicref href="modules/auth-provider-required-attributes.dita" toc="no" />
+      <topicref href="operating/manage-user-access/configuring-identity-providers/configure-okta-identity-cloud.dita" toc="no">
+        <topicref href="modules/create-an-okta-app.dita" toc="no" />
+        <topicref href="modules/configure-saml-identity-provider.dita" toc="no" />
+      </topicref>
+      <topicref href="operating/manage-user-access/configuring-identity-providers/configure-google-workspace-identity.dita" toc="no">
+        <topicref href="modules/set-up-oauth-20-credentials-for-your-gcp-project.dita" toc="no" />
+        <topicref href="modules/specify-a-client-secret.dita" toc="no" />
+        <topicref href="modules/configure-oidc-identity-provider.dita" toc="no" />
+      </topicref>
+      <topicref href="operating/manage-user-access/configuring-identity-providers/configure-ocp-oauth.dita" toc="no">
+        <topicref href="operating/manage-user-access/configuring-identity-providers/configure-ocp-oauth.dita" toc="no" />
+        <topicref href="modules/create-additional-routes-ocp-oauth.dita" toc="no" />
+      </topicref>
+      <topicref href="operating/manage-user-access/configuring-identity-providers/connecting-azure-ad-to-rhacs-using-sso-configuration.dita" toc="no" />
+    </topicref>
+    <topicref href="operating/manage-user-access/remove-admin-user.dita" chunk="to-content">
+      <topicref href="modules/remove-admin-user.dita" toc="no" />
+    </topicref>
+    <topicref href="operating/manage-user-access/configure-short-lived-access.dita" chunk="to-content">
+      <topicref href="modules/configure-short-lived-access.dita" toc="no" />
+      <topicref href="modules/exchanging-identity-token.dita" toc="no" />
+    </topicref>
+    <topicref href="operating/manage-user-access/understanding-multi-tenancy.dita" chunk="to-content">
+      <topicref href="modules/file-activity-monitoring-limitations.dita" toc="no" />
+    </topicref>
+    <topicref href="configuration/inviting-users-to-your-rhacs-instance.dita" chunk="to-content">
+      <topicref href="modules/configuring-access-control-and-sending-invitations.dita" toc="no" />
+    </topicref>
+  </topicref>
+</map>

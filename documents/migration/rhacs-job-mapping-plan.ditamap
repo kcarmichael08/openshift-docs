@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping-plan">
+  <title>Plan</title>
+  <topichead navtitle="Plan">
+    <mapref href="installation-methods-and-platform-options.ditamap" />
+    <mapref href="verify-default-resource-requirements.ditamap" />
+    <mapref href="verify-recommended-resource-requirements-scaled-to-large-environments.ditamap" />
+  </topichead>
+</map>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="troubleshoot-collector">
+  <title>Troubleshoot Collector</title>
+  <topicref href="modules/troubleshoot-collector.dita">
+    <topicref href="troubleshooting/retrieving-and-analyzing-the-collector-logs-and-pod-status.dita">
+      <topicref href="modules/retrieving-the-collector-logs.dita" chunk="to-content">
+        <topicref href="modules/retrieving-the-logs-with-the-oc-or-kubectl-command.dita" toc="no" />
+        <topicref href="modules/retrieving-logs-from-a-rhacs-diagnostic-bundle.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/analyzing-the-collector-pod-status.dita" />
+    </topicref>
+    <topicref href="troubleshooting/commonly-occurring-error-conditions.dita">
+      <topicref href="modules/collector-startup-diagnostics-overview.dita" />
+      <topicref href="modules/unable-to-connect-to-the-sensor.dita" />
+      <topicref href="modules/failing-to-load-the-ebpf-probe.dita" />
+    </topicref>
+  </topicref>
+</map>

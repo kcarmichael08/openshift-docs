@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="installation-methods-and-platform-options">
+  <title>Installation methods and platform options</title>
+  <topicref href="modules/installation-methods-and-platform-options.dita">
+    <topicref href="installing/acs-high-level-overview.dita">
+      <topicref href="‎modules/acs-installation-guidelines.dita" />
+      <topicref href="modules/installation-methods-for-different-platforms.dita" />
+      <topicref href="modules/installation-methods-for-different-architectures.dita" />
+      <topicref href="modules/installation-secrets-auth.dita" chunk="to-content">
+        <topicref href="modules/init-bundle-overview.dita" toc="no" />
+        <topicref href="modules/cluster-registration-secret-overview.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/installing-rhacs-ocp-steps.dita" chunk="to-content">
+        <topicref href="modules/installing-rhacs-on-red-hat-openshift-by-using-the-rhacs-operator.dita" toc="no" />
+        <topicref href="modules/installing-rhacs-on-red-hat-openshift-by-using-helm-charts.dita" toc="no" />
+        <topicref href="modules/installing-rhacs-on-red-hat-openshift-by-using-the-roxctl-cli.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/installing-rhacs-kubernetes-steps.dita" chunk="to-content">
+        <topicref href="modules/installing-rhacs-on-kubernetes-platforms-by-using-helm-charts.dita" toc="no" />
+        <topicref href="modules/installing-rhacs-on-kubernetes-platforms-by-using-the-roxctl.dita" toc="no" />
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

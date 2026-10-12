@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="manage-security-policies">
+  <title>Manage security policies</title>
+  <topicref href="modules/manage-security-policies.dita">
+    <topicref href="operating/manage_security_policies/about-security-policies.dita">
+      <topicref href="‎modules/about-security-policies-overview.dita" />
+      <topicref href="modules/policy-evaluation-engine.dita" />
+      <topicref href="modules/policy-enforcement-about.dita" chunk="to-content">
+        <topicref href="modules/policy-enforcement-build-stage.dita" toc="no" />
+        <topicref href="modules/policy-enforcement-deploy.dita" toc="no">
+          <topicref href="modules/policy-enforcement-hard.dita" toc="no" />
+          <topicref href="modules/namespace-exclusions.dita" toc="no" />
+          <topicref href="modules/enforcement-existing-deployments.dita" toc="no" />
+          <topicref href="modules/policy-enforcement-soft.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/policy-enforcement-runtime.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/policy-structure.dita" />
+      <topicref href="modules/policy-and-violation-management.dita" chunk="to-content">
+        <topicref href="modules/policy-rules-setting.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/default-security-policies-about.dita" chunk="to-content">
+        <topicref href="modules/viewing-default-security-policies.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/custom-security-policies-about.dita" />
+      <topicref href="modules/sharing-security-policies.dita" chunk="to-content">
+        <topicref href="modules/export-security-policy.dita" toc="no" />
+        <topicref href="modules/import-security-policy.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="operating/manage_security_policies/use-admission-controller-enforcement.dita">
+      <topicref href="modules/understand-admission-controller-enforcement.dita" />
+      <topicref href="modules/enable-admission-controller-enforcement.dita" />
+      <topicref href="modules/enable-admission-controller-enforcement-existing-cluster.dita" />
+      <topicref href="modules/bypass-admission-controller-enforcement.dita" />
+      <topicref href="modules/disable-admission-controller-enforcement.dita" />
+      <topicref href="modules/admission-controller-failure-policy.dita" />
+      <topicref href="modules/admission-controller-failure-policy-changing.dita" />
+    </topicref>
+    <topicref href="operating/manage_security_policies/configuring-file-activity-monitoring.dita">
+      <topicref href="modules/detection-of-unauthorized-file-modifications.dita" chunk="to-content">
+        <topicref href="modules/about-dynamic-path-support-for-file-activity-monitoring.dita" toc="no" />
+        <topicref href="modules/file-activity-monitoring-limitations.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/create-file-activity-monitoring-policy.dita" />
+      <topicref href="modules/process-filtering-for-file-activity-policies.dita" chunk="to-content">
+        <topicref href="modules/available-process-filtering-criteria.dita" toc="no" />
+        <topicref href="modules/common-use-cases-for-process-filtering.dita" toc="no" />
+        <topicref href="modules/combining-file-path-and-process-filters.dita" toc="no" />
+        <topicref href="modules/create-file-activity-policies-with-process-filters.dita" toc="no">
+          <topicref href="modules/file-activity-policies-process-filters-examples.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="modules/migrate-file-activity-monitoring-policies-from-410-to-411.dita" />
+    </topicref>
+    <topicref href="operating/manage_security_policies/custom-security-policies.dita">
+      <topicref href="modules/create-policy-from-system-policies-view.dita" chunk="to-content">
+        <topicref href="modules/enter-policy-details.dita" toc="no" />
+        <topicref href="modules/select-policy-lifecycle.dita" toc="no" />
+        <topicref href="modules/configure-policy-rules.dita" toc="no" />
+        <topicref href="modules/configure-policy-scope.dita" toc="no" />
+        <topicref href="modules/enable-policy.dita" toc="no" />
+        <topicref href="modules/configure-policy-enforcement-creating-policies.dita" toc="no" />
+        <topicref href="modules/selecting-policy-notifiers.dita" toc="no" />
+        <topicref href="modules/preview-policy-violations.dita" toc="no" />
+        <topicref href="modules/verifying-file-activity-policies.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/create-policy-from-risk-view.dita" />
+      <topicref href="modules/modify-existing-security-policies.dita" chunk="to-content">
+        <topicref href="modules/disable-associated-policies.dita" toc="no" />
+        <topicref href="modules/create-policy-categories-using-tab.dita" toc="no" />
+        <topicref href="modules/modify-policy-categories-using-tab.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="operating/manage_security_policies/managing-policies-as-code.dita">
+      <topicref href="modules/policy-as-code-about.dita" chunk="to-content">
+        <topicref href="modules/policy-as-code-drift.dita" toc="no" />
+        <topicref href="modules/policy-as-code-create-portal.dita" toc="no" />
+        <topicref href="modules/policy-as-code-create-cr.dita" toc="no" />
+        <topicref href="modules/policy-as-code-disable.dita" toc="no" />
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

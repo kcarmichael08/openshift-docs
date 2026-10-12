@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="review-administration-events">
+  <title>Review Administration Events</title>
+  <topicref href="modules/review-administration-events.dita">
+    <topicref href="operating/using-the-administration-events-page.dita">
+      <topicref href="modules/accessing-the-event-logs-in-different-domains.dita" />
+      <topicref href="modules/administration-events-page-overview.dita" />
+      <topicref href="modules/getting-information-about-the-events-in-a-particular-domain.dita" />
+      <topicref href="modules/administration-event-details-overview.dita" />
+      <topicref href="modules/setting-the-expiration-of-the-administration-events.dita" />
+    </topicref>
+  </topicref>
+</map>

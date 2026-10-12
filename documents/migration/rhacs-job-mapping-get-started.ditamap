@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping-get-started">
+  <title>Get started</title>
+  <topichead navtitle="Get started">
+    <mapref href="rhacs-cloud-service-onboarding-and-day-1-operations.ditamap" />
+  </topichead>
+</map>

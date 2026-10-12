@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="configure-network-proxy-access">
+  <title>Configure network proxy access</title>
+  <topicref href="modules/configure-network-proxy-access.dita">
+    <topicref href="configuration/configure-proxy.dita">
+      <topicref href="modules/configure-proxy-overview.dita" />
+      <topicref href="modules/configure-proxy-on-an-existing-deployment.dita" />
+      <topicref href="modules/configure-proxy-during-installation.dita" />
+    </topicref>
+  </topicref>
+</map>

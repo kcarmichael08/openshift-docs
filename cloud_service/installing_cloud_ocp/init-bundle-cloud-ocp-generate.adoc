@@ -1,5 +1,4 @@
 :_mod-docs-content-type: ASSEMBLY
-include::modules/common-attributes.adoc[]
 [id="init-bundle-cloud-ocp-generate"]
 = Generating a cluster registration secret or an init bundle for secured clusters
 :context: init-bundle-cloud-ocp-generate
@@ -10,6 +9,8 @@ toc::[]
 Generate a cluster registration secret (CRS) or init bundle to set up secured clusters. Use the {product-title-short} portal or the `roxctl` CLI to generate the secret, then apply it to your secured clusters.
 
 //Overview
+
+include::modules/common-attributes.adoc[]
 include::modules/init-bundle-cloud-ocp-generate-overview.adoc[leveloffset=+1]
 
 //Generating a CRS or an init bundle

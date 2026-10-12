@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="verify-recommended-resource-requirements-scaled-to-large-environments">
+  <title>Verify recommended resource requirements scaled to large environments</title>
+  <topicref href="modules/verify-recommended-resource-requirements-scaled-to-large-environments.dita">
+    <topicref href="installing/acs-recommended-requirements.dita">
+      <topicref href="modules/resource-requirements-for-scaling-based-on-deployment.dita" />
+      <topicref href="modules/recommended-requirements-central-services.dita" chunk="to-content">
+        <topicref href="modules/recommended-requirements-central.dita" toc="no" />
+        <topicref href="modules/recommended-requirements-central-db.dita" toc="no" />
+        <topicref href="modules/recommended-requirements-stackrox-scanner.dita" toc="no" />
+        <topicref href="modules/recommended-requirements-scanner-v4.dita" toc="no">
+          <topicref href="modules/recommended-requirements-scanner-v4-indexer.dita" toc="no" />
+          <topicref href="modules/recommended-requirements-scanner-v4-matcher.dita" toc="no" />
+          <topicref href="modules/recommended-requirements-scanner-v4-db.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="modules/recommended-requirements-secured-cluster-services.dita" chunk="to-content">
+        <topicref href="modules/recommended-requirements-sensor.dita" toc="no" />
+        <topicref href="modules/recommended-requirements-admission-controller.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/recommended-requirements-vm-scanning.dita" chunk="to-content">
+        <topicref href="modules/recommended-requirements-vm-scanning-guidelines.dita" toc="no" />
+        <topicref href="modules/recommended-requirements-vm-scanning-throughput-factors.dita" toc="no" />
+        <topicref href="modules/compliance-relay-concurrency.dita" toc="no" />
+        <topicref href="modules/central-enrichment-throughput.dita" toc="no" />
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

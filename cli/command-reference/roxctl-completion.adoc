@@ -1,7 +1,6 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="roxctl-completion"]
 = roxctl completion
-include::modules/common-attributes.adoc[]
 :context: roxctl-completion
 
 toc::[]
@@ -10,6 +9,8 @@ toc::[]
 Use the `roxctl completion` command to generate shell completion scripts for Bash, Zsh, Fish, and PowerShell.
 
 //roxctl completion overview
+
+include::modules/common-attributes.adoc[]
 include::modules/roxctl-completion-overview.adoc[leveloffset=+1]
 
 include::modules/roxctl-completion-usage.adoc[leveloffset=+2]

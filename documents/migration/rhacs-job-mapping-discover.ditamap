@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping-discover">
+  <title>Discover</title>
+  <topichead navtitle="Discover">
+    <mapref href="about-red-hat-advanced-cluster-security-for-kubernetes.ditamap" />
+    <mapref href="red-hat-advanced-cluster-security-for-kubernetes-architecture-first-look.ditamap" />
+  </topichead>
+</map>

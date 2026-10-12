@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="implement-gitops-workflows">
+  <title>Implement GitOps workflows</title>
+  <topicref href="modules/implement-gitops-workflows.dita">
+    <topicref href="configuration/using-rhacs-with-gitops.dita">
+      <topicref href="modules/using-rhacs-with-gitops-overview.dita" />
+      <topicref href="modules/config-using-declarative-config.dita" />
+      <topicref href="modules/config-using-policy-as-code.dita" />
+    </topicref>
+  </topicref>
+</map>

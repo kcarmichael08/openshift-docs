@@ -1,5 +1,4 @@
 :_mod-docs-content-type: ASSEMBLY
-include::modules/common-attributes.adoc[]
 [id="upgrade-cloudsvc-helm"]
 = Upgrading secured clusters in RHACS Cloud Service by using Helm charts
 :context: upgrade-cloudsvc-helm
@@ -11,6 +10,7 @@ You can upgrade your secured clusters in {product-title-managed-short} by using 
 
 If you installed {product-title-short} secured clusters by using Helm charts, you can upgrade to the latest version of {product-title-short} by updating the Helm chart and running the `helm upgrade` command.
 
+include::modules/common-attributes.adoc[]
 include::modules/updating-helm-repository.adoc[leveloffset=+1]
 
 include::modules/upgrade-helm-chart.adoc[leveloffset=+1]

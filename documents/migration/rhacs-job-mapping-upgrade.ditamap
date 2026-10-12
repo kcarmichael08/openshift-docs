@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping-upgrade">
+  <title>Upgrade</title>
+  <topichead navtitle="Upgrade">
+    <mapref href="upgrade-rhacs-by-using-the-operator.ditamap" />
+    <mapref href="upgrade-rhacs-by-using-helm-charts.ditamap" />
+    <mapref href="upgrade-rhacs-by-using-the-roxctl-cli.ditamap" />
+  </topichead>
+</map>

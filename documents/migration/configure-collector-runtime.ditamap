@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="configure-collector-runtime">
+  <title>Configure Collector runtime</title>
+  <topicref href="modules/configure-collector-runtime.dita">
+    <topicref href="operating/using-collector-runtime-configuration.dita" />
+  </topicref>
+</map>

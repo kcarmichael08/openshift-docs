@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="trust-only-signed-container-images">
+  <title>Trust only signed container images</title>
+  <topicref href="modules/trust-only-signed-container-images.dita">
+    <topicref href="operating/verify-image-signatures.dita">
+      <topicref href="modules/verify-image-signatures-overview.dita" />
+      <topicref href="modules/securing-container-images-by-using-signature-integration.dita" />
+      <topicref href="modules/verifying-image-signatures-to-ensure-image-integrity.dita" />
+      <topicref href="modules/use-signature-verification.dita" />
+      <topicref href="modules/enforcing-signature-verification.dita" />
+    </topicref>
+  </topicref>
+</map>

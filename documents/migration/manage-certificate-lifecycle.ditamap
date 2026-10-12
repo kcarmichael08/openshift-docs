@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="manage-certificate-lifecycle">
+  <title>Manage certificate lifecycle</title>
+  <topicref href="modules/manage-certificate-lifecycle.dita">
+    <topicref href="configuration/add-custom-certificates.dita">
+      <topicref href="modules/add-custom-security-certificate.dita" chunk="to-content">
+        <topicref href="modules/custom-cert-prerequisites.dita" toc="no" />
+        <topicref href="modules/custom-cert-new-install.dita" toc="no" />
+        <topicref href="modules/custom-cert-existing.dita" toc="no" />
+        <topicref href="modules/update-custom-certificate-central.dita" toc="no">
+          <topicref href="modules/restarting-the-central-container.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="modules/configure-sensor-trust-custom-certificates.dita" chunk="to-content">
+        <topicref href="modules/download-sensor-bundle.dita" toc="no" />
+        <topicref href="modules/trust-cert-new-sensor.dita" toc="no" />
+        <topicref href="modules/trust-cert-existing-sensor.dita" toc="no">
+          <topicref href="modules/restart-sensor-container.dita" toc="no" />
+        </topicref>
+      </topicref>
+    </topicref>
+    <topicref href="configuration/add-trusted-ca.dita">
+      <topicref href="modules/configure-additional-cas.dita" />
+      <topicref href="modules/propagating-changes-overview.dita" chunk="to-content">
+        <topicref href="modules/restarting-the-central-container.dita" toc="no" />
+        <topicref href="modules/restart-scanner-container.dita" toc="no" />
+        <topicref href="modules/post-configuration-notes.dita" toc="no" />
+      </topicref>
+    </topicref>
+    <topicref href="configuration/internal-certificate-authority-rotation-for-rhacs.dita">
+      <topicref href="modules/ca-rotation-support-for-different-installation-methods.dita" />
+      <topicref href="modules/preparing-for-deployments-and-upgrades.dita" />
+    </topicref>
+    <topicref href="configuration/reissue-internal-certificates.dita">
+      <topicref href="modules/reissuing-internal-certificates-for-central-services.dita" chunk="to-content">
+        <topicref href="modules/reissuing-internal-certificates-for-central.dita" toc="no">
+          <topicref href="modules/restarting-the-central-container.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/reissuing-internal-certificates-for-central-db.dita" toc="no">
+          <topicref href="modules/restarting-the-central-db-container.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/reissuing-internal-certificates-for-scanner.dita" toc="no">
+          <topicref href="modules/restarting-the-scanner-and-scanner-db-containers.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/reissuing-internal-certificates-for-scanner-v4.dita" toc="no">
+          <topicref href="modules/restarting-the-scanner-v4-containers.dita" toc="no" />
+        </topicref>
+      </topicref>
+      <topicref href="modules/reissuing-internal-certificates-secured-clusters-overview.dita" chunk="to-content">
+        <topicref href="modules/reissuing-internal-certificates-for-secured-clusters-by-using-automatic-certificate-renewal.dita" toc="no">
+          <topicref href="modules/verifying-the-status-of-automatic-certificate-renewal.dita" toc="no" />
+          <topicref href="modules/applying-the-latest-internal-certificates.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/reissue-internal-certificates-secured-clusters.dita" toc="no" />
+        <topicref href="modules/reissue-internal-certificates-secured-clusters-automatic-upgrades.dita" toc="no" />
+      </topicref>
+    </topicref>
+  </topicref>
+</map>

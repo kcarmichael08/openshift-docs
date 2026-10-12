@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="create-deployment-collections">
+  <title>Create deployment collections</title>
+  <topicref href="modules/create-deployment-collections.dita">
+    <topicref href="operating/create-use-collections.dita">
+      <topicref href="modules/collections-availability-overview.dita" />
+      <topicref href="modules/collections-prerequisites.dita" />
+      <topicref href="modules/object-collections.dita" />
+      <topicref href="modules/access-object-collections.dita" />
+      <topicref href="modules/create-object-collections.dita" chunk="to-content">
+        <topicref href="modules/create-collection-rules.dita" toc="no">
+          <topicref href="modules/using-regular-expression.dita" toc="no" />
+        </topicref>
+        <topicref href="modules/adding-attached-collections.dita" toc="no" />
+      </topicref>
+      <topicref href="modules/migrate-scope-collections.dita" />
+      <topicref href="modules/generating-sboms-by-using-the-api.dita" />
+    </topicref>
+  </topicref>
+</map>

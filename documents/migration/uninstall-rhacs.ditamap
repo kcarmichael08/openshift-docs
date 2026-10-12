@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="uninstall-rhacs">
+  <title>Uninstall RHACS</title>
+  <topicref href="modules/uninstall-rhacs.dita">
+    <topicref href="installing/uninstall-acs.dita">
+      <topicref href="modules/uninstall-acs-overview.dita" />
+      <topicref href="modules/delete-acs-namespace.dita" />
+      <topicref href="modules/delete-acs-global-resources.dita" />
+      <topicref href="modules/delete-acs-label-annotation.dita" />
+    </topicref>
+  </topicref>
+</map>

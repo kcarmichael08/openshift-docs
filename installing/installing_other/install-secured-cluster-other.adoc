@@ -1,5 +1,4 @@
 :_mod-docs-content-type: ASSEMBLY
-include::modules/common-attributes.adoc[]
 [id="install-secured-cluster-other"]
 = Installing secured cluster services for RHACS on other platforms
 :context: install-secured-cluster-other
@@ -13,6 +12,7 @@ You can install {rh-rhacs-first} on your secured clusters for the following plat
 * Google Kubernetes Engine (GKE)
 * Microsoft Azure Kubernetes Service (Microsoft AKS)
 
+include::modules/common-attributes.adoc[]
 include::modules/installing-rhacs-on-secured-clusters-by-using-helm-charts.adoc[leveloffset=+1]
 
 include::modules/installing-rhacs-on-secured-clusters-by-using-helm-charts-without-customizations.adoc[leveloffset=+2]

@@ -1,7 +1,6 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="roxctl-version"]
 = roxctl version
-include::modules/common-attributes.adoc[]
 :context: roxctl-version
 
 toc::[]
@@ -10,6 +9,8 @@ toc::[]
 Use the `roxctl version` command to display the current roxctl version.
 
 //roxctl version overview
+
+include::modules/common-attributes.adoc[]
 include::modules/roxctl-version-overview.adoc[leveloffset=+1]
 
 include::modules/roxctl-version-usage.adoc[leveloffset=+2]

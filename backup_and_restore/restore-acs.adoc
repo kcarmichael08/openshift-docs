@@ -1,5 +1,4 @@
 :_mod-docs-content-type: ASSEMBLY
-include::modules/common-attributes.adoc[]
 [id="restore-acs"]
 = Restoring from a backup
 :context: restore-acs
@@ -20,6 +19,8 @@ Depending upon your requirements and the data you have backed up, you can restor
 . *Restore Central from the Central deployment backup*: Use this if you are migrating Central to another cluster or namespace. This option restores the configurations of your Central installation.
 
 //Restoring an external PostgreSQL database
+
+include::modules/common-attributes.adoc[]
 include::modules/restoring-an-external-postgresql-database.adoc[leveloffset=+1]
 
 //Restoring the Central certificates and redeploying Central

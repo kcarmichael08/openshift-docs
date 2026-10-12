@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping-troubleshoot">
+  <title>Troubleshoot</title>
+  <topichead navtitle="Troubleshoot">
+    <mapref href="generate-a-diagnostic-bundle-with-system-health-data.ditamap" />
+    <mapref href="access-support-resources.ditamap" />
+    <mapref href="troubleshoot-collector.ditamap" />
+  </topichead>
+</map>

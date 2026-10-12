@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "technicalContent/dtd/map.dtd">
+<map id="rhacs-job-mapping">
+  <title>rhacs-job-mapping</title>
+  <mapref href="rhacs-job-mapping-discover.ditamap" />
+  <mapref href="rhacs-job-mapping-get-started.ditamap" />
+  <mapref href="rhacs-job-mapping-plan.ditamap" />
+  <mapref href="rhacs-job-mapping-install.ditamap" />
+  <mapref href="rhacs-job-mapping-upgrade.ditamap" />
+  <mapref href="rhacs-job-mapping-questions.ditamap" />
+  <mapref href="rhacs-job-mapping-administer.ditamap" />
+  <mapref href="rhacs-job-mapping-change-job-name-some-changes-to-the-nesting-here-because-it-comes-from-2-major-sections-in-doc-basics-network-graph-focus-and-cli-focus-no-basics.ditamap" />
+  <mapref href="rhacs-job-mapping-configure.ditamap" />
+  <mapref href="rhacs-job-mapping-secure.ditamap" />
+  <mapref href="rhacs-job-mapping-observe.ditamap" />
+  <mapref href="rhacs-job-mapping-integrate.ditamap" />
+  <mapref href="rhacs-job-mapping-troubleshoot.ditamap" />
+  <mapref href="rhacs-job-mapping-reference.ditamap" />
+</map>

@@ -1,5 +1,4 @@
 :_mod-docs-content-type: ASSEMBLY
-include::modules/common-attributes.adoc[]
 [id="install-secured-cluster-cloud-ocp"]
 = Installing secured cluster resources from RHACS Cloud Service
 :context: install-secured-cluster-cloud-ocp
@@ -10,6 +9,8 @@ toc::[]
 You can install {product-title-managed-short} on your secured clusters by using the Operator or Helm charts. You can also use the `roxctl` CLI to install it, but do not use this method unless you have a specific installation need that requires using it.
 
 //Prerequisites
+
+include::modules/common-attributes.adoc[]
 include::modules/install-secured-cluster-cloud-ocp-prerequisites.adoc[leveloffset=+1]
 
 //Installing {product-title-short} on secured clusters by using the Operator
