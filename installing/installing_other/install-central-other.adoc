@@ -2,6 +2,9 @@
 [id="install-central-other"]
 = Installing Central services for RHACS on other platforms
 :context: install-central-other
+// Set conditional attributes for DITA-compliant processing
+:kube:
+
 
 toc::[]
 
@@ -113,3 +116,6 @@ include::modules/using-the-interactive-installer.adoc[leveloffset=+2]
 
 //Running the Central installation scripts
 include::modules/install-central-roxctl.adoc[leveloffset=+2]
+
+// Unset conditional attributes
+:!kube:

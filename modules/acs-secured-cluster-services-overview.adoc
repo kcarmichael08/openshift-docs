@@ -3,15 +3,11 @@
 // * architecture/acs-architecture.adoc
 // * cloud_service/acscs-architecture.adoc
 
-ifeval::["{context}" == "acscs-architecture"]
-:title: Red Hat Advanced Cluster Security Cloud Service
-:short-title: RHACS Cloud Service
-endif::[]
 
-ifeval::["{context}" == "acs-architecture"]
-:title: Red Hat Advanced Cluster Security for Kubernetes
-:short-title: RHACS
-endif::[]
+
+
+// NOTE: Conditional attributes are set at the assembly (title) level
+// for DITA 1.3 compatibility. This module uses ifdef/ifndef only.
 
 :_mod-docs-content-type: CONCEPT
 [id="acs-secured-cluster-services_{context}"]

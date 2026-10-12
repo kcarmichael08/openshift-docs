@@ -3,6 +3,9 @@
 = roxctl completion
 
 :context: roxctl-completion
+// Set conditional attributes for DITA-compliant processing
+:roxctlcompletion:
+
 
 toc::[]
 
@@ -21,4 +24,7 @@ include::modules/roxctl-completion-supported-shell-types.adoc[leveloffset=+2]
 //Options inherited from the parent command
 :commandname: roxctl completion
 include::modules/options-inherited-from-the-parent-command.adoc[leveloffset=+1]
+
+// Unset conditional attributes
+:!roxctlcompletion:
 :!commandname:

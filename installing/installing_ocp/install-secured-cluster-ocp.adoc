@@ -2,6 +2,9 @@
 [id="install-secured-cluster-ocp"]
 = Installing secured cluster services for RHACS on Red Hat OpenShift
 :context: install-secured-cluster-ocp
+// Set conditional attributes for DITA-compliant processing
+:openshift:
+
 
 toc::[]
 
@@ -52,4 +55,7 @@ include::modules/install-roxctl-cli-macos.adoc[leveloffset=+3]
 
 include::modules/install-roxctl-cli-windows.adoc[leveloffset=+3]
 
+
+// Unset conditional attributes
+:!openshift:
 include::modules/install-sensor-roxctl.adoc[leveloffset=+2]

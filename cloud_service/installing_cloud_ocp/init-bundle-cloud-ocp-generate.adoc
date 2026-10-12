@@ -2,6 +2,11 @@
 [id="init-bundle-cloud-ocp-generate"]
 = Generating a cluster registration secret or an init bundle for secured clusters
 :context: init-bundle-cloud-ocp-generate
+// Set conditional attributes for DITA-compliant processing
+:cloud:
+:cloud-ocp-generate:
+:cloud-svc:
+
 
 toc::[]
 
@@ -28,3 +33,8 @@ include::modules/roxctl-generate-init-bundle.adoc[leveloffset=+2]
 //Next steps
 include::modules/init-bundle-cloud-ocp-generate-next-steps.adoc[leveloffset=+1]
 
+
+// Unset conditional attributes
+:!cloud:
+:!cloud-ocp-generate:
+:!cloud-svc:

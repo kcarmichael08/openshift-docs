@@ -2,6 +2,9 @@
 [id="configuring-file-activity-monitoring"]
 = Configuring file activity monitoring
 :context: file-activity-monitoring
+// Set conditional attributes for DITA-compliant processing
+:file-monitoring:
+
 :toc: macro
 :toclevels: 3
 
@@ -49,3 +52,6 @@ include::modules/migrate-file-activity-monitoring-policies-from-410-to-411.adoc[
 [id="additional-resources_configuring-file-activity-monitoring"]
 .Additional resources
 * xref:../../operating/respond-to-violations.adoc#respond-to-violations[Respond to violations]
+
+// Unset conditional attributes
+:!file-monitoring:

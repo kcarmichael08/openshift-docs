@@ -2,13 +2,14 @@
 //
 // * operating/manage-vulnerabilities/common-vuln-management-tasks.adoc
 
+
+// NOTE: Conditional attributes are set at the assembly (title) level
+// for DITA 1.3 compatibility. This module uses ifdef/ifndef only.
+
 :_mod-docs-content-type: CONCEPT
 [id="images-tab_{context}"]
 = Images tab
 
-ifeval::["{context}" == "observed-cves"]
-:observedcves:
-endif::[]
 
 [role="_abstract"]
 The images view organizes the information into the following groups:
@@ -25,7 +26,3 @@ endif::observedcves[]
 To review and triage the details associated with an image, click on the image.
 
 A window opens with information about the vulnerabilities associated with the image.
-
-ifeval::["{context}" == "observed-cves"]
-:!observedcves:
-endif::[]

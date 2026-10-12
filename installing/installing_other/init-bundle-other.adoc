@@ -2,6 +2,9 @@
 [id="init-bundle-other"]
 = Generating and applying a cluster registration secret or an init bundle for RHACS on other platforms
 :context: init-bundle-other
+// Set conditional attributes for DITA-compliant processing
+:kube:
+
 :topic-helm:
 
 toc::[]
@@ -50,3 +53,6 @@ include::modules/next-steps-init-bundle.adoc[leveloffset=+1]
 
 * xref:../../installing/installing_ocp/install-secured-cluster-ocp.adoc#install-secured-cluster-ocp[Installing secured cluster services for {product-title-short} on {osp}]
 * xref:../../installing/installing_other/install-secured-cluster-other.adoc#install-secured-cluster-other[Installing secured cluster services for {product-title-short} on other platforms]
+
+// Unset conditional attributes
+:!kube:

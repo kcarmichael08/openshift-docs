@@ -2,6 +2,10 @@
 [id="install-secured-cluster-other"]
 = Installing secured cluster services for RHACS on other platforms
 :context: install-secured-cluster-other
+// Set conditional attributes for DITA-compliant processing
+:k8:
+:kube:
+
 
 toc::[]
 
@@ -42,4 +46,8 @@ include::modules/install-roxctl-cli-macos.adoc[leveloffset=+3]
 include::modules/install-roxctl-cli-windows.adoc[leveloffset=+3]
 include::modules/install-sensor-roxctl.adoc[leveloffset=+2]
 include::modules/manifest-installation-method-by-using-the-web-portal.adoc[leveloffset=+3]
+
+// Unset conditional attributes
+:!k8:
+:!kube:
 include::modules/manifest-installation-by-using-the-roxctl-cli.adoc[leveloffset=+3]

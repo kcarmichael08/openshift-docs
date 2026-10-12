@@ -2,6 +2,10 @@
 [id="install-secured-cluster-cloud-other"]
 = Installing secured cluster services from RHACS Cloud Service on Kubernetes clusters
 :context: install-secured-cluster-cloud-other
+// Set conditional attributes for DITA-compliant processing
+:cloud-svc:
+:kube:
+
 :topic-helm:
 
 toc::[]
@@ -54,4 +58,8 @@ include::modules/install-roxctl-cli-macos.adoc[leveloffset=+3]
 include::modules/install-roxctl-cli-windows.adoc[leveloffset=+3]
 
 //Install Sensor
+
+// Unset conditional attributes
+:!cloud-svc:
+:!kube:
 include::modules/install-sensor-roxctl.adoc[leveloffset=+2]

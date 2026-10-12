@@ -2,6 +2,10 @@
 [id="install-secured-cluster-cloud-ocp"]
 = Installing secured cluster resources from RHACS Cloud Service
 :context: install-secured-cluster-cloud-ocp
+// Set conditional attributes for DITA-compliant processing
+:cloud-svc:
+:openshift:
+
 
 toc::[]
 
@@ -58,3 +62,7 @@ include::modules/install-sensor-roxctl.adoc[leveloffset=+2]
 //Next steps
 include::modules/install-secured-cluster-cloud-ocp-next-steps.adoc[leveloffset=+1]
 
+
+// Unset conditional attributes
+:!cloud-svc:
+:!openshift:

@@ -3,6 +3,9 @@
 = roxctl version
 
 :context: roxctl-version
+// Set conditional attributes for DITA-compliant processing
+:roxctlversion:
+
 
 toc::[]
 
@@ -21,4 +24,7 @@ include::modules/roxctl-version-command-options.adoc[leveloffset=+2]
 //Options inherited from the parent command
 :commandname: roxctl version
 include::modules/options-inherited-from-the-parent-command.adoc[leveloffset=+1]
+
+// Unset conditional attributes
+:!roxctlversion:
 :!commandname:

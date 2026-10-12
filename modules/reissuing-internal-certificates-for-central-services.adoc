@@ -2,6 +2,10 @@
 //
 // * configuration/reissue-internal-certificates.adoc
 
+
+// NOTE: Conditional attributes are set at the assembly (title) level
+// for DITA 1.3 compatibility. This module uses ifdef/ifndef only.
+
 :_mod-docs-content-type: CONCEPT
 [id="reissuing-internal-certificates-for-central-services_{context}"]
 = Reissuing internal certificates for Central services
@@ -25,7 +29,4 @@ Beginning with {product-title-short} 4.3.4, the Operator automatically rotates t
 
 * The rotation of the TLS certificates within the secrets does not automatically trigger the components to reload them. If the corresponding pods are not restarted at least every 6 months, you must manually restart the pods to load the new certificates before the old ones expire.
 
-ifeval::["{rhacs-version}" < "4.9.0"]
-* Certificate authority (CA) certificates are not updated. They are valid for 5 years.
-endif::[]
 ====
